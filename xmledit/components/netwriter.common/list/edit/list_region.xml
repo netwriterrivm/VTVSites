@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- LIST TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="list" type="region" uiname="rsi.menu.insert.list">
+	<edx:xhtml display="Bullets">
+		<img edxtemplate="widget:icon.default" />
+		<ul edxtemplate="listcontainer" class="textList" edxpath="."></ul>
+	</edx:xhtml>
+	<edx:xhtml display="Nobullets">
+		<img edxtemplate="widget:icon.default" />
+		<ul edxtemplate="listcontainer" class="nodot" edxpath="."></ul>
+	</edx:xhtml>
+	<edx:xhtml display="Arrows">
+		<img edxtemplate="widget:icon.default" />
+		<ul edxtemplate="listcontainer" class="kb_linklist" edxpath="."></ul>
+	</edx:xhtml>
+	<edx:xhtml display="Numbers">
+		<img edxtemplate="widget:icon.default" />
+		<ol edxtemplate="listcontainer" class="textList" edxpath="."></ol>
+	</edx:xhtml>
+	<edx:xhtml display="Letters">
+		<img edxtemplate="widget:icon.default" />
+		<ol type="a" edxtemplate="listcontainer" class="textList Letters" edxpath="."></ol>
+	</edx:xhtml>
+	<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.list" icon="/NetWriterGui/content/xml/icons/formatting_list_bullets.gif" id="btnInsertList" onclick="" xml_tag="list"  enable_check="guiOwnerCanApplyTag(\'list\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+	<edx:insert>
+		<list layout="Bullets">
+			<listitem>[list-item]</listitem>
+		</list>
+	</edx:insert>
+	<edx:attributelist>
+		<attribute name="layout" uiname="rsi.edx.attribute.list.layout" applytocolumn="false" uiicon="">
+			<option value="Bullets">rsi.edx.attribute.list.bullets</option>
+			<option value="Nobullets">rsi.edx.attribute.list.nobullets</option>
+			<option value="Arrows">rsi.edx.attribute.list.arrows</option>
+			<option value="Numbers">rsi.edx.attribute.list.numbers</option>
+			<option value="Letters">rsi.edx.attribute.list.alphabetic</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

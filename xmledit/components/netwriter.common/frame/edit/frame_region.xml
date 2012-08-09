@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- FRAME TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view"  edxnotifyparent="true" name="frame" type="region" uiname="rsi.edx.document.frame">
+	<edx:xhtml display="Normaal 1 Koloms">
+    <div class="nw_editor_clear_box">
+		<div class="nw_information_tekst_container" >
+			<img edxtemplate="widget:icon.default" />
+			<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+			<span edxtemplate="framelayoutselect" edxpath="."></span>
+			<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+			<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+			<span edxtemplate="column" edxpath="column1"></span>
+			
+			<span edxtemplate="column" edxpath="column2"></span>
+			
+			<span edxtemplate="column" edxpath="column3"></span>
+		</div>
+      </div>
+	</edx:xhtml>
+	<edx:xhtml display="Kader 1 Koloms">
+    <div class="nw_editor_clear_box">
+		<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelayoutselect" edxpath="."></span>
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_kader   mod visual nw_information_tekst_container">
+			<span edxtemplate="column" edxpath="column1"></span>
+			<hr color="#eeeeee" NOSHADE="True" align="left" width="50%" />
+			<span edxtemplate="column" edxpath="column2"></span>
+			<hr color="#eeeeee" NOSHADE="True" align="left" width="50%" />
+			<span edxtemplate="column" edxpath="column3"></span>
+		</div></div>
+	</edx:xhtml>
+	<edx:xhtml display="Normaal 2 Koloms">
+    <div class="nw_editor_clear_box">
+		<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelayoutselect" edxpath="."></span>
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_information_tekst_container">
+			<div class="nw_twocolumn">
+				<span edxtemplate="column" edxpath="column1"></span>
+			</div>
+			<div class="nw_twocolumn  nw_lastcolumn">
+				<span edxtemplate="column" edxpath="column2"></span>
+				<hr color="#eeeeee" NOSHADE="True" align="left" width="50%" />
+				<span edxtemplate="column" edxpath="column3"></span>
+			</div>
+		</div>
+</div>
+	</edx:xhtml>
+	<edx:xhtml display="Kader 2 Koloms">
+    <div class="nw_editor_clear_box">
+		<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelayoutselect" edxpath="."></span>
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_kader  mod visual nw_information_tekst_container">
+			<div class="nw_twocolumn">
+				<span edxtemplate="column" edxpath="column1"></span>
+			</div>
+			<div class="nw_twocolumn  nw_lastcolumn">
+				<span edxtemplate="column" edxpath="column2"></span>
+				<hr color="#eeeeee" NOSHADE="True" align="left" width="50%" />
+				<span edxtemplate="column" edxpath="column3"></span>
+			</div>
+		</div></div>  
+	</edx:xhtml>
+	<edx:xhtml display="Normaal 3 Koloms">
+    <div class="nw_editor_clear_box">
+		<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelayoutselect" edxpath="."></span>
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_information_tekst_container">
+			<div class="nw_threecolumn">
+				<span edxtemplate="column" edxpath="column1"></span>
+			</div>
+			<div class="nw_threecolumn">
+				<span edxtemplate="column" edxpath="column2"></span>
+			</div>
+			<div class="nw_threecolumn  nw_lastcolumn">
+				<span edxtemplate="column" edxpath="column3"></span>
+			</div>
+		</div>
+      </div>
+	</edx:xhtml>
+	<edx:xhtml display="icon: Normaal 1 Koloms">
+    <div class="nw_editor_clear_box">
+		<div class="nw_information_tekst_container" >
+			<img edxtemplate="widget:icon.default" />
+			<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+			<span edxtemplate="framelayoutselect" edxpath="."></span>
+			<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+			<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+			<span edxtemplate="column" edxpath="column1"></span>
+			
+			<span edxtemplate="column" edxpath="column2"></span>
+			
+			<span edxtemplate="column" edxpath="column3"></span>
+		</div>
+		<p class="back_to_top"><a href="#content">Naar boven</a></p>
+      </div>
+	</edx:xhtml>
+	<edx:xhtml display="icon: Kader 1 Koloms">
+    <div class="nw_editor_clear_box">
+			<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelayoutselect" edxpath="."></span>
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_kader  mod visual nw_information_tekst_container">
+			<span edxtemplate="column" edxpath="column1"></span>
+			<hr color="#eeeeee" NOSHADE="True" align="left" width="50%" />
+			<span edxtemplate="column" edxpath="column2"></span>
+			<hr color="#eeeeee" NOSHADE="True" align="left" width="50%" />
+			<span edxtemplate="column" edxpath="column3"></span>
+		</div>
+		<p class="back_to_top"><a href="#content">Naar boven</a></p>
+      </div>
+	</edx:xhtml>
+	<edx:xhtml display="icon: Normaal 2 Koloms">
+    <div class="nw_editor_clear_box">
+			<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelayoutselect" edxpath="."></span>
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_information_tekst_container">
+			<div class="nw_twocolumn">
+				<span edxtemplate="column" edxpath="column1"></span>
+			</div>
+			<div class="nw_twocolumn  nw_lastcolumn">
+				<span edxtemplate="column" edxpath="column2"></span>
+				<hr color="#eeeeee" NOSHADE="True" align="left" width="50%" />
+				<span edxtemplate="column" edxpath="column3"></span>
+			</div>
+		</div>
+		<p class="back_to_top"><a href="#content">Naar boven</a></p>
+      </div>
+	</edx:xhtml>
+	<edx:xhtml display="icon: Kader 2 Koloms">
+    <div class="nw_editor_clear_box">
+		<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelayoutselect" edxpath="."></span>
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_kader  mod visual nw_information_tekst_container">
+			<div class="nw_twocolumn">
+				<span edxtemplate="column" edxpath="column1"></span>
+			</div>
+			<div class="nw_twocolumn  nw_lastcolumn">
+				<span edxtemplate="column" edxpath="column2"></span>
+				<hr color="#eeeeee" NOSHADE="True" align="left" width="50%" />
+				<span edxtemplate="column" edxpath="column3"></span>
+			</div>
+		</div>
+		<p class="back_to_top"><a href="#content">Naar boven</a></p>
+      </div>
+	</edx:xhtml>
+	<edx:xhtml display="icon: Normaal 3 Koloms">
+    <div class="nw_editor_clear_box">
+		<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelayoutselect" edxpath="."></span>
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_information_tekst_container">
+			<div class="nw_threecolumn">
+				<span edxtemplate="column" edxpath="column1"></span>
+			</div>
+			<div class="nw_threecolumn">
+				<span edxtemplate="column" edxpath="column2"></span>
+			</div>
+			<div class="nw_threecolumn  nw_lastcolumn">
+				<span edxtemplate="column" edxpath="column3"></span>
+			</div>
+		</div>
+		<p class="back_to_top"><a href="#content">Naar boven</a></p>
+      </div>
+	</edx:xhtml>
+	<edx:xhtml display="Normaal 4 Koloms">
+    <div class="nw_editor_clear_box">
+		<img edxtemplate="widget:icon.default" />
+		<a edxtemplate="widget:name" edxpath="frameid"><!-- leeg --></a>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span>
+		<div class="nw_information_tekst_container">
+			<div class="nw_fourcolumn">
+				<span edxtemplate="column" edxpath="column1"></span>
+			</div>
+			<div class="nw_fourcolumn">
+				<span edxtemplate="column" edxpath="column2"></span>
+			</div>
+			<div class="nw_fourcolumn">
+				<span edxtemplate="column" edxpath="column3"></span>
+			</div>
+			<div class="nw_fourcolumn">
+				<span edxtemplate="column" edxpath="column4"></span>
+			</div>
+		</div>
+      </div>
+	</edx:xhtml>
+	<edx:insert>
+		<frame layout="Normaal 2 Koloms">
+			<framemenu layout="visible"></framemenu>
+			<column1>
+				<header align="" level="2">[Plaats hier een kopregel]</header>
+			</column1>
+			<column2></column2>
+			<column3></column3>
+			<column4></column4>
+			<column5></column5>
+			<framelabel visibilityinframe="visible">[label]</framelabel>
+			<frameid>id</frameid>
+		</frame>
+	</edx:insert>
+	<edx:navigationitem enabled="false"  toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" name="rsi.menu.insert.frame" icon="/NetWriterGui/content/xml/icons/insert_frame_below2.gif" id="btnInsertFrame" onclick="" xml_tag="frame"  enable_check="guiOwnerCanApplyTag(\'frame\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		<attribute name="layout" uiname="rsi.edx.attribute.frame.layout" applytocolumn="false" uiicon="">
+			<option value="Normaal 1 Koloms">rsi.edx.attribute.frame.normal.1</option>
+			<option value="Normaal 2 Koloms">rsi.edx.attribute.frame.normal.2</option>
+			<option value="Normaal 3 Koloms">rsi.edx.attribute.frame.normal.3</option>
+			<option value="Normaal 4 Koloms">rsi.edx.attribute.frame.normal.4</option>
+			<option value="Kader 1 Koloms">rsi.edx.attribute.frame.boxed.1</option>
+			<option value="Kader 2 Koloms">rsi.edx.attribute.frame.boxed.2</option>
+			<option value="icon: Normaal 1 Koloms">rsi.edx.attribute.frame.normal.1.top</option>
+			<option value="icon: Normaal 2 Koloms">rsi.edx.attribute.frame.normal.2.top</option>
+			<option value="icon: Normaal 3 Koloms">rsi.edx.attribute.frame.normal.3.top</option>
+			<option value="icon: Kader 1 Koloms">rsi.edx.attribute.frame.boxed.1.top</option>
+			<option value="icon: Kader 2 Koloms">rsi.edx.attribute.frame.boxed.2.top</option>
+		</attribute>
+		<childattribute childname="framemenu" name="layout" uiname="rsi.edx.attribute.frame.layout.framemenu"
+			uiicon="">
+			<option value="hidden">rsi.edx.attribute.no</option>
+			<option value="hidden_line">rsi.edx.attribute.framemenu.no.seperator.yes</option>
+			<option value="visible">rsi.edx.attribute.yes</option>
+			<option value="visible_noline">rsi.edx.attribute.framemenu.yes.seperator.no</option>
+			<option value="visible_newline">rsi.edx.attribute.framemenu.yes.seperator.no.lf</option>
+			<option value="visible_newline_noline">rsi.edx.attribute.framemenu.yes.seperator.yes.lf</option>
+		</childattribute>
+		<childattribute childname="framelabel" name="visibilityinframe" uiname="rsi.edx.attribute.frame.layout.framelabel"
+			uiicon="">
+			<option value="hidden">rsi.edx.attribute.no</option>
+			<option value="visible">rsi.edx.attribute.yes</option>
+		</childattribute>
+	</edx:attributelist>
+</edx:template>

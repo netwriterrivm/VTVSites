@@ -1,0 +1,217 @@
+﻿/* Kleurdefinitie
+ * @colordef		#f9e11e; yellow 1 (full)			| 13
+ * @colordef		#fdf6bb; yellow 2 (lighter)
+ * @colordef		#fefbdd; yellow 3 (lightest)
+*/
+/** 
+ * Remove shadow 
+ * @section			Drop shadow border around canvas area
+*/
+body  
+{
+	background: none !important;
+    font-size: 10px !important;
+}
+.container  
+{
+	background: none !important; 
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #fdf6bb;         }
+.header span { background: none !important; }
+.content_wrapper1  
+{
+	background: none !important; 
+	clear: both; 
+}
+.content_wrapper2 {  }
+.content { top: 0 !important; }
+.footer  
+{	display: none;
+	background: none !important; }
+.footer span { background: none !important; }
+
+/* margins and padding verwijderen */ 
+.content_add .mod { margin-right:0 !important; }
+.content { padding-right:0 !important; }
+.content_wrapper2  
+{
+	margin: 0 !important; 
+	border-top: none !important; 
+}
+.header, .nav_bar {padding: 0 !important; }
+.search  
+{
+	position: relative !important;
+	right: 0 !important;
+	top: 0 !important;
+	float: right;
+	padding: 2px 5px !important; 
+	width: 18.5em !important;
+}
+div.search input.submit
+{
+	width: 4.5em !important;
+}
+div.func_links ul li
+{
+	font-weight: bold;
+}
+/* header **************************************/
+.header  
+{	
+	height: 185px;
+	background: url("/vtvsites/images/Acropolis_banner.jpg") no-repeat scroll right top #fdf6bb !important; 
+	text-align: left !important;
+}
+div.branding
+{	width: 240px;
+ 	height: 87px !important;
+	padding-top: 65px!important;
+	text-align: left;
+	position: relative;
+}
+.header .branding img {
+	margin: 0;
+	position: relative;
+	top: 20px;
+	left: 0;
+	
+}
+div.branding, div.nav_bar
+{
+	background-color: #FEFBDD !important;
+	filter: alpha(opacity=80);
+	-moz-opacity: .80;
+	opacity: .80;
+}
+div.nav_bar
+{	
+ 	height: 33px;
+	padding-top: 20px;
+	text-align: left;
+	position: relative;
+}
+div.title_bar
+{	
+	float: left;
+	padding-left: 10px;
+}
+div.title_bar em
+{
+	font-size: 90%;
+	font-style: normal !important;
+	font-family: Tahoma, Verdana;
+}
+div.search
+{	
+ 	margin-top: 3px;
+}
+/* div#hoofd_content h1
+{
+	margin-top: -1em;
+}*/
+div.breadcrumb
+{	
+ 	padding-top: 3px;
+}
+/* left navigation *****************************/
+div#subnavigatie
+{	
+	padding-top: 0;
+	height: 100%;
+	border-right: 1px solid;
+	border-color: #fdf6bb;
+}
+
+/* ul styles */
+div#subnavigatie ul
+{
+	background-color: #ffffff ;
+}
+div#subnavigatie > ul
+{
+	border-bottom: 1px solid;
+	border-color: #fdf6bb;
+}
+
+/* li styles */
+div#subnavigatie ul ul li 
+{	
+	border-top: 1px solid;
+	border-color: #fdf6bb;
+}
+div#subnavigatieX ul ul ul li 
+{	
+	margin-left: 10px;
+}
+div#subnavigatie ul li, div#subnavigatie ul li.open 
+{
+	background-color: #ffffff ;
+}
+div#subnavigatie > ul > li 
+{	
+ 	background: none ;
+ 	margin-left: 0px;
+}
+div#subnavigatie ul li.active 
+{
+	background-color: #fdf6bb ;
+}
+
+
+/* hyperlink styles (a) */
+/*div#subnavigatie ul > li > a
+{	
+ 	padding-top: 2px;
+ 	padding-bottom: 2px;
+}
+*/
+div#subnavigatie ul li a
+{	
+	background: none;
+	padding-left: 0;
+ 	text-indent: 2px;	
+ 	width: auto;
+}
+div#subnavigatie ul ul ul li a
+{	
+ 	text-indent: 15px;	
+}
+div#subnavigatie ul li a:hover {
+	/* background: url("../skin/childs_arrow.png") no-repeat right center #fdf6bb !important;  */
+	background-color: #fdf6bb ;
+} 
+
+/* elements with childs */
+div#subnavigatie ul li.childs > a
+{
+	background-color: #fdf6bb ;
+	background: url("../skin/childs_arrow.png") no-repeat 97% center ; 
+}
+/* div#subnavigatie > ul > li > a
+{	
+	background: none;
+	padding: 0;
+}
+*/
+
+
+/* rechter berm */
+div.content_add
+{	
+	position: absolute;
+	padding-top: 0;
+	height: 100%;
+	top: 0 !important;
+	right: 0 !important;
+	left: auto !important;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	border-color: #fdf6bb;
+}
+
+
+

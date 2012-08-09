@@ -1,0 +1,51 @@
+- list binaries
+- link to webdav
+
+
+
+
+
+
+
+
+
+- zoekbutton in IE8 te groot;
+- treeview: onder active ook gearceerd, is dit wenselijk? Onderliggende items krijgen nu de actieve kleur, dit lijkt niet in overeenstemming met p.31 van de rijksbrede huisstijl.
+- header weergave linkerbern in treeview;
+- iconen middenberm/linkerberm;
+- systeem en menu niet weergeven in linkerberm
+- systeem en menu niet weergeven in kruimelpad
+- systeem en menu niet weergeven in voetregel 
+(- linkerberm kopregels regelen via content placeholder. headers niet uitvoeren in boom linkerberm )
+-> Interne verwijzingen niet weergeven op root level (is al een tabje)
+- paragraaf met  break end rendert geen p tag, dit is fout, moet p tag met bepaalde klasse zijn.
+- lijst binnen een lijst gaat nog fout
+- <!-- todo  <xsl:value-of select="$contentxslttemplatename"/> -->
+- IFRAME links vervangen door jquery oplossing
+- sorteren trefwoorden
+-uitlijning tabellen
+
+
+ContentPane
+<div>
+			<h3>Todo</h3>
+			<p>
+				<strike>inhoudsopgave en paragrafen</strike></p>
+					<p>
+				<strike>Auteurs niet vergeten, ook configureerbaar maken</strike>
+			</p>
+			<p><strike>Printversie documenten indien aangegeveven in config.</strike></p>
+			<p><strike>Linteratuurlijst, configureerbaar</strike></p>
+			<p><strike>begrippenlijst, configureerbaar</strike></p>
+			<p><strike>Voetregel, niet in printversie</strike></p>
+		</div>
+<div>
+			voor documenten en kaarten
+			<p>printheader, configureerbaar</p>
+			<p>Content, auteur substitueren voor printheader (netwriter_list?)</p>
+			<p><strike>Linteratuurlijst, configureerbaar</strike></p>
+			<p><strike>begrippenlijst, configureerbaar</strike></p>
+			<p><strike>Voetregel, niet in printversie</strike></p>
+		</div>
+				<p><strike>Sitestat</strike></p>
+		<p><strike>Linkerberm, rechterbermvulling</strike></p>

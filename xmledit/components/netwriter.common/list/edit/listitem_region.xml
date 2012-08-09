@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- LISTITEM -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="listitem" type="region" uiname="rsi.menu.insert.listitem">
+	<edx:xhtml display="default">
+		
+      <img edxtemplate="widget:icon.default" />
+      <span  edxtemplate="paracont" edxpath="."></span>
+		
+	</edx:xhtml>
+	<edx:navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.menu.insert.listitem" icon="" id="listitem" onclick="" xml_tag="listitem"  enable_check="guiOwnerCanApplyTag(\'listitem\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:insert>
+		<listitem>[list-item]</listitem>
+	</edx:insert>
+</edx:template>

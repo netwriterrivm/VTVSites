@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--FRAME MENU TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="framemenu" type="region" uiname="rsi.edx.frame.menu">
+	<edx:xhtml display="hidden"></edx:xhtml>
+	<edx:xhtml display="hidden_line"></edx:xhtml>
+	<edx:xhtml display="visible">
+		<span edxtemplate="field:flow" edxpath="../frameid" />
+		<span>:</span>
+		<a class="textMenuLabel" edxtemplate="widget:hrefinpage" edxpath="frameid">
+			<span edxtemplate="field:flow" edxpath="../framelabel" />
+		</a>
+	</edx:xhtml>
+	<edx:xhtml display="visible_noline">
+		<span edxtemplate="field:flow" edxpath="../frameid" />
+		<span>:</span>
+		<a class="textMenuLabel" edxtemplate="widget:hrefinpage" edxpath="frameid">
+			<span edxtemplate="field:flow" edxpath="../framelabel" />
+		</a>
+	</edx:xhtml>
+	<edx:xhtml display="visible_newline">
+	
+			
+		<li>
+		<span edxtemplate="field:flow" edxpath="../frameid" />
+		<span>:</span>
+		<a class="textMenuLabel" edxtemplate="widget:hrefinpage" edxpath="frameid">
+			<span edxtemplate="field:flow" edxpath="../framelabel" />
+		</a></li>
+	</edx:xhtml>
+	<edx:xhtml display="visible_newline_noline">
+		<li>
+		<span edxtemplate="field:flow" edxpath="../frameid" />
+		<span>:</span>
+		<a class="textMenuLabel" edxtemplate="widget:hrefinpage" edxpath="frameid">
+			<span edxtemplate="field:flow" edxpath="../framelabel" />
+		</a></li>
+	</edx:xhtml>
+</edx:template>

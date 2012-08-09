@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARAGRAPH TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="media_player" type="region" uiname="rsi.menu.insert.media_player">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<table>
+			<tr><th colspan="2">Afmetingen speler</th></tr>
+			<tr><td>Breedte</td><td><div>Datum: <input edxtemplate="widget:text" type="text" edxpath="@width" size="35"  /></div></td></tr>
+				<tr><td>Hoogte</td><td><div>Datum: <input edxtemplate="widget:text" type="text" edxpath="@height" size="35"  /></div></td></tr>
+		</table>
+		<span edxtemplate="header" edxpath="header"></span>
+		<p edxtemplate="paracont" edxpath="description"></p>
+		<p>Voeg alternatieve afbeelding in/Add picture:</p>
+			<div  edxtemplate="bannerimagecont" edxpath="alt_image"></div>
+		
+		<div edxtemplate="container_media_files" edxpath="media_files"></div>
+		<div edxtemplate="container_transcription" edxpath="transcription"></div>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLlt_ATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="true">
+	<media_player width="600" height="400">
+		<header align="" level="1">[Titel van de video]</header>
+		<description>Beschrijving van de video</description>
+		<alt_image></alt_image>
+		<media_files>
+			<media_file type="mp4">
+				<src></src>
+				<date>[1-4-2011]</date>
+				<length>[3,08 min]</length>
+				<size>[7.84MB]</size>
+			</media_file>
+			<media_file  type="wmf">
+				<src></src>
+				<date>[1-4-2011]</date>
+				<length>[3,08 min]</length>
+				<size>[7.84MB]</size>
+			</media_file>
+			<media_file type="3gp">
+				<src></src>
+				<date>[1-4-2011]</date>
+				<length>[3,08 min]</length>
+				<size>[7.84MB]</size>
+			</media_file>
+			<media_file type="srt">
+				<src></src>
+				<date>[1-4-2011]</date>
+				<length>[3,08 min]</length>
+				<size>[7.84MB]</size>
+			</media_file>
+			<media_file type="flv">
+				<src></src>
+				<date>[1-4-2011]</date>
+				<length>[3,08 min]</length>
+				<size>[7.84MB]</size>
+			</media_file>	
+		</media_files>
+		<transcription>
+			<transcription_item><transcription_scene>[Handeling]</transcription_scene>
+			<transcription_text>[Transcriptie]</transcription_text></transcription_item>
+		</transcription>
+	</media_player>
+	</edx:insert>
+	<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.media_player" icon="/NetWriterGui/images/icons/wmv-ikoon.gif" id="btnInsertMediaPlayer" onclick="" xml_tag="media_player"  enable_check="guiOwnerCanApplyTag(\'media_player\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		<attribute name="layout" uiname="rsi.edx.attribute.paragraph.layout" applytocolumn="false"
+			uiicon="">
+			<option value="paragraph">rsi.edx.attribute.paragraph.default</option>
+			<option value="break_start">rsi.edx.attribute.paragraph.lf.start</option>
+			<option value="break_end">rsi.edx.attribute.paragraph.lf.end</option>
+			<option value="break_none">rsi.edx.attribute.paragraph.nobreak</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

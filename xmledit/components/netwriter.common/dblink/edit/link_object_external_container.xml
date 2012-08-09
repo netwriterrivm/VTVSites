@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_object_external" type="container" uiname="rsi.menu.insert.object_external">
+	<edx:match element="object_external">
+		<span edxtemplate="object_external_writer" edxpath="."></span>
+	</edx:match>
+	
+	<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.object_external" icon="/NetWriterGui/content/xml/icons/object_external_1.gif" id="btnInsertExternal" onclick="" xml_tag="link_object_external"  enable_check="guiOwnerCanApplyTag(\'link_object_external\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectExternal.aspx?WrapXmlTag=link_object_external&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapObjectExternal.aspx?WrapXmlTag=link_object_external&amp;PageMode=4&amp;SelectMode=true&amp;"  item_type="insert"></edx:navigationitem>
+</edx:template>

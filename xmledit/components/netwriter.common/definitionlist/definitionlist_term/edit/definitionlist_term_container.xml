@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARACONT TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="definitionlist_term_container" type="container" uiname="rsi.menu.insert.definitionlist.term">
+		<edx:match element="#text">	<span edxtemplate="definitionlist_term_writer_region"  edxpath="."></span></edx:match>
+	<edx:match element="description">
+		<dl edxtemplate="definitionlist_description_region" edxpath="."></dl>
+	</edx:match>
+</edx:template>

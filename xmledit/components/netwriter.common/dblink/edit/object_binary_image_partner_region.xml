@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template name="object_binary_image_writer_partner" edxnotifyparent="true" xmlns:edx="msnbc-edx-edit-view" type="region"
+	uiname="rsi.edx.logo">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:object_binary_image_partner" edxpath="." valign="top" align="right"
+			border="0" />
+	</edx:xhtml>
+</edx:template>

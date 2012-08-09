@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- OBJECT BINARY PDF -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_object_binary_pdf" type="container"
+	uiname="rsi.menu.insert.pdf">
+	<edx:match element="object_binary">
+		<span edxtemplate="object_binary_pdf_writer" edxpath="."></span>
+	</edx:match>
+	<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.object_binary.map" icon="/NetWriterGui/content/xml/icons/object_binary_image_1.gif" id="btnInsertPdf" onclick="" xml_tag="link_object_binary_pdf"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_pdf\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_pdf&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapObjectBinary.aspx?WrapXmlTag=link_object_binary_pdf&amp;PageMode=4&amp;SelectMode=true&amp;"  item_type="insert"></edx:navigationitem>
+</edx:template>

@@ -1,0 +1,26 @@
+In dit document staan de wijzigingen tov de aangeleverde CSS bestanden, bij een update zullen dze waarschijnlijk weer toegevoegd moeten worden.
+30-07-2009 JB screen.css :focus verwijderd 1.2
+18-08-2009 JB hide_print toegevoegd  print.css 1.2
+18-08-2009 JB content_main: min-height 200px toegevoegd, template.css
+30-09-2009 JB @import url("netwriter.css"); toegevoegd aan screen.css 1.2
+20-11-2009 JB hide_screen toegevoegd aan screen.css 1.2
+20-11-2009 JB hide_screen toegevoegd aan print.css 1.2
+26-11-2009 JB IE7 toevoegingen
+15-03-2009 JB type.css:  .title_bar h1 { font-size: 1em; font-weight: bold; line-height: 1.7; margin-top: 0; margin-bottom: 0;  } , margin bottom toegevoegd
+23-03-2010 JB Form toegevoegd.
+19-05-2010 JB IE6, toegevoegd om probleem rechterberm op te lossen:
+.content_add .nw_information_tekst_container
+{
+	clear:none;
+}
+21-06-2010 WC listen hebben een rare inspring in ie7 toegevoegd aan screen.css: !!!!!!!Is weer verwijderd!!!!!
+.bullets li
+{
+	list-style-position:outside;
+}
+
+29-09-2011 Wilbert Corts In IE9 Valt de zoekbutton onder de tekstbox door een width =17.5em op div.search. Fix is getest in ie8, firefox, ie9, chrome en ie7. Toegevoegd in netwriter.css:
+div.search{width:19.5em; right:3.7em;}
+
+
+

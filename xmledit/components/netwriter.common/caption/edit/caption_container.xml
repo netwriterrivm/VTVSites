@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- CAPTIONCONT TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="captioncont" type="container" uiname="rsi.menu.insert.caption">
+	<edx:match element="#text">
+		<span edxtemplate="field:flow" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_language">
+		<span class="nw_editor_language_change"  edxtemplate="languagecont_with_links"  edxpath="."></span>
+	</edx:match>
+	<edx:match element="super">
+		<span edxtemplate="parasuper" edxpath="."></span>
+	</edx:match>
+	<edx:match element="sub">
+		<span edxtemplate="parasub" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_reference">
+		<span edxtemplate="para_link_reference" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_definition_short">
+		<span edxtemplate="para_link_definition_short" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_definition">
+		<span edxtemplate="para_link_definition" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_class">
+		<span edxtemplate="para_link_object_class" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_document">
+		<span edxtemplate="para_link_object_document" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_map">
+		<span edxtemplate="para_link_object_map" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_url">
+		<span edxtemplate="para_link_object_url" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_binary_pdf">
+		<span edxtemplate="para_link_object_binary_pdf" edxpath="."></span>
+	</edx:match>
+  <edx:match element="link_code_file">
+		<span edxtemplate="para_link_code_file" edxpath="."></span>
+	</edx:match>
+	<edx:match element="bold">
+				<strong class="textEmphasis" edxtemplate="parabold" edxpath="."></strong>
+			</edx:match>
+	 <edx:match element="italic">
+      <em edxtemplate="paraitalic" edxpath="."></em>
+    </edx:match>
+</edx:template>

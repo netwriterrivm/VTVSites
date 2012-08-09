@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- OBJECT MAP -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_object_map" type="container" uiname="rsi.menu.insert.map">
+		<edx:match element="object_map">
+		<span edxtemplate="object_map_writer"  edxoptions="display-link:use_database_label"  edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_binary_icon">
+		<span edxtemplate="region_link_object_binary_icon" edxpath="."></span>
+	</edx:match>
+	<edx:navigationitem enabled="false" shortcut_ctrl="false" shortcut_alt="false"   shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1"  name="rsi.menu.insert.map" icon="/NetWriterGui/content/xml/icons/object_map_1.gif" id="btnInsertObjectMap" onclick="" xml_tag="link_object_map"  enable_check="guiOwnerCanApplyTag(\'link_object_map\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectMap.aspx?WrapXmlTag=link_object_map&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Other/ObjectSelector2.aspx?WrapXmlTag=link_object_map&amp;PageMode=4&amp;ObjectTypeId=5&amp;SelectMode=true" item_type="insert"></edx:navigationitem>
+</edx:template>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+Bij het aanpassen van deze file, denk eraan dat deze backwardscompatible moet zijn. Voeg je dus iets toe dan moet eea gewoon blijven werken.
+De inhoud van deze file wordt gekopieerd naar de sql file van de betreffende site (zie onder map sql)
+<siteconfig organisation_name="RIVM">
+	<!--width_mode: ""|"wide"|"wider"|"liquid"-->
+	<layout width_mode="" content_page_mode="tree"  colorset="yellow" masterpage=""  show_netwriter_classes="true" treemode="tabs" leaf_link_mode="tree"  home_tab_label="Home" home_tab_title="Ga naar de homepage">
+		<logoimage>
+			<object_binary object_binary_id="7538" object_binary_label="Rijksinstituut voor Volksgezondheid en Milieu" object_binary_type_id="11" object_binary_filename="RO_VWS_RIVM_Logo_Homepage.png" object_binary_hash="vrw8Cnnzae2wl6JUAoF3JVyK0hJ0Lw1za5hA9yp+uMWdpMJ2bwLs5JCrssPd5HLe" language_id="1" status_id="2" object_binary_file_size="4.4130000e+003" object_binary_timestamp="2009-07-30T21:32:16" />
+			<!--<object_binary object_binary_id="7540" object_binary_label="NetWriter, the internet is yours to write" object_binary_type_id="11" object_binary_filename="header.png" object_binary_hash="WGAnrHp6dPXUX+3a+rVpJRP2LtzMk01A8xk0WNSjpk8W5V5KFmfqqt99IYfeHb9O" language_id="1" status_id="2" object_binary_file_size="1.6690000e+003" object_binary_timestamp="2009-08-22T20:10:48" />-->
+		</logoimage>
+		<logourl>http://www.rivm.nl</logourl>
+		<css_includes>
+			<!-- LET Op Structure_id attribuut is verplicht voor redactieomgeving-->
+			<code_file code_file_id="541" code_file_name="Handmatige CSS items" code_file="\css\clusters\rivm\kompas\manualitems.css" code_file_type_id="12" generated_all="0" generate_documentation="0" @structure_id="200"/>
+			<css_include href="/ddd/" media="all"></css_include>
+		</css_includes>
+	</layout>
+	<search url="">
+		<leftlink structure_id="46644"></leftlink>
+		<rightlink structure_id="46645"></rightlink>
+	</search>
+	<header show_sitename="true" external_title="NetWriter" slogan="Kennismanagement op niveau">
+	</header>
+	<footers>
+		<!-- <date_short /> Insert Short date Month Year-->
+		<!-- <date_long /> Insert Long date date Day Month Year -->
+		<!-- <version /> Insert Root Version -->
+		<!-- <contact /> Insert Contact information -->
+		<!-- <title /> Titel van de pagina -->
+		<!-- <authors />Insert Autor/editor information -->
+		<!-- <production_timestamp_short /> Insert production date, short -->
+		<!-- <production_timestamp_long /> Insert production date, long -->
+		<footer object_type_id="{22}{23}{53}" check_enabled="false" contact_email=""><div class="refer_footer">Volksgezondheid Toekomst Verkenning, Nationaal Kompas Volksgezondheid. Bilthoven: RIVM, &lt;http://www.nationaalkompas.nl&gt; versie <version />, <date_short /><br /><contact /></div></footer>
+		<footer object_type_id="{2}{5}{6}{8}"  check_enabled="true" contact_email=""><div class="refer_footer"><authors /><title /> In: Volksgezondheid Toekomst Verkenning, Nationaal Kompas Volksgezondheid. Bilthoven: RIVM, &lt;http://www.nationaalkompas.nl&gt; <path />, <production_timestamp_long />.</div></footer>
+		<footer object_type_id="{2}{5}{6}{8}"  check_enabled="false" contact_email=""><div class="copy_right">Nationaal Kompas Volksgezondheid, versie <version/>, <date_short/>
+   <br/>&amp;copy; RIVM, Bilthoven / <a class="textLink" href="http://www.rivm.nl/vtv/object_document/o3571n22312.html#disclaimer">Disclaimer</a>.</div></footer>
+		<site_footer><object_binary object_binary_id="3823" object_binary_label="Voetregel" object_binary_type_id="11" object_binary_filename="RO_footer.png" object_binary_hash="y6sPFNFq/aEywEMYFPXYE8BBfZTk+DviaKyRQ9YeVSRMSvgP2Fsi+VjUNL6o6afW" language_id="1" status_id="2" object_binary_file_size="9.6300000e+002" object_binary_timestamp="2009-12-16T11:20:41" /></site_footer>
+</footers>
+	<contentcontainer show_authors="true" show_authors_class="hide" show_reference_list="false" show_definition_list="true" list_children_content="true" list_children_content_class="hide"></contentcontainer>
+	<sitestat kenmerk=""></sitestat>
+</siteconfig>

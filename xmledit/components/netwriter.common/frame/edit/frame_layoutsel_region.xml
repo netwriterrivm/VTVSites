@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- FRAME LAYOUT SELECTIE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="framelayoutselect" type="region" uiname="rsi.edx.frame.layout">
+	<edx:xhtml display="rsi.edx.verbergen">
+		<div><img edxtemplate="widget:icon.properties" /></div>
+	</edx:xhtml>
+	<edx:xhtml display="rsi.edx.aanpassen">
+ <div><img edxtemplate="widget:icon.details"   class="link_attribute_region_icon" />  </div>
+    <div class="link_attribute_region">
+ 
+      <table class="edxPropertyFrame" border="0" cellpadding="5" cellspacing="0">
+        <tr>
+          <td>Frame label voor weergave in menu: </td>
+          <td>
+            <input edxtemplate="widget:text" type="text" edxpath="framelabel" size="35" style="font-size:12px;font-family:arial" />
+          </td>
+        </tr>
+        <tr>
+          <td>Frame id (voor de interne verwijzing): </td>
+          <td>
+            <input edxtemplate="widget:text" type="text" edxpath="frameid" size="35" style="font-size:12px;font-family:arial" />
+          </td>
+        </tr>
+      </table><div class="link_attribute_region_clear"></div>
+    </div>
+  </edx:xhtml>
+</edx:template>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" edxnotifyparent="true" allow_link_menu="true" restore_editor_label="false" copypasteparent="true" name="object_binary_image_writer"
+	type="region" uiname="rsi.menu.insert.image">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+	</edx:xhtml>
+</edx:template>

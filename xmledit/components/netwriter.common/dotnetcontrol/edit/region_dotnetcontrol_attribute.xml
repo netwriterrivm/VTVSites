@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="dotnetcontrol_attribute" type="region"
+	uiname="rsi.edx.dotnetcontrol.attribute" allow_link_menu="true" >
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<table>
+			<tr>
+				<td colspan="2">Attribute:</td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td>
+					<input edxtemplate="widget:text"  edxpath="@name"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>Value:</td>
+				<td>
+					<input edxtemplate="widget:text"  edxpath="@value"></input>
+				</td>
+			</tr>
+		</table>
+
+	</edx:xhtml>
+	<edx:navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.dotnetcontrol.attribute" icon="" id="dotnetcontrol_attribute" onclick="" xml_tag="dotnetcontrol_attribute"  enable_check="guiOwnerCanApplyTag(\'dotnetcontrol_attribute\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:insert>
+		<dotnetcontrol_attribute name="[name]" value="[value]"></dotnetcontrol_attribute>
+	</edx:insert>
+</edx:template>

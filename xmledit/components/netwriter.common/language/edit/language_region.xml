@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- CAPTION TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="languageregion" type="region" uiname="rsi.menu.insert.caption">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<span edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>
+	<edx:xhtml display="nl">
+		<img edxtemplate="widget:icon.default" />
+		<span lang="nl" edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>
+	<edx:xhtml display="en">
+		<img edxtemplate="widget:icon.default" />
+		<span lang="en" edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>
+	<edx:xhtml display="fr">
+		<img edxtemplate="widget:icon.default" />
+		<span lang="fr" edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>
+	<edx:xhtml display="de">
+		<img edxtemplate="widget:icon.default" />
+		<span lang="de" edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="false">
+		<language value="en"></language>
+	</edx:insert>
+	<edx:attributelist>
+		<attribute name="level" uiname="rsi.edx.attribute.header.layout" applytocolumn="false" uiicon="">
+			<option value="nl">rsi.edx.attribute.language.nl</option>
+			<option value="de">rsi.edx.attribute.language.de</option>
+			<option value="en">rsi.edx.attribute.language.en</option>
+			<option value="fr">rsi.edx.attribute.language.fr</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

@@ -1,0 +1,113 @@
+﻿<%@ Master Language="VB" Inherits="RIVM.NetWriter.NetWriterSiteComponents.masterpage.NetWriterSite"  %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl">
+<head id="Head1"  runat="server">
+    <title>Startpagina Milieuportaal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Language" content="nl-nl" />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="/NetWriterSite/css/netwriter/generic.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/NetWriterSite/systeem/css/thema.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/NetWriterSite/systeem/css/markup.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/NetWriterSite/systeem/css/layout.css" id="screenStyles" />
+    <link rel="stylesheet" type="text/css" media="all" href="/NetWriterSite/systeem/css/ezips_style.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/NetWriterSite/systeem/css/print.css" id="printStyles" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/NetWriterSite/systeem/css/NetWriterContent.css" id="NetWriterStyles" />
+    <link rel="stylesheet" type="text/css" media="all" href="/NetWriterSite/systeem/css/interventieTabel.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/NetWriterSite/systeem/css/ISISWEB.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/NetWriterGui/css/NWJSMenuPopup.css" />
+    
+
+    <!--Javascripts-->    
+    <script type="text/javascript" src="/NetWriterGui/javascript/include.js"></script>
+     <script src="/NetWriterGui/javascript/include_netwriter_ui.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/NetWriterGui/javascript/GetResource.aspx"></script>
+    <script type="text/javascript" src="/NetWriterSite/systeem/js/library.js"></script>
+    <script type="text/javascript" src="/NetWriterSite/systeem/js/sitestat.js"></script>
+    <script type="text/javascript" src="/NetWriterSite/systeem/js/uo_popup.js"></script>
+    
+    <!-- context links --> 
+    <link rel="icon" href="/NetWriterSite/images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="/NetWriterSite/images/favicon.ico" type="image/x-icon" />
+<asp:ContentPlaceHolder ID="CPHHeader" runat="Server"></asp:ContentPlaceHolder>
+</head>
+<!--htdig_noindex-->
+<body class="addQueryToClassName <% Response.Write(ThemeCSS & " ") %>">
+    <form id="form1" runat="server">
+        <div id="canvas">
+            <div id="header">
+                <a id="logo" href="http://www.rivm.nl/"><img alt="RIVM" src="/NetWriterSite/design/header_logo.png" /></a>
+                <div id="slogan">
+                    <asp:ContentPlaceHolder ID="CPHSiteTitle" runat="Server"></asp:ContentPlaceHolder>
+                </div>
+                <div id="sitetabs">
+                    <asp:ContentPlaceHolder runat="server" ID="CPHSiteTabs"></asp:ContentPlaceHolder>
+                </div>
+                <asp:ContentPlaceHolder runat="server" ID="CPHCrumbtrail"></asp:ContentPlaceHolder> 
+                <h1 id="SubSiteTitle"><asp:ContentPlaceHolder runat="server" ID="CPHSubSiteTitle"></asp:ContentPlaceHolder></h1>
+            </div>
+            <!--/htdig_noindex-->
+            <div id="body">
+                <div id="content">
+                    <div class="column">
+                        <!--htdig_noindex-->
+                        <!--<ul id="path">
+                            <li><span>Home</span></li>
+                        </ul>-->
+                        
+                        <!--/htdig_noindex-->
+                        <asp:ContentPlaceHolder runat="server" ID="CPHContent"></asp:ContentPlaceHolder>
+                        <asp:Panel ID="pnlLogin" Visible="false" runat="server">
+                            <fieldset class="LoginPane">
+					            <legend><span>Login</span></legend>
+					            <asp:Label CssClass="lblFloatLeft" AssociatedControlID="txtLogin" ID="lblUsername" runat="server" Text="Gebruikersnaam:"></asp:Label>
+					            <asp:textbox CssClass="lblFloatRight" id="txtLogin" runat="server"></asp:textbox>
+					            <asp:Label CssClass="lblFloatLeft"  AssociatedControlID="txtPassword" ID="lblPassword" runat="server" Text="Wachtwoord:"></asp:Label>
+					            <asp:textbox CssClass="lblFloatRight" id="txtPassword" runat="server"  TextMode="Password"></asp:textbox>
+					            <asp:button  CssClass="logonIptSubmit" id="btnLogin" runat="server" Text="Inloggen" ></asp:button>
+					        </fieldset>
+                        </asp:Panel>
+                        <asp:Panel ID="pnlNoAccess" Visible="false" runat="server">U heeft geen toegang tot dit deel van de website.</asp:Panel>
+                    </div>
+                </div>
+                <!--htdig_noindex-->
+                <div id="related">
+                    <div class="column">
+                        <asp:ContentPlaceHolder runat="server" ID="CPHRelated"></asp:ContentPlaceHolder>
+                        <!--/htdig_noindex-->
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder runat="server" ID="CPHExtra"></asp:ContentPlaceHolder>
+                <!--htdig_noindex-->
+            </div>
+            <div id="mainNavigation">
+                <div class="column">
+                    <asp:ContentPlaceHolder ID="CPHTreeView" runat="Server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="footer">
+                <asp:ContentPlaceHolder ID="CPHSiteFooter" runat="Server"></asp:ContentPlaceHolder>
+            </div>
+            <asp:ContentPlaceHolder ID="CPHMetaNavigation" runat="Server"></asp:ContentPlaceHolder>
+            <fieldset id="search">
+                <label for="frmSearchText">Trefwoord(en)</label>
+                <asp:TextBox cssclass="text emptyOnFocus match_Trefwoord" ID="txtFind" runat="server"></asp:TextBox>
+                <button type="submit" onclick="javascript:document.forms.aspnetForm.submit();return false;" name="frmSearchButton" id="frmSearchButton">
+                    <span><span>Zoek</span></span>
+                </button>                   
+                <br />
+            </fieldset>
+            <p class="print"><a href="javascript:window.print();" class="openAsPrintable">Afdrukken</a></p>             
+        </div>
+    <asp:ContentPlaceHolder runat="server"  ID="CPHNWPageMenu"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="CPHPrintversion" runat="Server" Visible="false"></asp:ContentPlaceHolder>
+    </form>
+        
+    <!-- inline javascript -->
+    <script type="text/javascript" src="/NetWriterSite/systeem/js/inline.js"></script>
+
+     
+</body>
+</html>

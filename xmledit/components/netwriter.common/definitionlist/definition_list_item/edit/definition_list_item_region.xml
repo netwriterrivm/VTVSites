@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARAGRAPH TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="definition_list_item" type="region" uiname="rsi.menu.insert.definitionlist.definitionlistitem">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<dt edxtemplate="field:flow" edxpath="definition_list_term" ></dt>
+		<span edxtemplate="definitionlist_descriptioncollection" edxpath="descriptioncollection"></span>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.menu.insert.definitionlist.definitionlistitem" icon="" id="definition_list_item" onclick="" xml_tag="definition_list_item"  enable_check="guiOwnerCanApplyTag(\'definition_list_item\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:insert allow_clipboard="true" allow_node_name_change="true">
+		   <definition_list_item>
+		<definition_list_term>[Definition/Term]</definition_list_term>
+		<descriptioncollection><definition_list_description>[Description/Omschrijving]</definition_list_description></descriptioncollection></definition_list_item>
+
+	</edx:insert>
+
+</edx:template>

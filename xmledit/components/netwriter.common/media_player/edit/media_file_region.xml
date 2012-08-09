@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARAGRAPH TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="media_file" type="region" uiname="rsi.menu.insert.media_file">
+	<edx:xhtml display="mp4">
+		<img edxtemplate="widget:icon.default" />
+		<h3>Apple Quicktime bestand (mp4 Video)</h3>
+		<h4>Video bestand</h4>
+		<div edxtemplate="bannerimagecont" edxpath="src"></div>
+		<h4>Bestandsinformatie</h4>
+		<div>Datum: <input edxtemplate="widget:text" type="text" edxpath="date" size="35"  /></div>
+		<div>Lengte: <input edxtemplate="widget:text" type="text" edxpath="length" size="35"  /></div>
+		<div>Bestandsgrootte: <input edxtemplate="widget:text" type="text" edxpath="size" size="35"  /></div>
+	</edx:xhtml>
+	<edx:xhtml display="wmf">
+		<img edxtemplate="widget:icon.default" />
+		<h3>Windows Media Player(wmf Video)</h3>
+		<h4>Video bestand</h4>
+		<div edxtemplate="bannerimagecont" edxpath="src"></div>
+		<h4>Bestandsinformatie</h4>
+		<div>Datum: <input edxtemplate="widget:text" type="text" edxpath="date" size="35"  /></div>
+		<div>Lengte: <input edxtemplate="widget:text" type="text" edxpath="length" size="35"  /></div>
+		<div>Bestandsgrootte: <input edxtemplate="widget:text" type="text" edxpath="size" size="35"  /></div>
+	</edx:xhtml>
+	<edx:xhtml display="3gp">
+		<img edxtemplate="widget:icon.default" />
+		<h3>Video mobiel gebruik (3gp Video)</h3>
+		<h4>Video bestand</h4>
+		<div edxtemplate="bannerimagecont" edxpath="src"></div>
+		<h4>Bestandsinformatie</h4>
+		<div>Datum: <input edxtemplate="widget:text" type="text" edxpath="date" size="35"  /></div>
+		<div>Lengte: <input edxtemplate="widget:text" type="text" edxpath="length" size="35"  /></div>
+		<div>Bestandsgrootte: <input edxtemplate="widget:text" type="text" edxpath="size" size="35"  /></div>
+	</edx:xhtml>
+	<edx:xhtml display="srt">
+		<img edxtemplate="widget:icon.default" />
+		<h3>Ondertitelingsbestand (srt Ondertiteling)</h3>
+		<h4>Ondertitelingsbestand</h4>
+		<div edxtemplate="bannerimagecont" edxpath="src"></div>
+		<h4>Bestandsinformatie</h4>
+		<div>Datum: <input edxtemplate="widget:text" type="text" edxpath="date" size="35"  /></div>
+		<div>Lengte: <input edxtemplate="widget:text" type="text" edxpath="length" size="35"  /></div>
+		<div>Bestandsgrootte: <input edxtemplate="widget:text" type="text" edxpath="size" size="35"  /></div>
+	</edx:xhtml>
+		<edx:xhtml display="flv">
+		<img edxtemplate="widget:icon.default" />
+		<h3>Flash video file</h3>
+		<h4>Flash</h4>
+		<div edxtemplate="bannerimagecont" edxpath="src"></div>
+		<h4>Bestandsinformatie</h4>
+		<div>Datum: <input edxtemplate="widget:text" type="text" edxpath="date" size="35"  /></div>
+		<div>Lengte: <input edxtemplate="widget:text" type="text" edxpath="length" size="35"  /></div>
+		<div>Bestandsgrootte: <input edxtemplate="widget:text" type="text" edxpath="size" size="35"  /></div>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="true">
+		<media_file type="mp4">
+				<src></src>
+				<date>[1-4-2011]</date>
+				<length>[3,08 min]</length>
+				<size>[7.84MB]</size>
+			</media_file>
+	</edx:insert>
+	<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.media_file" icon="/NetWriterGui/images/icons/wmv-ikoon.gif" id="btnInsertMediaFile" onclick="" xml_tag="media_file"  enable_check="guiOwnerCanApplyTag(\'media_file\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		<attribute name="type" uiname="rsi.edx.attribute.paragraph.layout" applytocolumn="false"
+			uiicon="">
+			<option value="mp4">rsi.edx.attribute.media_file.type.mp4</option>
+			<option value="mp3">rsi.edx.attribute.media_file.type.mp3</option>
+			<option value="wmf">rsi.edx.attribute.media_file.type.wmf</option>
+			<option value="3gp">rsi.edx.attribute.media_file.type.3gp</option>
+			<option value="srt">rsi.edx.attribute.media_file.type.srt</option>
+				<option value="flv">rsi.edx.attribute.media_file.type.flv</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

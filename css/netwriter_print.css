@@ -1,0 +1,42 @@
+﻿/** 
+ * print.css specifiek voor netwriter brede styles
+ *
+ */
+.nw_information_tekst_container, .textDocumentHeader, .textDocumentBody
+{
+	clear: both !important;
+}
+.back_to_top
+{
+	display:none;
+}
+.image_default, .nw_first_image, .nw_first, .nw_second_image, .nw_second, .nw_twocolumn,  .nw_threecolumn, .nw_fourcolumn,.nw_fivecolumn
+{
+	clear:both;
+	float: none;
+	
+	
+}
+.nw_twocolumn,  .nw_threecolumn, .nw_fourcolumn,.nw_fivecolumn
+{
+	width:100%;
+	display:block;
+}
+.nw_uo_popup_container,.nw_uo_popup_container, .nw_text_popup_container
+{
+	display:none!important;
+	visibility:hidden;
+	width:0px;
+	height:0px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	padding:0px;
+	margin:0px;
+}
+
+#clickAlert
+{
+	display:none;
+	}
+	ul, ol { list-style-position: outside !important; }

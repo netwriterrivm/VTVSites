@@ -1,0 +1,149 @@
+﻿<%@ Master Language="VB" Inherits="RIVM.NetWriter.SiteLogic.masterpage_NetWriterSite" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Titel pagina</title>
+	
+	<!--<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="distribution" content="global" />
+	<meta name="robots" content="index, follow" />
+	<meta name="language" content="nl" />	-->
+	<!-- Start metagegevens-->
+	<asp:ContentPlaceHolder id="CPHHeader" runat="Server"></asp:ContentPlaceHolder>
+	<!-- Einde metagegevens-->
+	<link rel="stylesheet" href="/Rijksbreed/css/screen.css" type="text/css" media="screen" />
+
+	<!--[if lte IE 7]><link rel="stylesheet" href="/Rijksbreed/css/ie/ie.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" href="/Rijksbreed/css/ie/ie6.css" type="text/css" media="screen" /><![endif]-->	
+	<link rel="stylesheet" href="/Rijksbreed/css/print.css" type="text/css" media="print" />
+	<link rel="shortcut icon" href="/Rijksbreed/favicon.ico" type="image/x-icon" />
+	 
+</head>
+<body class="<% Response.Write(ThemeCSS & " ") %>" id="content">
+	<form id="form1" runat="server">
+	<div class="container dark_brown">
+		
+		<ul class="skiplink">
+			<li>Ga direct naar: <a href="#hoofd_content" title="Direct naar de inhoud">inhoud</a>, <a href="#subnavigatie" title="Direct naar de subnavigatie">subnavigatie</a>, <a href="#service_menu" title="Direct naar het service menu">service menu</a>, <a href="#zoeken" title="Direct naar zoeken">zoeken</a></li>
+
+		</ul>
+		
+		<div class="header">
+			<span><asp:ContentPlaceHolder id="CPHSiteTitle" runat="Server"></asp:ContentPlaceHolder>sitetitle <asp:ContentPlaceHolder runat="server" id="CPHSubSiteTitle"></asp:ContentPlaceHolder>subtitle</span>			
+
+			<div class="branding"><a href="#" title="Ga naar Ministerie van Algemenen Zaken homepagina"><img src="/Rijksbreed/logos/RO_AZ.png" alt="Ministerie van Algemenen Zaken" height="87" width="500" /></a></div>
+			
+			<div class="nav_bar">
+                <!--Start mainnav code-->
+                <asp:ContentPlaceHolder id="CPHTreeView" runat="Server"></asp:ContentPlaceHolder>
+                <!--End mainnav code-->				
+				<div class="search">					
+					<form method="post" action="#" id="zoeken">
+
+						<fieldset>
+							<legend>Zoeken</legend>											
+							<dl>
+								<dt><label for="zoek_trefwoord">Zoek trefwoord</label></dt>
+								<dd><input type="text" class="text" name="zoek_trefwoord" id="zoek_trefwoord" /></dd>																
+								<dd><input type="submit" name="submit" value="zoek" class="submit" /></dd>								
+							</dl>
+							<ul>
+								<li class="advanced_search"><a href="#" title="Uitgebreid zoeken">Uitgebreid zoeken</a></li>
+
+								<li class="sidemap"><a href="#" title="Sitemap">Sitemap</a></li>						
+							</ul>							
+						</fieldset>
+					</form>
+					<!-- Start netwriterzoekgeval-->
+					<fieldset id="search">
+                        <label for="frmSearchText">Trefwoord(en)</label>
+                        <asp:TextBox cssclass="text emptyOnFocus match_Trefwoord" id="txtFind" runat="server"></asp:TextBox>
+                        <button type="submit" onclick="javascript:document.forms.aspnetForm.submit();return false;" name="frmSearchButton" id="frmSearchButton">
+                            <span><span>Zoek</span></span>
+                        </button>                   
+                        <br />
+                    </fieldset>
+					<!-- End netwriterzoekgeval-->
+				</div>				
+
+			</div>		
+		</div>
+
+		<div class="c1"><div class="c2">
+			
+			<div class="content">
+				
+			<!-- START : CONTENT -->	
+	             <!-- Start: Wordt invisible gezet indien al ingelogd-->
+                 <asp:Panel id="pnlLogin" Visible="false" runat="server">
+                    <fieldset class="LoginPane">
+			            <legend><span>Login</span></legend>
+			            <asp:Label CssClass="lblFloatLeft" AssociatedControlid="txtLogin" id="lblUsername" runat="server" Text="Gebruikersnaam:"></asp:Label>
+			            <asp:textbox CssClass="lblFloatRight" id="txtLogin" runat="server"></asp:textbox>
+			            <asp:Label CssClass="lblFloatLeft" AssociatedControlid="txtPassword" id="lblPassword" runat="server" Text="Wachtwoord:"></asp:Label>
+			            <asp:textbox CssClass="lblFloatRight" id="txtPassword" runat="server"  TextMode="Password"></asp:textbox>
+			            <asp:button  CssClass="logonIptSubmit" id="btnLogin" runat="server" Text="Inloggen"></asp:button>
+			        </fieldset>
+                </asp:Panel>
+                <!-- Einde: Wordt invis gezet indien al ingelogd-->
+                        		
+				<div class="breadcrumb">
+                    <!-- Start Kruimelpad -->
+                    <asp:ContentPlaceHolder runat="server" id="CPHCrumbtrail"></asp:ContentPlaceHolder>
+                    <!-- Einde Kruimelpad -->
+				</div>
+			
+				<div class="content_main" id="hoofd_content">
+					<!-- Start main content-->
+			        <asp:ContentPlaceHolder runat="server" id="CPHContent"></asp:ContentPlaceHolder>
+			        <!-- End main content-->
+				</div>				
+
+				<div class="content_add">
+                    <!--Start extra content 21-->
+					<asp:ContentPlaceHolder runat="server" id="CPHRelated"></asp:ContentPlaceHolder>	
+					<!--End extra content 1-->
+					<!--Start extra content 2-->
+					<asp:ContentPlaceHolder runat="server" id="CPHExtra"></asp:ContentPlaceHolder>
+					<!--End extra content 2-->
+				</div>				
+				
+				<div class="nav_sub" id="subnavigatie">
+					
+					<h3>Subnavigatie</h3>
+					<!--Start sitetabs-->
+					<asp:ContentPlaceHolder runat="server" id="CPHSiteTabs"></asp:ContentPlaceHolder>
+					<!--End sitetabs-->
+				</div>
+				
+			<!-- END : CONTENT -->									
+			
+			</div>
+		
+		</div></div>
+		
+		<div class="func_links" id="service_menu">			
+			<!--Start servicemenu-->
+            <asp:ContentPlaceHolder id="CPHMetaNavigation" runat="Server"></asp:ContentPlaceHolder>
+            <!--End servicemenu-->
+		</div>
+
+		<div class="footer">
+		<!-- Start Footer -->
+			<asp:ContentPlaceHolder id="CPHSiteFooter" runat="Server"></asp:ContentPlaceHolder>
+			<span></span>			
+        <!-- End Footer -->
+		</div>
+		
+	</div>
+	</form>
+    <!--Start netwriter editor menu -->
+    <asp:ContentPlaceHolder runat="server" id="CPHNWPageMenu"></asp:ContentPlaceHolder>
+    <!--End netwriter editor menu -->
+    <!-- Start javascripts NetWriter CMS -->
+    <script type="text/javascript" src="/NetWriterSite/systeem/js/inline.js"></script>
+    <!-- End javascripts  NetWriter CMS -->
+</body>
+</html>

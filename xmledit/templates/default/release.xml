@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<editviews xmlns:edx="msnbc-edx-edit-view" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  xmlns:xi="http://www.w3.org/2003/XInclude">
+  <edx:view uiname="Edit">
+    <edx:template name="root" type="region" uiname="Kompas Document">
+      <edx:xhtml display="default">
+        <xsl:if test="count(/kompasdocument/documentheader/child::node())>0">
+          <div class="textDocumentHeader" edxtemplate="documentheadercontainer" edxpath="/kompasdocument/documentheader"></div>
+        </xsl:if>
+        <div class="textDocumentBody" edxtemplate="body" edxpath="/kompasdocument/body"></div>
+
+      </edx:xhtml>
+    </edx:template>
+
+    <!-- DOCUMENTTITLES CONTAINER -->
+    <edx:template name="documentheadercontainer" type="container" uiname="Body">
+      <edx:match element="documenttitle">
+        <span edxtemplate="documenttitle" edxpath="." edxoptions="display-link:layout" />
+      </edx:match>
+      <edx:match element="link_object_binary_image_partner">
+        <xsl:apply-templates select="." mode="link_object_binary_image"></xsl:apply-templates>
+      </edx:match>
+    </edx:template>
+
+
+
+    <!-- BODY TEMPLATE -->
+    <edx:template xsltaddxlinkselector="true" name="body" type="region" uiname="Body">
+      <edx:xhtml display="Normaal">
+        <xsl:variable name="id">
+          <xsl:text>al_</xsl:text>
+          <xsl:value-of select="@XlinkId"></xsl:value-of>
+        </xsl:variable>
+        <span id="{$id}" class="outputModeHeaderPrint authorlistprintversion">
+          <xsl:comment>DNC</xsl:comment>
+        </span>
+        <xsl:variable name="childcount" select="count(descendant::framemenu[@layout='visible_newline' or @layout='visible_newline_noline'])"></xsl:variable>
+        <xsl:choose>
+          <xsl:when test="$childcount>0">
+            <ul class="nw_linklist">
+              <xsl:apply-templates mode="framemenu" select="descendant::framemenu"></xsl:apply-templates>
+            </ul>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates mode="framemenu" select="descendant::framemenu"></xsl:apply-templates>
+          </xsl:otherwise>
+        </xsl:choose>
+        <span edxtemplate="bodycont" edxpath="."></span>
+      </edx:xhtml>
+    </edx:template>
+    <!-- LINKLIST CONTENT CONTAINER -->
+    <edx:template name="linklist" type="container" uiname="Body">
+      <edx:match element="frame">
+        <span edxtemplate="framemenu" edxpath="framemenu" edxoptions="display-link:layout" />
+      </edx:match>
+    </edx:template>
+    <!-- BODY CONTENT CONTAINER -->
+    <edx:template name="bodycont" type="container" uiname="Body">
+      <edx:match element="frame">
+        <span edxtemplate="frame" edxpath="." edxoptions="display-link:layout" />
+      </edx:match>
+
+    </edx:template>
+
+    <!-- FOOTER REGION -->
+    <edx:template name="footer" type="region" uiname="rsi.edx.document.footer">
+      <edx:xhtml display="visible">
+        <span edxtemplate="widget:footer" edxpath="." />
+        <span edxtemplate="linklist" edxpath="body" ></span>
+      </edx:xhtml>
+      <edx:xhtml display="hidden">
+        <span edxtemplate="widget:footer" edxpath="." />
+        <span edxtemplate="linklist" edxpath="body" ></span>
+      </edx:xhtml>
+    </edx:template>
+    <!-- FOOTERLAYOUT REGION -->
+    <edx:template name="footerlayoutsel" type="region" uiname="rsi.edx.document.footer.properties">
+      <edx:xhtml display="Verbergen">
+        <img edxtemplate="widget:icon.properties" />
+        <!-- of : 
+				<table class="edxPropertyFrame" border="0" cellpadding="1" cellspacing="0">
+					<tr>
+						<td><img edxtemplate="widget:icon.properties" /></td>
+						<td>Voetregel</td>
+						<td></td>
+					</tr>
+				</table>			
+-->
+      </edx:xhtml>
+      <edx:xhtml display="Aanpassen">
+        <img edxtemplate="widget:icon.details" />
+        <table class="edxPropertyFrame" border="0" cellpadding="5" cellspacing="0">
+          <tr>
+            <td>Voetregel:</td>
+            <td>
+              <select edxtemplate="widget:select" edxpath="@visibility" style="font-size:11px;font-family:arial">
+                <option value="visible">Voetregel tonen</option>
+                <option value="hidden">Geen voetregel</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Personen: </td>
+            <td>
+              <select edxtemplate="widget:select" edxpath="@footerpersons" style="font-size:11px;font-family:arial">
+                <option value="visible">Auteurs/redacteuren tonen</option>
+                <option value="hidden">Geen personen tonen</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </edx:xhtml>
+    </edx:template>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\documenttitle\release\documenttitle_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\documenttitle\release\documenttitle_region.xml"/>
+    <!-- INCLUDE VOOR FRAME INDELING DOCUMENT -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\frame\release\frame_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\frame\release\frame_line_region.xml"/>
+    <!-- Include voor framelabel -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\frame\framelabel\release\framelabel_region.xml"/>
+    <!-- Include voor framemenu -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\frame\framemenu\release\framemenu_region.xml"/>
+
+    <!-- Include voor kolommen frame -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\frame\column\release\column_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\frame\column\release\column_container.xml"/>
+    <!-- Include voor groeperingen binnen een kolom -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\subgroup\release\subgroup_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\subgroup\release\subgroup_container.xml"/>
+    <!-- Include voor empty elementen -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\empty\release\empty_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\empty\release\empty_body_region.xml"/>
+
+
+
+
+    <!-- Include voor paragraph elementen -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\paragraph\release\paragraph_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\paragraph\release\paragraph_container.xml"/>
+    <!-- Include voor caption elementen -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\caption\release\caption_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\caption\release\caption_container.xml"/>
+
+    <!-- Include voor header tempates-->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\header\release\header_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\header\release\header_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\header\release\header_container_links.xml"/>
+    <!-- Include voor topicallead tempates-->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\topicallead\release\topicallead_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\topicallead\release\topicallead_container.xml"/>
+    <!-- bold (=italic), superscript en subscript -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\basic_formatting\release\bold_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\basic_formatting\release\super_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\basic_formatting\release\sub_container.xml"/>
+    <!-- includes tbv database linking -->
+    <!-- includes refence -->
+    <!-- includes code_file -->
+    <xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_code_file_container.xml"/>
+    <xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\code_file_region.xml"/>
+    <!-- REFERENCE -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_reference_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\reference_region.xml"/>
+    <!-- includes DEFINITION -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_definition_short_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\definition_short_region.xml"/>
+    <!-- includes DEFINITION -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_definition_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\definition_region.xml"/>
+    <!-- includes DEFINITION -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_class_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_class_region.xml"/>
+    <!-- includes link naar icoontje bij links -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_binary_icon_region.xml"/>
+    <!-- includes object_document -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_document_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_document_region.xml"/>
+    <!-- includes object_map -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_map_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_map_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_map_swf_region.xml"/>
+    <!-- includes object_url -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_url_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_url_region.xml"/>
+    <!-- includes object_binary_icon partner logo-->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_binary_image_partner_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_binary_image_partner_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_binary_image_partner_region.xml"/>
+    <!-- includes object_binary_image -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_binary_image_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_binary_image_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_binary_image_region.xml"/>
+    <!-- includes link_content, om fragmenten te includen -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_content_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_content_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\content_region.xml"/>
+    <!-- includes link_content, om wen user controls te includen -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_wuc_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_wuc_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_wuc_region.xml"/>
+
+
+
+
+    <!-- includes externe objecten -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_external_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_external_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_external_region.xml"/>
+    <!-- includes object_binary_pdf -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\link_object_binary_pdf_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\release\object_binary_pdf_region.xml"/>
+    <!-- Include voor list tempates-->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\list\release\list_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\list\release\list_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\list\release\listitem_region.xml"/>
+    <!-- Includes voor Tabellen -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\release\datatable_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\release\datatable_body_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\release\datatable_container.xml"/>
+    <!-- Includes voor Tabel rijen -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\datarow\release\datarow_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\datarow\release\datarow_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\datarow\release\datarow_container_th.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\datarow\release\datarow_container_throw.xml"/>
+
+    <!-- Includes voor Tabel cellen -->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\datacell\release\datacell_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\datatable\datacell\release\datacell_container.xml"/>
+    <!-- includes voor banner/teasers-->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\banner\release\banner_region.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\banner\release\banner_container.xml"/>
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\banner\release\banner_image_container.xml"/>
+    <!-- includes voor box element-->
+    <xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\box\release\box_region.xml"/>
+
+
+
+
+
+
+
+
+  </edx:view>
+</editviews>

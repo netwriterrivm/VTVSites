@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--COLUMN TEMPLATE-->
+<edx:template  xmlns:edx="msnbc-edx-edit-view" name="column" type="region" uiname="rsi.edx.column">
+	<edx:xhtml display="Normaal">
+		<span edxtemplate="columncont" edxpath="." />
+	</edx:xhtml>
+</edx:template>

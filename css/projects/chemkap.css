@@ -1,0 +1,151 @@
+﻿
+	 /*gekopieerd uit dobolav markup.css en aangepast, is de opmaak van de reportviewer toolbar*/
+
+/*resetten*/
+div.rpvDobolav table,
+div.rpvDobolav tr,
+div.rpvDobolav td,
+div.rpvDobolav div
+
+{
+	background-color:transparent!important;
+	margin:0!important;
+	padding:0!important;
+	border:none!important;
+	border-spacing:0;
+	border-collapse:collapse;
+	line-height:1em;
+	width:auto;
+}
+div.rpvDobolav td
+{
+	vertical-align:middle;
+	padding:2px!important;
+}
+div.rpvDobolav select
+{
+	background-color:#fff!important;
+	margin:2px 5px!important;
+	padding:0!important;
+}
+/* firstchild kan niet ie6 , hangt maar 1 div onder gelukkig */
+
+div.rpvDobolav div 
+{
+	/*height:22px!important;*/
+	background-color:#ece9d8!important;
+}
+/*firstchild kan niet ie6*/
+div.rpvDobolav div div 
+
+{
+	/*height:22px!important;	*/
+}
+div.rpvDobolav div div table
+{
+	/*display:none;*/
+}
+div.rpvDobolav div div div table
+{
+	height:22px!important;
+	display:inherit;
+}
+div.rpvDobolav div div div table tr td
+{
+	height:22px!important;
+	/*background-color:Green;*/
+}
+	 
+	 
+	 #zoeken
+	 {
+	 	display:none;
+	 }
+	 .report_control label
+	 {
+	 	width:8em;
+	 	display:block;
+	 	float:left;
+	 }
+	 .report_control select, .report_control input
+	 {
+	 	width:20em;
+	 	font-size:90%;
+	 	display:block;
+	 	float:left;
+	 }
+	 
+	 .report_control_row
+	 {
+	 	clear:both;
+	 }
+	 .report_control
+	 {
+	 	float:left;
+	 	margin-left:4px;
+	 }
+	 .rpvDobolav
+	 {
+	 	clear:both;
+	 	width:900px !important;
+	 	height:500px !important;
+	 }
+	 
+	 /* einde blok chemkap*/
+	 
+.btn
+{
+	background-color:#E4F0C8;
+	color:#464646;
+	font-weight:bold;
+	border-collapse:collapse;
+    border:1px solid #464646;
+    font-family:Verdana,Arial,sans-serif;
+    padding:1px 4px 2px;
+    vertical-align:top;
+    width:auto;
+}
+.report_control_row input,
+.report_control_row select
+{
+    border:1px solid #6B6760;
+    margin-top:4px;
+}
+
+.btnOverview,
+.logonIptSubmit,
+#ctl00_CPHContent_frmDoboReport1_btnDetails,
+#ctl00_CPHContent_frmDoboReport1_btnChart,
+#ctl00_CPHContent_frmDoboReport1_btnReset
+{
+	float:left;	
+	display:block;
+	padding:2px 4px 3px 4px;
+	text-align:center;
+	color:#000 !important;	
+	background-color:#E4F0C8;
+	border:1px solid #000 !important;
+	font-family:Verdana,Arial,sans-serif;
+	font-weight:bold;
+	width:125px;
+	margin-left:4px;
+	margin-top:4px;
+	margin-bottom:10px;
+	text-decoration:none;
+}
+.LoginPane input
+{
+	color:#000 !important;	
+	border:1px solid #000 !important;
+	margin-top:4px;
+}
+#ctl00_pnlNoAccess
+{
+	clear:both;
+	padding-top:5px;
+}
+ul.toolbox 
+{
+	margin-top:5px;
+}
+

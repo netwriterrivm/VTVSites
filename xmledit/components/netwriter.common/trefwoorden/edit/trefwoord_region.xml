@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- HEADER TEMPLATE -->
+<!-- HEADER TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="trefwoord" type="region" uiname="rsi.edx.keywords">
+	<edx:xhtml display="default">
+	<img edxtemplate="widget:icon.default" />
+		<span  edxtemplate="trefwoord_container" edxpath="." ></span>
+	</edx:xhtml>
+	<edx:navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.keyword" icon="" id="trefwoord" onclick="" xml_tag="trefwoord"  enable_check="guiOwnerCanApplyTag(\'trefwoord\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:insert allow_clipboard="true" allow_node_name_change="false">
+		<trefwoord>[Trefwoord/Keyword]</trefwoord>
+	</edx:insert>
+	<!-- INSERTION TEMPLATE -->
+</edx:template>

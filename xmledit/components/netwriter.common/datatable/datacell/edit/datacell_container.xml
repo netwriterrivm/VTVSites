@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- DATACELL CONTAINER -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="datacellcont" type="container" uiname="rsi.menu.table.insertcell">
+	<edx:match element="paragraph">
+		<div edxtemplate="paragraph" edxpath="." edxoptions="display-link:layout;enter-action:checkshift;allow-split:true"></div>
+	</edx:match>
+	<edx:match element="list">
+		<div edxtemplate="list" edxpath="." edxoptions="display-link:layout"></div>
+	</edx:match>
+	<edx:match element="header">
+		<div edxtemplate="header" edxpath="." edxoptions="display-link:level"></div>
+	</edx:match>
+	<edx:match element="link_object_binary_image">
+		<div edxtemplate="region_link_object_binary_image" edxpath="."></div>
+	</edx:match>
+	<!-- EMPTY - note "magic" name for the situation when the container is empty -->
+	<edx:match element="#empty">
+		<div edxtemplate="emptycell" edxpath="."></div>
+	</edx:match>
+</edx:template>

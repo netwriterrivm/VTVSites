@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- CAPTIONCONT TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="languagecont" type="container" uiname="rsi.menu.accessibility.language">
+	<edx:match element="#text">
+		<span edxtemplate="field:flow" edxpath="."></span>
+	</edx:match>
+	<edx:match element="language">
+		<span edxtemplate="languageregion" edxpath="."></span>
+	</edx:match>
+	<!--<edx:match element="super">
+		<span edxtemplate="parasuper" edxpath="."></span>
+	</edx:match>
+	<edx:match element="sub">
+		<span edxtemplate="parasub" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_reference">
+		<span edxtemplate="para_link_reference" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_definition_short">
+		<span edxtemplate="para_link_definition_short" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_definition">
+		<span edxtemplate="para_link_definition" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_class">
+		<span edxtemplate="para_link_object_class" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_document">
+		<span edxtemplate="para_link_object_document" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_map">
+		<span edxtemplate="para_link_object_map" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_url">
+		<span edxtemplate="para_link_object_url" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_binary_pdf">
+		<span edxtemplate="para_link_object_binary_pdf" edxpath="."></span>
+	</edx:match>-->
+	<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.accessibility.language" icon="/NetWriterGui/images/icons/accessibility_language.gif" id="btnAccessibilityLanguage" onclick="" xml_tag="link_language"  enable_check="guiOwnerCanApplyTag(\'link_language\');" aspx_propertypage="/NetWriterGui/system/Language.aspx?WrapXmlTag=link_language&amp;PageMode=8"  aspx_selectpage="/NetWriterGui/system/LanguageList.aspx?WrapXmlTag=link_language&amp;PageMode=4&amp;SelectMode=true&amp;"  item_type="insert" preserve_inner_xml="true"></edx:navigationitem>
+</edx:template>

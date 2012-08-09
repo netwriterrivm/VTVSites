@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARAGRAPH TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="definitionlist" type="region" uiname="rsi.menu.insert.definitionlist">
+	<edx:xhtml display="default">
+		<div><img edxtemplate="widget:icon.default" />
+		<dl edxtemplate="definitionlist_container" edxpath="."></dl></div>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true">
+		<definitionlist layout="default" sort="none">
+		<definition_list_item>
+		<definition_list_term>[Definition/Term]</definition_list_term>
+		<descriptioncollection><definition_list_description>[Description/Omschrijving]</definition_list_description></descriptioncollection></definition_list_item><definition_list_item>
+		<definition_list_term>[Definition/Term]</definition_list_term>
+		<descriptioncollection><definition_list_description>[Description/Omschrijving]</definition_list_description></descriptioncollection></definition_list_item>
+		</definitionlist>
+	</edx:insert>
+	<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.definitionlist" icon="/NetWriterGui/images/icons/deflist.gif" id="btnInsertDefList" onclick="" xml_tag="definitionlist"  enable_check="guiOwnerCanApplyTag(\'definitionlist\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		<attribute name="sort" uiname="rsi.edx.attribute.definitionlist.sort" applytocolumn="false" uiicon="">
+			<option value="none">rsi.edx.attribute.definitionlist.sort.none</option>
+			<option value="asc">rsi.edx.attribute.definitionlist.sort.asc</option>
+			<option value="desc">rsi.edx.attribute.definitionlist.sort.desc</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

@@ -1,0 +1,47 @@
+<edx:template  xmlns:edx="msnbc-edx-edit-view" name="subgroup_container" type="container" uiname="rsi.menu.tablecontainer">
+	<edx:match element="topicallead">
+		<span edxtemplate="topicallead" edxpath="."></span>
+	</edx:match>
+	<edx:match element="header" edxpath=".">
+		<span edxtemplate="header" edxpath="." edxoptions="display-link:level"></span>
+	</edx:match>
+	<edx:match element="paragraph">
+		<span edxtemplate="paragraph" edxpath="." edxoptions="display-link:layout;enter-action:checkshift;allow-split:true"></span>
+	</edx:match>
+	<edx:match element="link_object_binary_image">
+		<img  class="right" edxtemplate="widget:object_binary_image" edxpath="object_binary" border="0" />
+	</edx:match>
+	<edx:match element="datatable">
+		<span edxtemplate="datatable" edxpath="."></span>
+	</edx:match>
+	<edx:match element="list">
+		<span edxtemplate="list" edxpath="." edxoptions="display-link:layout"></span>
+	</edx:match>
+	<edx:match element="caption">
+		<span edxtemplate="caption" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_map_swf">
+		<span edxtemplate="region_link_object_map_swf" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_content">
+		<span edxtemplate="region_link_content" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_wuc">
+		<span edxtemplate="region_link_object_wuc" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_external">
+		<span edxtemplate="region_link_object_external" edxpath="."></span>
+	</edx:match>
+  <edx:match element="dotnetcontrol">
+		<span edxtemplate="dotnetcontrol" edxpath="."></span>
+	</edx:match>
+	<edx:match element="banner">
+		<span edxtemplate="banner" edxpath="."></span>
+	</edx:match>
+	<edx:match element="box">
+		<span edxtemplate="box" edxpath="."></span>
+	</edx:match>
+	<edx:match element="media_player">
+		<span edxtemplate="media_player" edxpath="." edxoptions="display-link:type"></span>
+	</edx:match>
+</edx:template>

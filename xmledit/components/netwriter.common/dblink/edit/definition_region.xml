@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" allow_link_menu="true" copypasteparent="true" name="definition_writer"
+	type="region" uiname="rsi.menu.insert.definition">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<span>
+			<span class="nw_editor_element_definition infolabel" onclick="widgetShowInfobox()" edxoptions="enter-action:none;allow-split:false" edxtemplate="field:flow"
+				edxpath="@editor_label"></span><span  class ="nw_editor_element_definition_infobox" style="display:none;"><span class="nw_editor_element_definition_short_desc" edxtemplate="widget:attribute" edxpath="@definition_desc"></span>
+        <span class="nw_editor_element_definition_short_memo" edxtemplate="widget:attribute" edxpath="@definition_memo"></span>
+        </span>
+		</span>
+	</edx:xhtml>
+</edx:template>

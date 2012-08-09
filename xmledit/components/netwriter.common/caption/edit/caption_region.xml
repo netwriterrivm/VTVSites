@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- CAPTION TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="caption" type="region" uiname="rsi.menu.insert.caption">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<p class="textCaption caption" edxtemplate="captioncont" edxpath="."></p>
+	</edx:xhtml>
+	<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.caption" icon="/NetWriterGui/content/xml/icons/insert_caption.gif" id="btnInsertCaption" onclick="" xml_tag="caption"  enable_check="guiOwnerCanApplyTag(\'caption\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="true">
+		<caption align="">[Nieuw Bijschrift]</caption>
+	</edx:insert>
+</edx:template>

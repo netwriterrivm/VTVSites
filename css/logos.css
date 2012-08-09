@@ -1,0 +1,32 @@
+/** 
+ * logos.css 
+ * 
+ * Sets up all the available logos (lintje + afzendershap).
+ * 
+ * @version			0.9.1
+ * @date			2009-06-23
+ * @lastmodified	2009-06-23 16:53
+ * @author			Studio Dumbar (Jonathan van Wunnik)
+ * @project			Starters Kit Rijksoverheid
+ * @link			http://www.website.com
+ * @cssdoc			version 1.0-pre
+ *
+ */
+
+
+/** 
+ * Logos
+ * 
+ * @section			Style description for including logo
+ * @note			Hide/unhide the logo to be used
+ */
+
+/* 	Rijksoverheid */
+.header .imgreplacement.ro { background-image: url(../logos/RO.png); height: 87px; width: 500px; }
+
+/* Ministerie van Algemene Zaken */
+.header .imgreplacement.minaz { background-image: url(../logos/RO_AZ.png); height: 87px; width: 500px; }
+
+/*	Rijksdienst voor Archeologie, Cultuurlandschap en Monumenten
+	Ministerie van Onderwijs, Cultuur en Wetenshap */
+.header .imgreplacement.ocw_racm { background-image: url(../logos/RO_OCW_RACM.png); height: 101px; width: 500px; }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<edx:template xmlns:edx="msnbc-edx-edit-view" allow_link_menu="true" copypasteparent="true" name="code_file_writer"
+	type="region" uiname="rsi.menu.insert.code_file">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+    <span edxtemplate="link_attribute_region" edxpath="."></span>
+		<a edxtemplate="widget:link_code_file" edxpath="." class="textUrl" target="_blank">
+			<span edxtemplate="field:flow" edxoptions="enter-action:none;allow-split:false" edxpath="@editor_label"></span>
+		</a>
+	</edx:xhtml>
+</edx:template>

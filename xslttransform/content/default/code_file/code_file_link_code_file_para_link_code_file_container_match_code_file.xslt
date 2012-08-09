@@ -1,0 +1,2 @@
+<xsl:stylesheet version="1.0" exclude-result-prefixes="asp ucidb" xmlns:ucidb="http://www.piet.nl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:asp="urn:schemas-microsoft-com:datatypes"><xsl:template match="code_file" mode="link_code_file_para_link_code_file_container_match_code_file"><xsl:apply-templates mode="code_file_writer" select="."></xsl:apply-templates></xsl:template>
+</xsl:stylesheet>

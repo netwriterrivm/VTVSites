@@ -1,0 +1,2 @@
+<xsl:stylesheet version="1.0" exclude-result-prefixes="asp ucidb" xmlns:ucidb="http://www.piet.nl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:asp="urn:schemas-microsoft-com:datatypes"><xsl:template match="caption" mode="datatable_datatablecontainer_container_match_caption"><caption><xsl:apply-templates mode="paracont" select="."></xsl:apply-templates></caption></xsl:template>
+</xsl:stylesheet>

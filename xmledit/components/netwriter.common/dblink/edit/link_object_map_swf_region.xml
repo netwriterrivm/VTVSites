@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="region_link_object_map_swf" type="region"
+	uiname="rsi.edx.flash.map">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<IFRAME FRAMEBORDER="0" marginheight="0" marginwidth="0" Scrolling="No" Width="500" Height="531"
+			edxtemplate="widget:link_object_map_swf" edxpath="object_map"></IFRAME>
+	</edx:xhtml>
+</edx:template>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" edxnotifyparent="true" name="datatablecontainer"
+	type="container" uiname="rsi.menu.table">
+	<edx:match element="datatablecaption">
+		 <caption edxtemplate="paracont" edxpath="."></caption>  
+	</edx:match>
+	<edx:match element="datarow">
+		<tbody edxtemplate="datarow" edxpath="." edxoptions="display-link:layout"></tbody>
+	</edx:match>
+	<edx:match element="#empty">
+		<tbody edxtemplate="emptycelltbody" edxpath="."></tbody>
+	</edx:match>
+</edx:template>

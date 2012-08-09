@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_search_result" type="container"
+	uiname="rsi.menu.insert.cgl.link.search">
+	<edx:match element="#text">
+		<span edxtemplate="field:flow" edxpath="."></span>
+	</edx:match>
+	<edx:match element="searchtask">
+		<span edxtemplate="searchtask_writer" edxpath="."></span>
+	</edx:match>
+</edx:template>

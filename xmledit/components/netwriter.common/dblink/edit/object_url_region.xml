@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" allow_link_menu="true" copypasteparent="true" name="object_url_writer"
+	type="region" uiname="rsi.menu.insert.url">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+    <span edxtemplate="link_attribute_region" edxpath="."></span>
+		<span>
+			<span edxtemplate="field:flow" class="nw_editor_element_object_url" edxoptions="enter-action:none;allow-split:false" edxpath="@editor_label"></span><img edxtemplate="widget:icon.link"  edxpath="@object_url_id" />
+		</span>
+	</edx:xhtml>
+  <edx:xhtml display="false">
+		<img edxtemplate="widget:icon.default" />
+    <span edxtemplate="link_attribute_region" edxpath="."></span>
+		<span>
+			<span edxtemplate="field:flow" class="nw_editor_element_object_url" edxoptions="enter-action:none;allow-split:false" edxpath="@editor_label"></span><img edxtemplate="widget:icon.link"  edxpath="@object_url_id" />
+		</span>
+	</edx:xhtml>
+  <edx:xhtml display="true">
+		<img edxtemplate="widget:icon.default" />
+    <span edxtemplate="link_attribute_region" edxpath="."></span>
+		<span>
+				<span class ="nw_editor_element_object_url nw_link_disabled" edxtemplate="widget:attribute" edxpath="@object_url_label"></span><img edxtemplate="widget:icon.link"  edxpath="@object_url_id" />
+		</span>
+	</edx:xhtml>
+</edx:template>

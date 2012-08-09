@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARAGRAPH TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="definitionlist_term_region" type="region" uiname="rsi.menu.insert.definitionlist.term">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<dt edxtemplate="field:flow" edxpath="." ></dt>
+		<span edxtemplate="definitionlist_term_container" edxpath="."></span>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="true">
+		<term>[Definition/Term]
+		<description>[Description/Omschrijving]</description>
+	</term>
+	</edx:insert>
+
+</edx:template>

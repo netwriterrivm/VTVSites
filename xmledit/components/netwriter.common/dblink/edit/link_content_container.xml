@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_content" type="container" uiname="rsi.edx.logo">
+	<edx:match element="content">
+		<span edxtemplate="content_writer" edxpath="."></span>
+	</edx:match>
+</edx:template>

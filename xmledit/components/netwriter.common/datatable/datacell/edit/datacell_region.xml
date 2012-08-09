@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- DATACELL TEMPLATE-->
+<edx:template xmlns:edx="msnbc-edx-edit-view" edxnotifyparent="true" name="datacell" type="region"
+	uiname="rsi.menu.table.insertcell" edxwidgetlabel="moveup:rsi.menu.table.tablecell.moveup|movedown:rsi.menu.table.tablecell.movedown">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.column" src="/NetWriterGui/content/xml/icons/column.gif" />
+		<span edxtemplate="datacellcont" edxpath="." />
+	</edx:xhtml>
+	<edx:xhtml display="">
+		<img edxtemplate="widget:icon.column" src="/NetWriterGui/content/xml/icons/column.gif" />
+		<span edxtemplate="datacellcont" edxpath="." />
+	</edx:xhtml>
+	<edx:insert allow_clipboard="true" clipboard_delete_commands="column:rsi.edx.deletecolumn" clipboard_copy_commands="copycolumn:rsi.edx.copycolumn"
+		clipboard_insert_commands="left:rsi.menu.table.insertcolumnleft|right:rsi.menu.table.insertcolumnright">
+		<datacell layout="" colspan="1" align="" valign="" width="" height="" nowrap="false">
+			<paragraph align="" layout="paragraph">[Paragraaf]</paragraph>
+		</datacell>
+	</edx:insert>
+	<edx:navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table.insertcell" icon="/NetWriterGui/content/xml/icons/cell.gif" id="btnInsertTableCell" onclick="" xml_tag="datacell"  enable_check="guiOwnerCanApplyTag(\'datacell\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table.insertcolumnleft" icon="/NetWriterGui/content/xml/icons/column_left.gif" id="btnInsertTableColumnLeft" onclick="widgetHandle.widgetPopupClick(\'tableinsertcolumnleft\',\'\');" xml_tag="datacell"  enable_check="guiOwnerCanApplyTag(\'datacell\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+			<edx:navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table.insertcolumnright" icon="/NetWriterGui/content/xml/icons/column_right.gif" id="btnInsertTableColumnRight" onclick="widgetHandle.widgetPopupClick(\'tableinsertcolumnright\',\'\');" xml_tag="datacell"  enable_check="guiOwnerCanApplyTag(\'datacell\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		<attribute name="colspan" uiname="rsi.edx.attribute.table.colspan" applytocolumn="false" uiicon="">
+			<option value="1">rsi.edx.attribute.table.colspan.1</option>
+			<option value="2">rsi.edx.attribute.table.colspan.2</option>
+			<option value="3">rsi.edx.attribute.table.colspan.3</option>
+			<option value="4">rsi.edx.attribute.table.colspan.4</option>
+			<option value="5">rsi.edx.attribute.table.colspan.5</option>
+			<option value="6">rsi.edx.attribute.table.colspan.6</option>
+		</attribute>
+		<attribute name="width" uiname="rsi.edx.attribute.table.cell.width" applytocolumn="false" uiicon="">
+			<option value="">rsi.edx.attribute.table.notset</option>
+			<option value="10%">rsi.edx.attribute.table.width.perc.10</option>
+			<option value="20%">rsi.edx.attribute.table.width.perc.20</option>
+			<option value="30%">rsi.edx.attribute.table.width.perc.30</option>
+			<option value="40%">rsi.edx.attribute.table.width.perc.40</option>
+			<option value="50%">rsi.edx.attribute.table.width.perc.50</option>
+			<option value="60%">rsi.edx.attribute.table.width.perc.60</option>
+			<option value="70%">rsi.edx.attribute.table.width.perc.70</option>
+			<option value="80%">rsi.edx.attribute.table.width.perc.80</option>
+			<option value="90%">rsi.edx.attribute.table.width.perc.90</option>
+		</attribute>
+		<attribute name="width" uiname="rsi.edx.attribute.table.cell.column.width" applytocolumn="true"
+			uiicon="">
+			<option value="">rsi.edx.attribute.table.notset</option>
+			<option value="10%">rsi.edx.attribute.table.width.perc.10</option>
+			<option value="20%">rsi.edx.attribute.table.width.perc.20</option>
+			<option value="30%">rsi.edx.attribute.table.width.perc.30</option>
+			<option value="40%">rsi.edx.attribute.table.width.perc.40</option>
+			<option value="50%">rsi.edx.attribute.table.width.perc.50</option>
+			<option value="60%">rsi.edx.attribute.table.width.perc.60</option>
+			<option value="70%">rsi.edx.attribute.table.width.perc.70</option>
+			<option value="80%">rsi.edx.attribute.table.width.perc.80</option>
+			<option value="90%">rsi.edx.attribute.table.width.perc.90</option>
+		</attribute>
+		<attribute name="valign" uiname="rsi.edx.attribute.table.valign" applytocolumn="false" uiicon="">
+			<option value="top">rsi.edx.attribute.table.valign.top</option>
+			<option value="middle">rsi.edx.attribute.table.valign.middle</option>
+			<option value="center">rsi.edx.attribute.table.valign.centre</option>
+			<option value="bottom">rsi.edx.attribute.table.valign.bottom</option>
+			<option value="baseline">rsi.edx.attribute.table.valign.baseline</option>
+		</attribute>
+		<attribute name="align" uiname="rsi.edx.attribute.table.align" applytocolumn="false" uiicon="">
+			<option value="">rsi.edx.attribute.table.cell.default</option>
+			<option value="left">rsi.edx.attribute.table.align.left</option>
+			<option value="center">rsi.edx.attribute.table.align.center</option>
+			<option value="right">rsi.edx.attribute.table.align.right</option>
+		</attribute>
+		<attribute name="valign" uiname="rsi.edx.attribute.table.valign.column" applytocolumn="true"
+			uiicon="">
+			<option value="">rsi.edx.attribute.table.cell.default</option>
+			<option value="top">rsi.edx.attribute.table.valign.top</option>
+			<option value="middle">rsi.edx.attribute.table.valign.middle</option>
+			<option value="center">rsi.edx.attribute.table.valign.centre</option>
+			<option value="bottom">rsi.edx.attribute.table.valign.bottom</option>
+			<option value="baseline">rsi.edx.attribute.table.valign.baseline</option>
+		</attribute>
+		<attribute name="align" uiname="rsi.edx.attribute.table.align.column" applytocolumn="true"
+			uiicon="">
+			<option value="">rsi.edx.attribute.table.cell.default</option>
+			<option value="left">rsi.edx.attribute.table.align.left</option>
+			<option value="center">rsi.edx.attribute.table.align.center</option>
+			<option value="right">rsi.edx.attribute.table.align.right</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- CAPTION TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" allow_link_menu="true" name="languageregion" type="region" uiname="rsi.menu.accessibility.language">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		
+	</edx:xhtml>
+	<!--<edx:xhtml display="nl">
+		<img edxtemplate="widget:icon.default" />
+		<span lang="nl" edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>
+	<edx:xhtml display="en">
+		<img edxtemplate="widget:icon.default" />
+		<span lang="en" edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>
+	<edx:xhtml display="fr">
+		<img edxtemplate="widget:icon.default" />
+		<span lang="fr" edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>
+	<edx:xhtml display="de">
+		<img edxtemplate="widget:icon.default" />
+		<span lang="de" edxtemplate="languagecont" edxpath="."></span>
+	</edx:xhtml>-->
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="false">
+		<link_language>taal</link_language>
+	</edx:insert>
+	
+</edx:template>

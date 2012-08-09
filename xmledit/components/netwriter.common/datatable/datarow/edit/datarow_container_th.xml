@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" edxnotifyparent="true" name="datarowcontainerth"
+	type="container" uiname="rsi.menu.table.insertrow">
+	<edx:match element="datacell">
+		<th edxmapattributes="colspan:colspan|width:width|valign:valign|align:align" edxtemplate="datacell"
+			edxpath="." edxoptions="display-link:layout"></th>
+	</edx:match>
+</edx:template>

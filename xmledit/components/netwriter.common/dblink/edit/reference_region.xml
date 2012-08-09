@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" allow_link_menu="true" copypasteparent="true" name="referencewriter"
+	type="region" uiname="rsi.menu.insert.reference">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		    <span>
+          <cite class ="nw_editor_element_reference infolabel" onclick="widgetShowInfobox()"><span  edxtemplate="widget:attribute" edxpath="@reference"></span><span  edxtemplate="widget:attribute" edxpath="@reference_code"></span></cite>
+          <span  class ="nw_editor_element_reference_infobox" style="display:none;"><span  class ="nw_editor_element_reference_authors" edxtemplate="widget:attribute" edxpath="@reference_authors"></span> <span  class ="nw_editor_element_reference_title"  edxtemplate="widget:attribute" edxpath="@reference_title"></span></span>
+			</span>
+	</edx:xhtml>
+</edx:template>

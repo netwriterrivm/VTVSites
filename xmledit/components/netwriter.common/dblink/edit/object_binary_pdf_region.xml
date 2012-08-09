@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" copypasteparent="true" name="object_binary_pdf_writer"
+	type="region" uiname="rsi.menu.insert.pdf">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<span>
+			<span edxtemplate="field:flow" class=".nw_editor_element_pdf" edxoptions="enter-action:none;allow-split:false" edxpath="@editor_label"></span>
+		</span>
+	</edx:xhtml>
+</edx:template>

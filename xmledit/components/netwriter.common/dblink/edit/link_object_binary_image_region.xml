@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- OBJECT BINARY IMAGE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="region_link_object_binary_image" type="region"
+	uiname="rsi.menu.insert.image">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<span class="textImageFrame" edxtemplate="para_link_object_binary_image" edxpath="."></span>
+		<img  class="textImageFrame" onclick="" edxtemplate="widget:object_binary_image" edxpath="object_binary" border="0" />
+		<br></br>
+	</edx:xhtml>
+	<edx:xhtml display="none">
+		<img edxtemplate="widget:icon.default" />
+		<span class="textImageFrame" edxtemplate="para_link_object_binary_image" edxpath="."></span>
+		<img class="textImageFrame" onclick="" edxtemplate="widget:object_binary_image" edxpath="object_binary" border="0" />
+		<br></br>
+	</edx:xhtml>
+	<edx:xhtml display="left">
+		<img edxtemplate="widget:icon.default" />
+		<span class="left" edxtemplate="para_link_object_binary_image" edxpath="."></span>
+		<img class="left" onclick="" edxtemplate="widget:object_binary_image" edxpath="object_binary" border="0" />
+	</edx:xhtml>
+	<edx:xhtml display="right">
+		<img edxtemplate="widget:icon.default" />
+		<span class="right" edxtemplate="para_link_object_binary_image" edxpath="."></span>
+		<img class="right" onclick="" edxtemplate="widget:object_binary_image" edxpath="object_binary" border="0" />
+	</edx:xhtml>
+	<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.image" icon="/NetWriterGui/content/xml/icons/image.gif" id="btnInsertImage" onclick="" xml_tag="link_object_binary_image"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_image\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image&amp;PageMode=4&amp;SelectMode=true&amp;T1=rsi.aspx.other.objectselector.searchtree&amp;U1=/vtvRedactieGui/Other/ObjectSelector2.aspx&amp;P1=0&amp;TI1=0&amp;R1=0" item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		   
+	<attribute name="align" uiname="rsi.edx.attribute.object_binary.align" applytocolumn="false" uiicon="">
+			<option value="none">rsi.edx.attribute.object_binary.align.none</option>
+			<option value="left">rsi.edx.attribute.object_binary.align.left</option>
+			<option value="right">rsi.edx.attribute.object_binary.align.right</option>
+	</attribute>
+	</edx:attributelist>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert>
+		<link_object_binary_image align="none">Nieuwe paragraaf</link_object_binary_image>
+	</edx:insert>
+</edx:template>

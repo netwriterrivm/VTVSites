@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- FRAME TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="frame" type="region" uiname="rsi.edx.document.frame">
+	<edx:xhtml display="Normaal 1 Koloms">
+		<div edxtemplate="column" edxpath="column1"></div>
+		<div edxtemplate="column" edxpath="column2"></div>
+		<div edxtemplate="column" edxpath="column3"></div>
+		<div edxtemplate="column" edxpath="column4"></div>
+	</edx:xhtml>
+	<edx:xhtml display="Kader 1 Koloms">
+		   <div clas="Kader1Koloms">
+					 	<img edxtemplate="widget:icon.default" />
+		<div edxtemplate="widget:name" edxpath="frameid">
+		<span edxtemplate="framelayoutselect" edxpath="." />
+		<span edxtemplate="frameline" edxpath="framemenu" edxoptions="display-link:layout"></span>
+		<span edxtemplate="framelabelregion" edxpath="framelabel" edxoptions="display-link:visibilityinframe"></span></div>
+		<div edxtemplate="column" edxpath="column1"></div>
+		<div edxtemplate="column" edxpath="column2"></div>
+		<div edxtemplate="column" edxpath="column3"></div>
+		<div edxtemplate="column" edxpath="column4"></div></div>
+	</edx:xhtml>
+	<edx:insert>
+		<frame layout="Normaal 1 Koloms">
+			<framemenu layout="hidden"></framemenu>
+			<column1>
+				<header align="" level="2">[kopregel]</header>
+				<list layout="Bullets">
+					<listitem>[list-item]</listitem>
+				</list>
+			</column1>
+			<column2></column2>
+			<column3></column3>
+			<column4></column4>
+			<column5></column5>
+			<framelabel visibilityinframe="visible">[label]</framelabel>
+			<frameid>id</frameid>
+		</frame>
+	</edx:insert>
+	<edx:attributelist>
+		<attribute name="layout" uiname="rsi.edx.attribute.frame.layout" applytocolumn="false" uiicon="">
+			<option value="Normaal 1 Koloms">rsi.edx.attribute.frame.normal.1</option>
+			<option value="Kader 1 Koloms">rsi.edx.attribute.frame.boxed.1</option>
+		</attribute>
+		<childattribute childname="framemenu" name="layout" uiname="rsi.edx.attribute.frame.layout.framemenu"
+			uiicon="">
+			<option value="hidden">rsi.edx.attribute.no</option>
+			<option value="hidden_line">rsi.edx.attribute.framemenu.no.seperator.yes</option>
+			<option value="visible">rsi.edx.attribute.yes</option>
+			<option value="visible_noline">rsi.edx.attribute.framemenu.yes.seperator.no</option>
+			<option value="visible_newline">rsi.edx.attribute.framemenu.yes.seperator.no.lf</option>
+			<option value="visible_newline_noline">rsi.edx.attribute.framemenu.yes.seperator.yes.lf</option>
+		</childattribute>
+		<childattribute childname="framelabel" name="visibilityinframe" uiname="rsi.edx.attribute.frame.layout.framelabel"
+			uiicon="">
+			<option value="hidden">rsi.edx.attribute.no</option>
+			<option value="visible">rsi.edx.attribute.yes</option>
+		</childattribute>
+	</edx:attributelist>
+</edx:template>

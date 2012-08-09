@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<editviews xmlns:edx="msnbc-edx-edit-view" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xi="http://www.w3.org/2003/XInclude">
+	<edx:view uiname="Edit">
+		<edx:template name="root" type="region" uiname="Content Paragraaf">
+			<edx:xhtml display="default">
+				<span  edxtemplate="body" edxpath="/kompasdocument/body" />
+			</edx:xhtml>
+		</edx:template>
+
+		<!-- BODY TEMPLATE -->
+		<edx:template name="body" type="region" uiname="Body">
+			<edx:xhtml display="Normaal">
+				<xsl:variable name="childcount" select="count(descendant::framemenu[@layout='visible_newline' or @layout='visible_newline_noline'])"></xsl:variable>
+				<xsl:choose>
+					<xsl:when test="$childcount>0">
+						<ul class="kb_linklist">
+							<xsl:apply-templates mode="framemenu" select="descendant::framemenu"></xsl:apply-templates>
+						</ul>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:apply-templates mode="framemenu" select="descendant::framemenu"></xsl:apply-templates>
+					</xsl:otherwise>
+				</xsl:choose>
+				<span edxtemplate="bodycont" edxpath="."></span>
+			</edx:xhtml>
+		</edx:template>
+<!-- LINKLIST CONTENT CONTAINER -->
+		<edx:template name="linklist" type="container" uiname="Body">
+			<edx:match element="frame">
+				<span edxtemplate="framemenu" edxpath="framemenu" edxoptions="display-link:layout" />
+			</edx:match>
+		</edx:template>
+		<!-- BODY CONTENT CONTAINER -->
+		<edx:template name="bodycont" type="container" uiname="Body">
+			<edx:match element="frame">
+				<span edxtemplate="frame" edxpath="." edxoptions="display-link:layout" />
+			</edx:match>	
+		</edx:template>
+
+		
+
+<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\frame\release\kb_frame_region.xml" />
+<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\frame\release\kb_frame_line_region.xml" />
+    				<!-- Include voor groeperingen binnen een kolom -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\subgroup\release\subgroup_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\subgroup\release\subgroup_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\frame\framelabel\release\framelabel_region.xml"/>			
+		
+	<!-- Include voor framemenu -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\frame\framemenu\release\framemenu_region.xml"/>
+	
+
+	<!-- Include voor kolommen frame -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\frame\column\release\column_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\frame\column\release\kb_column_container.xml"/>	
+	<!-- Include voor empty elementen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\empty\release\empty_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\empty\release\empty_body_region.xml"/>		
+	<!-- Include voor paragraph elementen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\paragraph\release\paragraph_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\paragraph\release\paragraph_container.xml"/>	
+	<!-- Include voor caption elementen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\caption\release\caption_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\caption\release\caption_container.xml"/>	
+	<!-- Include voor header tempates-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\header\release\middenberm_header_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\header\release\kb_header_container.xml"/>
+	<!-- Include voor topicallead tempates-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\topicallead\release\topicallead_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\topicallead\release\topicallead_container.xml"/>
+
+	<!-- bold,italic, superscript en subscript -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\basic_formatting\release\bold_container.xml"/>
+		<!--<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\basic_formatting\release\italic_container.xml"/>-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\basic_formatting\release\super_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\basic_formatting\release\sub_container.xml"/>	
+	
+		<!-- includes tbv database linking -->
+	<!-- includes refence -->
+	<!-- REFERENCE -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_reference_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\reference_region.xml"/>
+	<!-- includes DEFINITION -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_definition_short_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\definition_short_region.xml"/>
+	<!-- includes DEFINITION -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_definition_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\definition_region.xml"/>
+<!-- includes DEFINITION -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_class_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_class_region.xml"/>
+		<!-- includes link naar icoontje bij links -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_binary_icon_region.xml"/>
+
+	<!-- includes object_document -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_document_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_document_region.xml"/>
+	<!-- includes object_map -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_map_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_map_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_map_swf_region.xml"/>
+
+				<!-- includes code_file -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_code_file_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\code_file_region.xml"/>
+			<!-- includes object_url -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_url_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_url_region.xml"/>
+<!-- includes object_binary_icon partner logo-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_binary_image_partner_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_binary_image_partner_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_binary_image_partner_region.xml"/>
+	<!-- includes object_binary_image -->
+	<!--<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_binary_image_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_binary_image_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_binary_image_region.xml"/>-->
+<!-- includes link_content, om fragmenten te includen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_content_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_content_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\content_region.xml"/>
+<!-- includes link_content, om wen user controls te includen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_wuc_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_wuc_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_wuc_region.xml"/>
+				<!-- includes externe objecten -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_external_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_external_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_external_region.xml"/>
+	<!-- includes object_binary_pdf -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_binary_pdf_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\object_binary_pdf_region.xml"/>
+	<!-- Include voor list tempates-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\list\release\list_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\list\release\list_container.xml"/>
+		
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\list\release\listitem_region.xml"/>
+		<!-- Includes voor Tabellen -->		
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\release\datatable_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\release\datatable_body_region.xml"/>
+<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\release\datatable_container.xml"/>
+<!-- Includes voor Tabel rijen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datarow\release\datarow_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datarow\release\datarow_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datarow\release\datarow_container_th.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datarow\release\datarow_container_throw.xml"/>
+	
+			<!-- Includes voor Tabel cellen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datacell\release\datacell_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datacell\release\datacell_container.xml"/>
+				<!-- includes voor banner/teasers-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\banner\release\banner_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\banner\release\banner_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\banner\release\banner_image_container.xml"/>
+				<!-- Artikelcategorielijst-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\release\articlecategorylist_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\release\articlecategorylist_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\release\articlecategory_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\release\articlecategory_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\release\articlecategory_image_container.xml"/>
+		<!-- Homepagelijst-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\release\homepagelist_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\release\homepagelist_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\release\homepagelist_headerlinkcont_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\release\homepagelist_item_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\release\homepage_list_link_imagecont.xml"/>
+	</edx:view>
+</editviews>

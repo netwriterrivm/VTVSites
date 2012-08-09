@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- OBJECT CLASS -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_object_class" type="container" uiname="rsi.menu.insert.class">
+
+	<edx:match element="object_class">
+		<span edxtemplate="object_class_writer" edxoptions="display-link:use_database_label" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_binary_icon">
+		<span edxtemplate="region_link_object_binary_icon" edxpath="."></span>
+	</edx:match>
+	<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1"  name="rsi.menu.insert.class" icon="/NetWriterGui/content/xml/icons/insert_object_clas.gif" id="btnInsertObjectClass" onclick="" xml_tag="link_object_class"  enable_check="guiOwnerCanApplyTag(\'link_object_class\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectClass.aspx?WrapXmlTag=link_object_class&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Other/ObjectSelector2.aspx?WrapXmlTag=link_object_class&amp;PageMode=4&amp;ObjectTypeId=23&amp;SelectMode=true"  item_type="insert"></edx:navigationitem>
+</edx:template>

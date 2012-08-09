@@ -1,0 +1,834 @@
+﻿@import "ezips_style.css";
+
+/*Frameindeling*/
+.nw_onecolumn
+{
+	float: left;
+	width: 99%; /*in de editor geeft men aan hoeveel kolommen men wil.*/
+	padding-right: 5px;
+}
+.nw_twocolumn
+{
+	float: left;
+	width: 48%;
+	padding-right: 14px;
+}
+.wide .nw_twocolumn
+{
+	float: left;
+	width: 48%;
+	padding-right: 14px;
+}
+.content_main .nw_twocolumn
+{
+	width: 46%;
+}
+.nw_threecolumn
+{
+	float: left;
+	width: 30%;
+	padding-right: 14px;
+}
+.wide .nw_threecolumn
+{
+	float: left;
+	width: 32%;
+	padding-right: 14px;
+}
+.nw_fourcolumn
+{
+	float: left;
+	width: 22%;
+	padding-right: 14px;
+}
+.nw_fivecolumn
+{
+	float: left;
+	width: 17%;
+	padding-right: 14px;
+}
+/*Images*/
+.nw_first_image, .nw_first
+{
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+.nw_second_image, .nw_second
+{
+	float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+.nw_information_tekst_container
+{
+	clear: both;
+}
+.nw_arrows
+{
+}
+/*Menu redactie omgeving*/
+.nw_red_context_menu
+{
+	margin-bottom: 0px;
+}
+.nav_main .nw_red_context_menu
+{
+	display: inline;
+}
+.nav_main .nw_red_context_menu_anchor
+{
+	display: inline !important;
+}
+.nw_menu_container img, .func_links img
+{
+	margin-bottom: 0px !important;
+}
+.nw_contextmenu
+{
+	margin: 0 !important;
+}
+
+.content_main.twothird
+{
+	width: 66%;
+}
+/*Default form ol/ul overrulen in de middenberm, alleen daar, ol wordt elders misbruikt*/
+#hoofd_content .nw_information_tekst_container ol
+{
+	list-style-type: decimal !important;
+	margin-left: 2.4em;
+}
+.form_nw_app .nw_information_tekst_container ol
+{
+	list-style-type: decimal !important;
+	margin-left: 0 !important;
+}
+.nw_tabs_list
+{
+		padding-bottom: 0px !important;
+		margin-bottom:0px!important;
+}
+#hoofd_content .nw_information_tekst_container ol, #hoofd_content .nw_information_tekst_container ul
+{
+	margin-bottom: 2.2em ;
+}
+
+
+/*onbekend of dit gebruikt wordt*/
+.ref_def_list img, .nw_text_icon
+{
+	margin-bottom: 0;
+	vertical-align: text-bottom;
+}
+/*tabel hacks*/
+.nw_table th
+{
+	white-space: normal !important;
+}
+.nw_table td p
+{
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+/*vormgeving popups*/
+.nw_text_popup_container
+{
+	max-width: 250px;
+	padding: 5px !important;
+	min-height: 40px;
+}
+/**TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO..*
+/**BEGIN TIJDELIJKE CSS DIT MOET AANGEPAST WORDEN**/
+/**************************************************/
+/*Popup met referenties en literatuurlijst stylen.*/
+/**************************************************/
+/*Wordt niet gebruikt?*/
+.ref_lit_container_print
+{
+	display: none;
+}
+/*Einde wordt niet gebruikt?*/
+.ref_lit_container
+{
+	/*position:absolute;*/
+	border: 1px solid #006584;
+	background-color: #EEEEEE; /*display:none; 						width:100%;*/
+}
+.ref_lit_bgtop .close_ref_lit
+{
+	float: right;
+	margin-top: -15px;
+	margin-right: 3px;
+}
+.ref_lit_bgtop
+{
+	background-image: url(/VtvRedactieGuiPublic/pictures/allsites/popup_background3.jpg);
+	background-repeat: repeat-x;
+	height: 20px;
+	display: block;
+	width: 100%;
+	border-bottom: solid 1px gray;
+}
+.ref_lit_bgtop img
+{
+	padding: 2px 2px 2px;
+}
+
+.referenceheader
+{
+	font-weight: bold;
+	margin: 3px 5px 0px 5px;
+	color: #003366;
+}
+.ref_lit_container ul
+{
+	list-style: none;
+	margin: 0px 5px 5px 10px;
+}
+/*Oude css klassen voor literatuurverwijzingen. Nog in gebruik voor dobolav???*/
+.ReferenceAuthor
+{
+	font-weight: bold;
+	font-size: 8pt;
+	color: #003366;
+}
+.ReferenceTitle
+{
+	color: #003366;
+	font-size: 8pt;
+}
+.ReferenceList
+{
+	list-style: none;
+	margin-left: 6px;
+}
+/*Styling van de lijsten onderaan de pagina*/
+.begrippen_afkortingen h3, .bronnen_literatuur h3
+{
+	background-color: White !important;
+}
+.begrippen_afkortingen ul, .bronnen_literatuur ul
+{
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+.begrippen_afkortingen dl
+{
+	margin-left: 1px !important;
+}
+.begrippen_afkortingen dl dd
+{
+}
+/*Styling van 'oude' definitielijst, die nog uit de xslt uit de vtvredactiepublic stamt, nieuwe klassen begint met nw_ */
+.definition_list dt
+{
+	font-weight: bold;
+	float: left;
+	padding-right: 6px;
+}
+.definition_list dd
+{
+	margin-left: 16px;
+}
+.ref_lit_title
+{
+	font-size: 10pt;
+	color: #003366;
+	font-weight: bold;
+	display: inline;
+	margin-left: 10px;
+}
+/*Externe verwijzingen, icoon toevoegen*/
+.nw_url
+{
+	background: url(skin/arrows.png) no-repeat 4px -371px;
+	padding-left: 14px;
+}
+/*Interne verwijzing, icoon toevoegen*/
+.nw_document, .nw_map
+{
+	background: url(skin/icons.png) no-repeat 0px -218px;
+	padding-left: 14px;
+}
+/*Interne verwijzing naar onderwerp, icoon toevoegen*/
+.nw_class_internal
+{
+	background-position: 3px 7px;
+	padding-left: 14px;
+}
+/*Binaries, icoon toevoegen*/
+.nw_binary
+{
+	background: url(skin/icons.png) no-repeat left 6px;
+	padding-left: 14px;
+}
+/*PDF*/
+.nw_binary_type_14
+{
+	background-position: left -819px;
+}
+/*Office*/
+.nw_binary_type_13
+{
+	background-position: left -390px;
+}
+.nw_binary_type_12
+{
+	background-position: left -438px;
+}
+.nw_binary_type_6
+{
+	background-position: left -475px;
+}
+/*Breedte tabbladen beperken*/
+.nav_main
+{
+	max-width: 688px;
+}
+/*Voetregel*/
+.refer_footer
+{
+	font-style: italic;
+	padding-top: 0px;
+	padding-right: 20px;
+	font-size: 1.1em;
+}
+.copy_right
+{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 10px;
+}
+
+/*Klap in klap uit kader*/
+.nw_foldable_header
+{
+	background: url(skin/arrows_foldable.png) no-repeat right -376px;
+	padding-right: 20px !important;
+}
+.nw_foldable_header:hover
+{
+	background: url(skin/arrows_foldable.png) no-repeat right -482px;
+	background-color: White !important;
+	cursor: pointer;
+}
+.nw_foldable_header_on
+{
+	background: url(skin/arrows_foldable.png) no-repeat right -482px;
+	padding-right: 20px !important;
+}
+/*Inlogscherm NetWriter*/
+.LoginPane
+{
+	padding-top: 80px;
+	width: 350px;
+	clear: both;
+}
+.LoginPane legend
+{
+	display: block;
+	width: 350px;
+	float: left;
+}
+.LoginPane label
+{
+	display: block;
+	width: 175px;
+	display: block;
+	float: left;
+}
+.LoginPane input
+{
+	display: block;
+	width: 150px;
+	display: block;
+	float: left;
+}
+/*Extra klassen om de breedte aan te kunnen passen*/
+.nw_home_no_tong
+{
+	width: 66.66666%;
+}
+.nw_home_full_width
+{
+	width: 100%;
+}
+.nw_home_add_no_tong
+{
+	width: 33.33333%;
+}
+/*.nw_home_add_no_tong .banner
+{
+	width:208px;
+
+}
+.banner img
+{
+	width:60px !important;
+	height:60px !important;
+}*/
+/*Paragraafinstellingen doorvoeren*/
+.nw_break_start, .nw_inline
+{
+	padding-top: 0px;
+	margin-top: 0px;
+}
+.nw_break_end, .nw_inline
+{
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+/*Tabelinstellingen*/
+.nw_table_cell_align_left
+{
+	text-align: left;
+}
+.nw_table_cell_align_right
+{
+	text-align: right;
+}
+
+/*Aanpassingen ten behoeve van forms.
+de rijksbrede vormgeving heeft een class (b.v. form_ll op het form element. Dit is niet altijd mogelijk te maken omdat er gebruik wordt gemaakt van webusercontrols.
+Daarom een kopie van de css waarbij het form  element wordt vervangen door een div. Dit is suplementair.
+*/
+.form_nw_app
+{
+	width: 66%;
+}
+.form_nw_app legend
+{
+	padding-bottom: 0.8em;
+}
+.form_nw_app label
+{
+	display: inline-block;
+	vertical-align: top;
+}
+.form_nw_app p, .form_nw_app fieldset
+{
+	margin-bottom: 1.8em;
+	margin-right: 20px;
+	padding: 0;
+}
+.form_nw_app p.mandatory
+{
+	margin-bottom: -1.8em;
+}
+.form_nw_app fieldset li
+{
+	background: #f5f5f5;
+	border-bottom: 0.2em solid #fff;
+	list-style: none;
+	padding: 0.4em 1em 0.4em 1em;
+}
+.form_nw_app fieldset fieldset
+{
+	border: none;
+	margin: 0.3em 0 0;
+}
+.form_nw_app fieldset fieldset legend
+{
+	font-weight: normal;
+	padding-bottom: 0.2em;
+}
+.form_nw_app fieldset fieldset label
+{
+	display: block;
+	width: auto;
+}
+.form_nw_app label
+{
+	width: 12.2em;
+}
+.form_nw_app fieldset fieldset label
+{
+	margin-left: 12.3em;
+}
+.form_nw_app fieldset p
+{
+	margin: 0;
+	padding: 0 0 0 12.5em;
+}
+.form_nw_app input.text, .form_nw_app textarea
+{
+	width: 22.2em;
+}
+.form_nw_app input.submit
+{
+	position: relative;
+}
+.form_nw_app
+{
+	margin-left: 0em !important;
+}
+/*italic*/
+em
+{
+	font-style: italic !important;
+	color: Black !important;
+}
+
+.nw_index_list
+{
+	clear: both;
+}
+/*links vanuit de editor geeft de redactie de iconen aann*/
+.nw_text_link
+{
+	background-image: none;
+	padding-left: 0px;
+}
+.nw_table p
+{
+	padding-right: 0px;
+}
+/*Clear both op een aantal elementen*/
+.bronnen_literatuur, .begrippen_afkortingen, .refer_footer, .copy_right, .back_to_top, .textFrameLabel
+{
+	clear: both;
+}
+.bronnen_literatuur li
+{
+	background-image: none;
+	padding-left: 2px;
+}
+/*JB square bullets komen op de verkeerde plaats, dus work-around hiervoor*/
+.nav_sub ul.bullets, ul.bullets
+{
+	list-style-position: outside !important;
+	list-style-type: none !important;
+}
+.nav_sub ul.bullets li, ul.bullets li
+{
+	padding-left: 15px !important;
+	background: transparent url(skin/square.png) no-repeat !important;
+	background-position: 0 5px !important;
+}
+
+.nw_reference_author
+{
+	font-weight: bold;
+	padding-right: 4px;
+}
+.nav_sub ul.bullets li a
+{
+	background-image: none;
+	padding-left: 0px;
+}
+.nw_no_nav_sub
+{
+	position: relative;
+	padding-top: 50px;
+	float: left;
+	width: 75%;
+	left: 0px;
+}
+/*titels document hadden te veel padding, even een smerige oplossing*/
+.textClass, .textSection, .textFrameLabel
+{
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+.textClass, .textSection
+{
+	font-size:1.5em;
+}
+ul.nw_linklist
+{
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.nw_linklist li
+{
+	margin-bottom: 0px;
+	text-decoration: underline !important;
+	padding-left: 0px;
+	margin-bottom: 0px;
+	background-image:none;
+}
+.outputModeHeaderPrint
+{
+	display: none;
+}
+.textMenuLabelSeperator
+{
+	color:#767676;
+	padding-right:6px;
+}
+/*Ankerlijst*/
+.textMenuLabel
+{
+	background-image: none;
+	background-repeat: no-repeat;
+	padding-right: 6px;
+	padding-bottom: 4px;
+	background-position: 3px 3px;
+	text-decoration: underline !important;
+	font-size: 110%;
+}
+.textMenuLabel a
+{
+	text-decoration: underline !important;
+}
+
+.nw_linklist .textMenuLabel
+{
+	background-image: none;
+	padding-left: 0px;
+	list-style-image: none;
+	font-size: 100% !important;
+	padding-bottom: 0px;
+}
+.begrippen_afkortingen dl
+{
+	padding-top: 0px !important;
+}
+
+/*Work around voor p paddings.*/
+form p
+{
+	margin-top: 0em !important;
+}
+.nw_form p
+{
+	margin-top: 1.4em;
+}
+/*Kruimelpad over volledige breedte*/
+.breadcrumb.left
+{
+	width: 100%;
+}
+
+
+.textLine
+{
+	width: 98%;
+	text-align: left;
+	margin: 0 auto 0 0;
+	clear: both;
+	color: gray;
+	border: 1px solid gray;
+	margin-top: 10px;
+}
+abbr a, .textReference
+{
+	text-decoration: none !important;
+}
+cite
+{
+	border-bottom: 1px dashed;
+}
+/*Fix voor lijst binnen lijst, hier heeft de studio geen rekening mee gehouden*/
+.nw_information_tekst_container ul ul, .nw_information_tekst_container ul ul ul
+{
+	font-size: 100%;
+}
+
+/*Verticale alignment tabelcellen*/
+.nw_table_cell_valign_top
+{
+	vertical-align: top;
+}
+.nw_table_cell_valign_middle
+{
+	vertical-align: top;
+}
+.nw_table_cell_valign_center
+{
+	vertical-align: middle;
+}
+.nw_table_cell_valign_bottom
+{
+	vertical-align: bottom;
+}
+.nw_table_cell_valign_baseline
+{
+	vertical-align: baseline;
+}
+.nw_table_cell_align_left
+{
+	text-align: left;
+}
+.nw_table_cell_align_right
+{
+	text-align: right;
+}
+.nw_table_cell_align_center
+{
+	text-align: center;
+}
+
+.nw_zgg_add_table_sorter th,.nw_zgg_add_table_sorter_site th
+{
+	font-weight: bold;
+	text-align: left;
+	font-size: 1.1em;
+}
+.nw_zgg_add_table_sorter td, .nw_zgg_add_table_sorter th
+{
+	background-color: White;
+}
+.nw_zgg_add_table_sorter td a, .nw_zgg_add_table_sorter th a
+{
+	text-decoration: underline;
+	font-weight:bold;
+}
+.nw_zgg_add_table_sorter td a:hover, .nw_zgg_add_table_sorter th a:hover
+{
+	text-decoration: none;
+	
+}
+.nw_zgg_add_table_sorter td table
+{
+	width: auto;
+}
+.nw_information_tekst_container .ref_def_list li
+{
+	background-image:none;
+	margin-left:0px;
+	padding-left:0px;
+	}
+.nw_popup_message_container
+{
+	margin-bottom:0px;
+}	
+/*.nw_table
+{
+	padding-right:20px;
+}
+.nw_twocolumn .nw_table
+{
+	padding-right:0px;
+}*/
+/*De gebruiker kan nu voor gekleurde tabellen in het schema kiezen*/
+/*td*/
+.dark_brown .nw_color_table td { background: #e8e1df; }
+.purple .nw_color_table td { background: #e3dce7; }
+.dark_green .nw_color_table td { background: #dfe6e1; }
+.ruby .nw_color_table td { background: #f9dfdd; }
+.red .nw_color_table td { background: #f9dfdd; }
+.violet .nw_color_table td { background: #f2d9e7; }
+.moss_green .nw_color_table td { background: #ebebd9; }
+.brown .nw_color_table td { background: #efeada; }
+.green .nw_color_table td { background: #e1eddb; }
+.azure .nw_color_table td { background: #d9ebf7; }
+.light_blue .nw_color_table td { background: #eef7fb; }
+.pink .nw_color_table td { background: #fdeff8; }
+.yellow .nw_color_table td { background: #fefbdd; }
+.dark_yellow .nw_color_table td { background: #fff4dc; }
+.mint_green .nw_color_table td { background: #ebf8f4; }
+.orange .nw_color_table td { background: #fbead9; }
+   /*th*/
+  .dark_brown .nw_color_table th { background-color: #d1c1be; color: #000; }
+  .purple .nw_color_table th { background-color: #c6b8cf; color: #000; }
+  .dark_green .nw_color_table th { background-color: #becdc3; color: #000; }
+  .ruby .nw_color_table th { background-color: #f2bfbb; color: #000; }
+  .red .nw_color_table th { background-color: #f2bfbb; color: #000; }
+  .violet .nw_color_table th { background-color: #e5b2cf; color: #000; }
+  .moss_green .nw_color_table th { background-color: #d6d7b2; color: #000; }
+  .brown .nw_color_table th { background-color: #dfd4b5; color: #000; }
+  .green .nw_color_table th { background-color: #c3dbb6; color: #000; }
+  .azure .nw_color_table th { background-color: #b2d7ee; color: #000; }
+  .light_blue .nw_color_table th { background-color: #ddeff8; color: #000; }
+  .pink .nw_color_table th { background-color: #fadef0; color: #000; }
+  .yellow .nw_color_table th { background-color: #fdf6bb; color: #000; }
+  .dark_yellow .nw_color_table th { background-color: #ffe9b7; color: #000; }
+  .mint_green .nw_color_table th { background-color: #d6f1e9; color: #000; }
+  .orange .nw_color_table th { background-color: #f6d4b2; color: #000; }
+  
+.nw_status_1
+{
+	border: 2px dashed #ffcccc;
+}
+.nw_status_2
+{
+	border: 2px dashed #ff0000;
+}
+.nw_status_3
+{
+	border: 2px dashed #ff9900;
+}
+.nw_status_4
+{
+	border: 2px dashed #ccff00;
+}
+.nw_status_5
+{
+	border: 2px dashed #00cc00;
+}
+.nw_status_6
+{
+	border: 2px dashed #006600;
+}
+.nw_status_7
+{
+
+}
+.nw_status_8
+{
+	border: 2px dashed #ffcc00;
+}
+.nw_status_9
+{
+	border: 2px dashed #33cc33;
+}
+.nw_status_production
+{
+	border-style:solid;
+}
+.nw_detail_document, .nw_detail_map
+{
+	background-color:#e0e0e0;
+}
+
+.nw_content_seperator .textTitle
+{
+	border-bottom:2px solid gray;
+	margin-right:16px;
+	padding-bottom:2px;
+	}
+.nw_content_seperator .refer_footer 
+{
+	border-top:2px solid gray;
+padding-top:4px;
+		margin-right:16px;
+	}	
+	 .zorgatlas_file_dialog form, .zorgatlas_dialog form
+{
+	text-align:left !important;
+}
+	 .zorgatlas_file_dialog #hoofd_content, .zorgatlas_dialog #hoofd_content
+	 {
+	 	left:28%;
+	 }
+	 /*webrichtlijnen*/
+	 input:focus,a:focus { outline: 0.1em dotted grey; }
+	 
+	 
+	 /*ik begrijp dat ik de dumbar files in tact moet laten vandaar dat ik het hier zet
+	de breadcrumb issue NWREL-3021 gaat fout door screen.css r156, vandaar dat ik het even oplos
+koots, 19-10-2010
+*/
+	 .breadcrumb span { white-space: normal!important; }
+	 
+	 
+	 /* dit is voor NWREL-1937 */
+	 .search form input.submit {height:21px;}
+	 
+	 /* dit is voor  NWREL-2673  */
+	 .bronnen_literatuur h2{margin:0!important;}
+	
+	 /* dit is voor  NWREL-3106  */
+	 #hoofd_content .nw_information_tekst_container ul.bullets ul.bullets{margin-bottom:0!important;}
+	 
+	
+	 

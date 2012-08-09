@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_definition" type="container" uiname="rsi.menu.insert.definition">
+	<edx:match element="definition">
+		<span edxtemplate="definition_writer" edxpath="."></span>
+	</edx:match>
+	<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1" name="rsi.menu.insert.definition" icon="/NetWriterGui/content/xml/icons/definition_1.gif" id="btnInsertDefinition" onclick="" xml_tag="link_definition"  enable_check="guiOwnerCanApplyTag(\'link_definition\');" aspx_propertypage="/VtvRedactieGui/Objects/Definition.aspx?WrapXmlTag=link_definition&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapDefinition.aspx?WrapXmlTag=link_definition&amp;PageMode=4&amp;SelectMode=true"  item_type="insert"></edx:navigationitem>
+</edx:template>

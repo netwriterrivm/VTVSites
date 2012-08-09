@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--FRAME LABEL TEMPLATE-->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="framelabelregion" type="region" uiname="rsi.edx.frame.label">
+	<edx:xhtml display="hidden"></edx:xhtml>
+	<edx:xhtml display="visible">
+		<h2 class="textFrameLabel" edxtemplate="field:flow" edxpath="."  />
+	</edx:xhtml>
+</edx:template>

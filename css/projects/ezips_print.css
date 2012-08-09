@@ -1,0 +1,65 @@
+﻿/*Css toegevoed speciaal voor de pagina met de grafiek:*/
+/*Verbergen van formulier elementen en redundante informatie*/
+.ezips_panel_selectpathogen,
+.title_bar,
+.ezips_panel_print,
+.submit
+{
+	display:none;
+}
+/*Verplaatsen items*/
+.header
+{
+	margin:0;
+	padding:0;
+}
+.branding
+{
+	padding:0;
+	margin:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+/*Locatie weergeven:*/
+.breadcrumb
+{
+	margin-left:20px !important;
+}
+.breadcrumb em
+{
+	display:none;
+}
+.breadcrumb a,
+.breadcrumb span
+{
+	font-size:2em;
+	text-decoration:none;
+	color:#000;
+}
+.content form
+{
+	margin-top:40px;
+}
+#content .content_main
+{
+	left:auto !important;
+}
+.refer_footer
+{
+	display:block;
+	width:100%;
+}
+.chart_panel
+{
+	overflow:visible !important;
+	overflow-x:visible !important;
+	overflow-y:visible !important;
+	clear:both;
+	display:block;
+}
+table
+{
+	border:1px solid #000;
+	clear:both;
+	display:block;
+}

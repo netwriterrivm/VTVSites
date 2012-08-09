@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARACONT TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="definitionlist_descriptioncollection" type="container" uiname="rsi.menu.insert.definitionlist.description">
+	<edx:match element="definition_list_description">
+		<dd edxtemplate="definition_list_description" edxpath="."></dd>
+	</edx:match>
+		<edx:match element="#empty">
+		<div edxtemplate="emptycell" edxpath="."></div>
+	</edx:match>
+</edx:template>

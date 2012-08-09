@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="content_writer" type="region" uiname="rsi.edx.logo">
+	<edx:xhtml display="default">
+		<!-- LET OP TEMPLATE WORDT NIET MEER GEBRUIKT!!!!-->
+		<span edxtemplate="widget:link_content" edxpath="." />
+	</edx:xhtml>
+</edx:template>

@@ -1,0 +1,93 @@
+﻿<%@ Master Language="c#" Inherits="RIVM.NetWriter.NetWriterSiteComponents.masterpage.NetWriterSite" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head id="PageHeader" runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Titel Pagina</title>
+    <script type="text/javascript" src="/Rijksbreed/javascript/include.js" ></script>
+    <script type="text/javascript" src="/VTVSites/javascript/uo_popup_wr.js" ></script>
+    <asp:contentplaceholder id="CPHHeader" runat="Server"></asp:contentplaceholder>
+ 	<link rel="stylesheet" href="/Rijksbreed/css/screen.css" type="text/css" media="screen" />
+ 	<!--[if IE 8]><link rel="stylesheet" href="/Rijksbreed/css/ie/ie8.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" href="/Rijksbreed/css/ie/ie.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" href="/Rijksbreed/css/ie/ie6.css" type="text/css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="/Rijksbreed/css/print.css" type="text/css" media="print" />
+    <link rel="shortcut icon" href="/Rijksbreed/favicon.ico" type="image/x-icon" />
+</head>
+<body id="<% Response.Write(BodyTagId); %>">
+ 
+    <div class="container <% Response.Write(ThemeCSS + " "); %>">
+        <ul class="skiplink">
+            <li>Ga direct naar: <a href="#hoofd_content" title="Direct naar de inhoud">inhoud</a>,
+                <a href="#subnavigatie" title="Direct naar de subnavigatie">subnavigatie</a>, <a
+                    href="#service_menu" title="Direct naar het service menu">service menu</a>,
+                <a href="#zoeken" title="Direct naar zoeken">zoeken</a></li>
+        </ul>
+        <div class="header">
+            <span></span>
+            <div class="branding">
+                <asp:ContentPlaceHolder ID="CPHSiteLogo" runat="Server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <asp:ContentPlaceHolder ID="CPHSiteTitle" runat="Server">
+            </asp:ContentPlaceHolder>
+            <div class="nav_bar">
+                <asp:ContentPlaceHolder ID="CPHSiteTabs" runat="Server">
+                </asp:ContentPlaceHolder>
+                <div class="search">
+                    <asp:ContentPlaceHolder ID="CPHSiteSearch" runat="Server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+       
+        <div class="content_wrapper1">
+            <div class="content_wrapper2">
+                <div class="content">
+                    <!-- START : CONTENT -->
+                    <asp:ContentPlaceHolder ID="CPHCrumbtrail" runat="Server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolder1">
+                    </asp:ContentPlaceHolder>
+                     <form id="aspnetForm" runat="server">
+                    <asp:Panel ID="pnlLogin" CssClass="line m_top50" Visible="false" runat="server">
+                            <fieldset class="LoginPane">
+                                <legend><span>Login</span></legend>
+                                <asp:Label CssClass="lblFloatLeft" AssociatedControlID="txtLogin" ID="lblUsername"
+                                    runat="server" Text="Gebruikersnaam:"></asp:Label>
+                                <asp:TextBox CssClass="lblFloatRight" ID="txtLogin" runat="server"></asp:TextBox>
+                                <asp:Label CssClass="lblFloatLeft" AssociatedControlID="txtPassword" ID="lblPassword"
+                                    runat="server" Text="Wachtwoord:"></asp:Label>
+                                <asp:TextBox CssClass="lblFloatRight" ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                <asp:Button CssClass="logonIptSubmit" ID="btnLogin"  onclick="btnLogin_Click" runat="server" Text="Inloggen"></asp:Button>
+                            </fieldset>
+                        </asp:Panel>
+                        <asp:Panel ID="pnlNoAccess"   CssClass="line m_top50" Visible="false" runat="server">
+                            U heeft geen toegang tot dit deel van de website.</asp:Panel>
+                        <asp:ContentPlaceHolder ID="CPHContent" runat="Server">
+                        </asp:ContentPlaceHolder>
+             
+                    <asp:ContentPlaceHolder ID="CPHExtra" runat="Server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="CPHRelated" runat="Server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="CPHTreeView" runat="Server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="CPHPrintversion" runat="Server"  Visible="false">
+                    </asp:ContentPlaceHolder>
+                    </form>
+                    <!-- END : CONTENT -->
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="CPHMetaNavigation" runat="Server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="CPHSiteFooter" runat="Server">
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    
+    <asp:ContentPlaceHolder runat="server"  ID="CPHNWPageMenu"></asp:ContentPlaceHolder>
+    
+</body>
+</html>

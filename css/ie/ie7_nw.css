@@ -1,0 +1,20 @@
+﻿/*Toevoegingen IE7 NetWriter*/
+.func_links a.plus { background-position: left -82px; height: 15px; }
+.netwritertoolbar .content_wrapper1
+{
+	width:100%;
+}
+#mnuInformation_menu_container
+{
+	
+	padding-top:4px;
+}
+.fg-menu li a
+{
+	text-align:left;
+}
+.red_iframe_container
+{
+	text-align:left;
+}
+hr { display: none; }

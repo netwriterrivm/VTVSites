@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARABOLD -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="paraitalic" type="container" uiname="rsi.menu.formatting.bold">
+	<edx:match element="#text">
+		<span edxtemplate="field:flow" edxpath="."></span>
+	</edx:match>
+	<!--<edx:match element="super">
+      <span edxtemplate="parasuper" edxpath="."></span>
+    </edx:match><edx:match element="sub">
+      <span edxtemplate="parasub" edxpath="."></span>
+    </edx:match>-->
+	<edx:match element="bold">
+      <strong edxtemplate="parabold" edxpath="."></strong>
+    </edx:match>
+    <!--<edx:match element="under">
+      <u edxtemplate="paraunder" edxpath="."></u>
+    </edx:match>-->
+	<edx:navigationitem enabled="false"  shortcut_ctrl="true" shortcut_alt="false" shortcut_key="I" shortcut_keycode="73" toolbar_button_visible="1" name="rsi.menu.formatting.italic" icon="/NetWriterGui/content/xml/icons/formatting_italic.gif" id="btnFormatItalic" onclick="" xml_tag="italic"  enable_check="edxid.canApplyTag(\'italic\');" aspx_propertypage=""  aspx_selectpage=""  item_type="format"></edx:navigationitem>
+</edx:template>

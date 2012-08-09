@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" copypasteparent="true" allow_link_menu="true" name="object_external_writer"
+	type="region" uiname="rsi.menu.insert.object_external">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<span edxtemplate="widget:link_object_external" edxpath="." ></span>
+		<!--<iframe edxtemplate="widget:link_object_external" edxpath="." width="500" height="400" frameborder="0"></iframe>-->
+	</edx:xhtml>
+</edx:template>

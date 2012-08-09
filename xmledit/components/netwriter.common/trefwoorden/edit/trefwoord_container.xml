@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- HEADER TEMPLATE -->
+<!-- HEADER CONTAINER TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="trefwoord_container" type="container" uiname="rsi.edx.keywords">
+	<edx:match element="#text">
+		<span edxtemplate="field:flow" edxpath="."></span>
+	</edx:match>
+</edx:template>

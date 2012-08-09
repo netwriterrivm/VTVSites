@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="/NetWriterGui/javascript/include.js"></script>
+</head>
+<body>
+    <script>
+        iCount = 0;
+        var isCtrl = false;$(document).keyup(function (e) {
+            if (e.which == 17) isCtrl = false;
+        }).keydown(function (e) {
+            iCount++;
+            $("body").html( e.which + ' ' + iCount);
+            if (e.which == 17) isCtrl = true;
+            if (e.which == 66 && isCtrl == true) {
+                $("body").html('66 Keyboard shortcuts + JQuery are even more cool! ' + iCount);
+                return false;
+            }
+            if (e.which == 73 && isCtrl == true) {
+                $("body").html(' 73 Keyboard shortcuts + JQuery are even more cool!  ' + iCount);
+                return false;
+            }
+        });
+    </script>
+    test
+</body>
+</html>

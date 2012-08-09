@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?edxview /VTVSites/xmledit/templates/default/editor.compiled.xml?>
+<kompasdocument xmlns="http://www.msnbc.com/xmlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<documentheader>
+		<documenttitle layout="Titel onderwerp" autodb="Ja">[Titel onderwerp]</documenttitle>
+		<documenttitle layout="Titel rubriek" autodb="NVT">[Titel rubriek]</documenttitle>
+		<documenttitle layout="Titel document" autodb="Ja">[Titel document]</documenttitle>
+	</documentheader>
+	<body>
+		<frame layout="Normaal 1 Koloms">
+			<framemenu layout="hidden"></framemenu>
+			<column1>
+				<header align="" level="2">[kopregel]</header>
+				<paragraph align="">[tekst]</paragraph>
+			</column1>
+			<column2>
+			</column2>
+			<column3>
+			</column3>
+			<column4>
+			</column4>
+			<column5>
+			</column5>
+			<framelabel visibilityinframe="hidden">[Label]</framelabel>
+			<frameid>Id</frameid>
+		</frame>
+	</body>
+	<footer visibility="visible" footerpersons="visible"></footer>
+</kompasdocument>
+

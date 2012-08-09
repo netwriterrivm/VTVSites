@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="region_link_content" type="region" uiname="rsi.menu.file.include">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<img edxtemplate="widget:link_content_link" edxpath="content" align="absmiddle"></img>
+		<span edxtemplate="widget:link_content" edxpath="content"></span>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:navigationitem enabled="false"  toolbar_button_visible="1" name="rsi.menu.file.include"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" icon="/NetWriterGui/content/xml/icons/include2.gif" id="btnInclude" onclick="" xml_tag="link_content"  enable_check="guiOwnerCanApplyTag(\'link_content\');"  aspx_propertypage=""  aspx_selectpage="/VtvRedactieGui/Other/ObjectSelector2.aspx?WrapXmlTag=link_content&amp;PageMode=4&amp;ObjectTypeId=32&amp;SelectMode=true" item_type="insert"></edx:navigationitem>
+	<edx:insert>
+		<link_content>Nieuwe paragraaf</link_content>
+	</edx:insert>
+</edx:template>

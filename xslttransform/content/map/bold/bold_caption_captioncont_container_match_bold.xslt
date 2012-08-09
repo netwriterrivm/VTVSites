@@ -1,0 +1,2 @@
+<xsl:stylesheet version="1.0" exclude-result-prefixes="asp ucidb" xmlns:ucidb="http://www.piet.nl" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:asp="urn:schemas-microsoft-com:datatypes"><xsl:template match="bold" mode="caption_captioncont_container_match_bold"><xsl:if test="count(child::*)>0 or  count(child::text())>0"><strong class="textEmphasis"><xsl:apply-templates mode="parabold" select="."></xsl:apply-templates></strong></xsl:if></xsl:template>
+</xsl:stylesheet>

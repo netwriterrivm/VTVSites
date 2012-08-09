@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- OBJECT BINARY ICON -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="region_link_object_binary_icon" type="region"
+	uiname="rsi.edx.icon">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<span edxtemplate="para_link_object_binary_image" edxpath="."></span>
+		<img edxtemplate="widget:object_binary_image" edxpath="object_binary" border="0" />
+	</edx:xhtml>
+	<edx:navigationitem toolbar_button_visible="0" shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""   enabled="true" name="rsi.edx.icon" icon="" id="link_object_binary_icon" onclick="" xml_tag="link_object_binary_icon"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_icon\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_icon&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapObjectBinary.aspx?SearchMode=icon&amp;WrapXmlTag=link_object_binary_icon&amp;PageMode=4&amp;SelectMode=true&amp;T1=rsi.aspx.other.objectselector.searchtree&amp;U1=/vtvRedactieGui/Other/ObjectSelector2.aspx&amp;P1=0&amp;TI1=0&amp;R1=0"  item_type="insert"></edx:navigationitem>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert>
+		<link_object_binary_icon>Nieuwe paragraaf</link_object_binary_icon>
+	</edx:insert>
+</edx:template>

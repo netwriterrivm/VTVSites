@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- CAPTION TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="banner" type="region" uiname="rsi.menu.insert.banner">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<div style="border:1px dashed black">
+			<b>Banner/Teaser image(max 1):</b>
+			<div  edxtemplate="bannerimagecont" edxpath="link_image"></div>
+			<b>Banner/Teaser link (max 1):</b>
+			<div edxtemplate="bannercont" edxpath="link_object"></div>
+			<b>Banner/Teaser tekst:</b>
+			<div edxtemplate="field:flow" edxpath="content"></div>
+		</div>
+	</edx:xhtml>
+	<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.banner" icon="/NetWriterGui/images/icons/insert_banner.gif" id="btnInsertBanner" onclick="" xml_tag="banner"  enable_check="guiOwnerCanApplyTag(\'banner\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="true">
+		<banner color="default"  align=""><link_image></link_image><link_object></link_object><content>[Paragraaf]</content></banner>
+	</edx:insert>
+	<edx:attributelist>
+		<attribute name="color" uiname="rsi.menu.insert.banner.color" applytocolumn="false"
+			uiicon="">
+			<option value="color1">rsi.menu.insert.banner.color.1</option>
+			<option value="color2">rsi.menu.insert.banner.color.2</option>
+			<option value="color3">rsi.menu.insert.banner.color.3</option>
+			<option value="color4">rsi.menu.insert.banner.color.4</option>
+			<option value="color5">rsi.menu.insert.banner.color.5</option>
+			<option value="color6">rsi.menu.insert.banner.color.6</option>
+			<option value="color7">rsi.menu.insert.banner.color.7</option>
+			<option value="color8">rsi.menu.insert.banner.color.8</option>
+			<option value="color9">rsi.menu.insert.banner.color.9</option>
+			<option value="color10">rsi.menu.insert.banner.color.10</option>
+			<option value="color11">rsi.menu.insert.banner.color.11</option>
+			<option value="color12">rsi.menu.insert.banner.color.12</option>
+			<option value="color13">rsi.menu.insert.banner.color.13</option>
+			<option value="color14">rsi.menu.insert.banner.color.14</option>
+			<option value="color15">rsi.menu.insert.banner.color.15</option>
+			<option value="lighter">rsi.menu.insert.banner.color.lighter</option>
+			<option value="lightest">rsi.menu.insert.banner.color.lightest</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- DATATABLE TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="datatable" type="region" uiname="rsi.menu.table">
+	<edx:xhtml display="rsi.menu.file.preview">
+		<p>
+			<img edxtemplate="widget:icon.default" />
+				<span edxtemplate="widget:datatableview" edxpath="." ></span>
+			<!--<iframe edxtemplate="widget:datatableview" edxpath="." width="500" height="400" frameborder="0"></iframe>-->
+		</p>
+	</edx:xhtml>
+	<edx:xhtml display="rsi.edx.aanpassen">
+		<p>
+			<img edxtemplate="widget:icon.default" />
+			<span edxtemplate="datatablelayoutselect" edxpath="." ><!-- test--></span>
+			<span edxtemplate="widget:datatablewidth" edxpath="."><!-- test--></span>
+		</p>
+		<p edxtemplate="datatable_body" edxpath="." ></p>
+		
+	</edx:xhtml>
+	<edx:navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table" icon="/NetWriterGui/content/xml/icons/insert_table.gif" id="btnInsertTable" onclick="" xml_tag="datatable"  enable_check="guiOwnerCanApplyTag(\'datatable\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:insert allow_clipboard="true" clipboard_check="clipBoardIsTable();">
+		<datatable summary="[beschrijving/summary]">
+			<datatablecaption>Tabelcaption</datatablecaption>
+			<datarow layout="Kop" align="left" valign="top" width="" height="" nowrap="false">
+				<datacell layout="" colspan="1" align="" valign="" width="" height="" nowrap="false">
+					<paragraph align="" layout="paragraph">[Kopregel]</paragraph>
+				</datacell>
+				<datacell layout="" colspan="1" align="" valign="" width="" height="" nowrap="false">
+					<paragraph align="" layout="paragraph">[Kopregel]</paragraph>
+				</datacell>
+			</datarow>
+			<datarow layout="Normaal" align="left" valign="top" width="" height="" nowrap="false">
+				<datacell layout="" colspan="1" align="" valign="" width="" height="" nowrap="false">
+					<paragraph align="" layout="paragraph">[Paragraaf]</paragraph>
+				</datacell>
+				<datacell layout="" colspan="1" align="" valign="" width="" height="" nowrap="false">
+					<paragraph align="" layout="paragraph">[Paragraaf]</paragraph>
+				</datacell>
+			</datarow>
+		</datatable>
+	</edx:insert>
+	<edx:attributelist>
+		<textattribute name="width" uiname="rsi.edx.attribute.table.width"></textattribute>
+		<attribute name="width" uiname="rsi.edx.attribute.table.width" applytocolumn="false" uiicon="">
+			<option value="">rsi.edx.attribute.table.width.none</option>
+			<option value="10%">rsi.edx.attribute.table.width.perc.10</option>
+			<option value="20%">rsi.edx.attribute.table.width.perc.20</option>
+			<option value="30%">rsi.edx.attribute.table.width.perc.30</option>
+			<option value="40%">rsi.edx.attribute.table.width.perc.40</option>
+			<option value="50%">rsi.edx.attribute.table.width.perc.50</option>
+			<option value="60%">rsi.edx.attribute.table.width.perc.60</option>
+			<option value="70%">rsi.edx.attribute.table.width.perc.70</option>
+			<option value="80%">rsi.edx.attribute.table.width.perc.80</option>
+			<option value="90%">rsi.edx.attribute.table.width.perc.90</option>
+			<option value="100">rsi.edx.attribute.table.width.pixel.100</option>
+			<option value="200">rsi.edx.attribute.table.width.pixel.200</option>
+			<option value="300">rsi.edx.attribute.table.width.pixel.300</option>
+			<option value="400">rsi.edx.attribute.table.width.pixel.400</option>
+			<option value="500">rsi.edx.attribute.table.width.pixel.500</option>
+			<option value="600">rsi.edx.attribute.table.width.pixel.600</option>
+			<option value="700">rsi.edx.attribute.table.width.pixel.700</option>
+			<option value="800">rsi.edx.attribute.table.width.pixel.800</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

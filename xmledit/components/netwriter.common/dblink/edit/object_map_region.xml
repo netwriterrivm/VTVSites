@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" allow_link_menu="true" copypasteparent="true" name="object_map_writer"
+	type="region" uiname="rsi.menu.insert.map">
+  <edx:xhtml display="default">
+    <img edxtemplate="widget:icon.default" />
+    <span edxtemplate="link_attribute_region" edxpath="."></span>
+    <span>
+      <span edxtemplate="field:flow" class="nw_editor_element_object_map" edxoptions="enter-action:none;allow-split:false" edxpath="@editor_label"></span><img edxtemplate="widget:icon.link"  edxpath="@object_map_id" />
+    </span>
+  </edx:xhtml>
+  <edx:xhtml display="false">
+    <img edxtemplate="widget:icon.default" />
+    <span edxtemplate="link_attribute_region" edxpath="."></span>
+    <span>
+      <span edxtemplate="field:flow" class="nw_editor_element_object_map" edxoptions="enter-action:none;allow-split:false" edxpath="@editor_label"></span><img edxtemplate="widget:icon.link"  edxpath="@object_map_id" />
+    </span>
+  </edx:xhtml>
+  <edx:xhtml display="true">
+    <img edxtemplate="widget:icon.default" />
+    <span edxtemplate="link_attribute_region" edxpath="."></span>
+    <span>
+      <span class ="nw_editor_element_object_map  nw_link_disabled" edxtemplate="widget:attribute" edxpath="@object_map_label"></span><img edxtemplate="widget:icon.link"  edxpath="@object_map_id" />
+    </span>
+  </edx:xhtml>
+  <edx:attributelist>
+    <attribute name="link_target" uiname="rsi.edx.attribute.link.target" applytocolumn="false"
+			uiicon="">
+      <option value="_self">rsi.edx.attribute.link.target.self</option>
+      <option value="_blank">rsi.edx.attribute.link.target.blank</option>
+      <option value="_popup">rsi.edx.attribute.link.target.popup</option>
+      <option value="_popup_map">rsi.edx.attribute.link.target.popup.map</option>
+      <option value="_popup_map_slider">rsi.edx.attribute.link.target.popup.map.slider</option>
+    </attribute>
+  </edx:attributelist>
+</edx:template>

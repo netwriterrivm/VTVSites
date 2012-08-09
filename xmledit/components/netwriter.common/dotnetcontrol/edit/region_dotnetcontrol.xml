@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- OBJECT BINARY IMAGE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="dotnetcontrol" type="region"
+	uiname="rsi.edx.dotnetcontrol">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<div>
+			<strong>Control information:</strong>
+			<table>
+				<tr>
+					<td collpan="2">General</td>
+				</tr>
+				<tr>
+					<td>Id:</td>
+					<td>
+						<input edxtemplate="widget:text"  edxpath="@elementid"></input>
+					</td>
+				</tr>
+				<tr>
+					<td>Tagprefix:</td>
+					<td>
+						<input edxtemplate="widget:text"  edxpath="@tagprefix"></input>
+					</td>
+				</tr>
+				<tr>
+					<td>Control name or tag name:</td>
+					<td>
+						<input edxtemplate="widget:text"  edxpath="@tagname"></input>
+					</td>
+				</tr>
+				<tr>
+					<td collpan="2">Custom Control</td>
+				</tr>
+				<tr>
+					<td>Assembly:</td>
+					<td>
+						<input edxtemplate="widget:text"  edxpath="@assembly"></input>
+					</td>
+				</tr>
+				<tr>
+					<td collpan="2">Web User Control</td>
+				</tr>
+				<tr>
+					<td>Source location:</td>
+					<td>
+						<input edxtemplate="widget:text"  edxpath="@src"></input>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div><strong>Attributes:</strong></div>
+		<div class="textImageFrame" edxtemplate="dotnetcontrol_attributes_container" edxpath="attributes"></div>
+		<div>See .NET Framework General Reference for documentation</div>
+	</edx:xhtml>
+	<edx:navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.dotnetcontrol" icon="/NetWriterGui/images/icons/insert_net.gif" id="dotnetcontrol" onclick="" xml_tag="dotnetcontrol"  enable_check="guiOwnerCanApplyTag(\'dotnetcontrol\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		<attribute name="register" uiname="Register Tag" applytocolumn="false" uiicon="">
+			<option value="yes">rsi.edx.attribute.yes</option>
+			<option value="no">rsi.edx.attribute.no</option>
+		</attribute>
+		<attribute name="outputpreview" uiname="Output in preview modes" applytocolumn="false" uiicon="">
+			<option value="yes">rsi.edx.attribute.yes</option>
+			<option value="no">rsi.edx.attribute.no</option>
+		</attribute>
+	</edx:attributelist>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert>
+		<dotnetcontrol register="yes" outputpreview="no" elementid="[id]"  tagprefix="[tagprefix]" namespace="[namespace]" assembly="[assembly]" tagname="[tagname]" src="[src]">
+			<attributes></attributes>
+		</dotnetcontrol>
+	</edx:insert>
+</edx:template>

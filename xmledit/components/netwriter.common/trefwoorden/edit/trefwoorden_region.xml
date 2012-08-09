@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- HEADER TEMPLATE -->
+<!-- HEADER TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="trefwoorden" type="region" uiname="rsi.edx.keywords">
+	<edx:xhtml display="default">
+			<img edxtemplate="widget:icon.details" />
+		   <b>Trefwoorden/Keywords:</b><br/>
+		<ul  edxtemplate="trefwoordencont" edxpath="." ></ul>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="false" allow_node_name_change="false">
+	<trefwoorden><trefwoord>[trefwoord]</trefwoord></trefwoorden></edx:insert>
+</edx:template>

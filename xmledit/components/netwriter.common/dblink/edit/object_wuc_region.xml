@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" copypasteparent="true" allow_link_menu="true" name="object_wuc_writer"
+	type="region" uiname="rsi.menu.insert.wuc">
+	<edx:xhtml display="default">
+		<!--<img edxtemplate="widget:icon.default" />-->
+		<iframe edxtemplate="widget:link_object_wuc" edxpath="." width="500" height="400" frameborder="0"></iframe>
+	</edx:xhtml>
+</edx:template>

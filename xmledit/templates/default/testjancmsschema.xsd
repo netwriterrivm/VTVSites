@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2006 rel. 3 U (http://www.altova.com) by Mehdi Alkadhimi (geen) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="link_object_url">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="object_url" minOccurs="0"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_object_map">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="object_map"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_object_document">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="object_document"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_object_class">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="object_class" minOccurs="0"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_definition">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="definition"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_definition_short">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="definition"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_reference">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="reference"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="sub">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="super">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="bold">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="object_map">
+		<xs:complexType>
+			<xs:attribute name="object_map_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_map_label" type="xs:string" use="optional"/>
+			<xs:attribute name="object_map_memo" type="xs:string" use="optional"/>
+			<xs:attribute name="object_map_file" type="xs:string" use="optional"/>
+			<xs:attribute name="object_map_timestamp" type="xs:dateTime" use="optional"/>
+			<xs:attribute name="status_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_map_production" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_map_default_structure_id" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="language_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="map_detail_basname" type="xs:string" use="optional"/>
+			<xs:attribute name="xml_template_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="editor_label" type="xs:string" use="optional"/>
+			<xs:attribute name="link_target" type="xs:string" use="optional"/>
+			<xs:attribute name="object_binary_id" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="object_binary_extension" type="xs:string" use="optional"/>
+			<xs:attribute name="click_zone_id" type="xs:unsignedByte" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="object_class">
+		<xs:complexType>
+			<xs:attribute name="object_class_title_alt" type="xs:string" use="optional"/>
+			<xs:attribute name="object_class_label" type="xs:string" use="optional"/>
+			<xs:attribute name="object_class_title_short" type="xs:string" use="optional"/>
+			<xs:attribute name="object_class_id" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="object_class_name" type="xs:string" use="optional"/>
+			<xs:attribute name="object_class_title" type="xs:string" use="optional"/>
+			<xs:attribute name="class_title_on" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="language_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="status_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="editor_label" type="xs:string" use="optional"/>
+			<xs:attribute name="link_target" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="definition">
+		<xs:complexType>
+			<xs:attribute name="definition_desc_regex" type="xs:string" use="optional"/>
+			<xs:attribute name="definition_id" type="xs:string" use="optional"/>
+			<xs:attribute name="person_id" type="xs:string" use="optional"/>
+			<xs:attribute name="definition_name" type="xs:string" use="optional"/>
+			<xs:attribute name="definition_desc" type="xs:string" use="optional"/>
+			<xs:attribute name="definition_memo" type="xs:string" use="optional"/>
+			<xs:attribute name="editor_label" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="object_document">
+		<xs:complexType>
+			<xs:attribute name="object_document_file" type="xs:string" use="optional"/>
+			<xs:attribute name="object_document_memo" type="xs:string" use="optional"/>
+			<xs:attribute name="object_document_id" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="object_document_label" type="xs:string" use="optional"/>
+			<xs:attribute name="object_document_production" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_document_timestamp" type="xs:dateTime" use="optional"/>
+			<xs:attribute name="status_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_document_default_structure_id" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="xml_template_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="language_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="editor_label" type="xs:string" use="optional"/>
+			<xs:attribute name="link_target" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="object_url">
+		<xs:complexType>
+			<xs:attribute name="object_url_id" type="xs:string" use="optional"/>
+			<xs:attribute name="object_url" type="xs:string" use="optional"/>
+			<xs:attribute name="object_url_label" type="xs:string" use="optional"/>
+			<xs:attribute name="object_url_validated" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_url_allowlist" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_url_broken" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_url_comment" type="xs:string" use="optional"/>
+			<xs:attribute name="person_id" type="xs:string" use="optional"/>
+			<xs:attribute name="editor_label" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="object_binary">
+		<xs:complexType>
+			<xs:attribute name="object_binary_is_icon" type="xs:string" use="optional"/>
+			<xs:attribute name="object_binary_id" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="object_binary_label" type="xs:string" use="optional"/>
+			<xs:attribute name="object_binary_type_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_binary_filename" type="xs:string" use="optional"/>
+			<xs:attribute name="object_binary_hash" type="xs:string" use="optional"/>
+			<xs:attribute name="language_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="status_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_binary_file_size" type="xs:string" use="optional"/>
+			<xs:attribute name="object_binary_timestamp" type="xs:string" use="optional"/>
+			<xs:attribute name="editor_label" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="content">
+		<xs:complexType>
+			<xs:attribute name="content_id" type="xs:unsignedInt" use="required"/>
+			<xs:attribute name="content_date" type="xs:string" use="required"/>
+			<xs:attribute name="content_type_id" type="xs:unsignedByte" use="required"/>
+			<xs:attribute name="object_id" type="xs:unsignedShort" use="required"/>
+			<xs:attribute name="object_type_id" type="xs:unsignedByte" use="required"/>
+			<xs:attribute name="content" type="xs:string" use="required"/>
+			<xs:attribute name="status_id" type="xs:unsignedByte" use="required"/>
+			<xs:attribute name="xml_template_id" type="xs:unsignedByte" use="required"/>
+			<xs:attribute name="XlinkIdLinked" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="object_wuc">
+		<xs:complexType>
+			<xs:attribute name="object_wuc_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_wuc_name" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_desc" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_location" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_preview_page" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_config_page" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_preview_width" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="object_wuc_paramlist" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_preview_height" type="xs:unsignedByte" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="reference">
+		<xs:complexType>
+			<xs:attribute name="reference_code" type="xs:string" use="optional"/>
+			<xs:attribute name="reference_id" type="xs:string" use="optional"/>
+			<xs:attribute name="reference" type="xs:string" use="optional"/>
+			<xs:attribute name="reference_authors" type="xs:string" use="optional"/>
+			<xs:attribute name="object_url_id" type="xs:string" use="optional"/>
+			<xs:attribute name="object_url" type="xs:string" use="optional"/>
+			<xs:attribute name="reference_title" type="xs:string" use="optional"/>
+			<xs:attribute name="reference_info" type="xs:string" use="optional"/>
+			<xs:attribute name="reference_year" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="reference_type_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="reference_volume" type="xs:string" use="optional"/>
+			<xs:attribute name="editor_label" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_object_binary_image_partner">
+		<xs:complexType>
+			<xs:choice minOccurs="0">
+				<xs:element ref="object_binary"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="kompasdocument">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="documentheader" minOccurs="0">
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="documenttitle" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="layout" type="xs:string" use="optional"/>
+											<xs:attribute name="autodb" type="xs:string" use="optional"/>
+											<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element ref="link_object_binary_image_partner" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:choice>
+						<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="body" minOccurs="0">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="frame" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:choice maxOccurs="unbounded">
+										<xs:element name="framemenu">
+											<xs:complexType>
+												<xs:attribute name="layout" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="column1">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element ref="paragraph" minOccurs="0"/>
+													<xs:element ref="caption" minOccurs="0"/>
+													<xs:element ref="header" minOccurs="0"/>
+													<xs:element ref="datatable" minOccurs="0"/>
+													<xs:element ref="list" minOccurs="0"/>
+													<xs:element ref="link_object_binary_image" minOccurs="0"/>
+													<xs:element ref="link_content" minOccurs="0"/>
+													<xs:element ref="link_object_wuc" minOccurs="0"/>
+													<xs:element ref="topicallead" minOccurs="0"/>
+												</xs:choice>
+												<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="column2">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element ref="paragraph" minOccurs="0"/>
+													<xs:element ref="caption" minOccurs="0"/>
+													<xs:element ref="datatable" minOccurs="0"/>
+													<xs:element ref="header" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="link_content" minOccurs="0"/>
+													<xs:element ref="link_object_binary_image" minOccurs="0"/>
+													<xs:element ref="link_object_wuc" minOccurs="0"/>
+													<xs:element ref="list" minOccurs="0"/>
+													<xs:element ref="topicallead" minOccurs="0"/>
+												</xs:choice>
+												<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="column3">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element ref="caption" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="datatable"/>
+													<xs:element ref="header"/>
+													<xs:element ref="link_content"/>
+													<xs:element ref="link_object_binary_image"/>
+													<xs:element ref="link_object_wuc"/>
+													<xs:element ref="list"/>
+													<xs:element ref="paragraph"/>
+													<xs:element ref="topicallead"/>
+												</xs:choice>
+												<xs:attribute name="XlinkId" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="column4">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element ref="caption" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="datatable" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="header" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="link_content" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="link_object_binary_image" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="link_object_wuc" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="list" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="paragraph" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="topicallead" minOccurs="0" maxOccurs="unbounded"/>
+												</xs:choice>
+												<xs:attribute name="XlinkId" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="column5">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element ref="caption" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="datatable" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="header" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="link_content" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="link_object_binary_image" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="link_object_wuc" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="list" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="paragraph" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element ref="topicallead" minOccurs="0" maxOccurs="unbounded"/>
+												</xs:choice>
+												<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="framelabel">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="visibilityinframe" type="xs:string" use="required"/>
+														<xs:attribute name="XlinkId" type="xs:string" use="required"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="frameid">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="visibilityinframe" type="xs:string" use="optional"/>
+														<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="layout" type="xs:string" use="optional"/>
+									<xs:attribute name="XlinkId" use="optional">
+										<xs:simpleType >
+										 <xs:restriction base="xs:decimal">
+         <xs:enumeration value="10.5"/>
+         <xs:enumeration value="9"/>
+         <xs:enumeration value="8"/>
+         <xs:enumeration value="11"/>
+      </xs:restriction></xs:simpleType>
+
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="XlinkId" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="footer" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="visibility" type="xs:string" use="required"/>
+						<xs:attribute name="footerpersons" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="XlinkId" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="paragraph">
+		<xs:complexType mixed="true">
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="super" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="sub" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="bold" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_reference" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_definition_short" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_definition" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_object_class" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_object_document" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_object_map" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_object_url" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="level" type="xs:string" use="optional"/>
+			<xs:attribute name="align" type="xs:string" use="optional"/>
+			<xs:attribute name="layout" type="xs:string" use="optional"/>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="header">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="align" type="xs:string" use="optional"/>
+					<xs:attribute name="level" type="xs:unsignedByte" use="optional"/>
+					<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="caption">
+		<xs:complexType mixed="true">
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="super" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="sub" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="bold"/>
+				<xs:element ref="link_reference" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_definition_short" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_definition" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_object_class" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_object_document" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_object_map" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="link_object_url" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+			<xs:attribute name="align" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="topicallead">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="align" type="xs:string" use="optional"/>
+					<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="listitem">
+						<xs:complexType mixed="true">
+							<xs:choice maxOccurs="unbounded">
+								<xs:element ref="super" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element ref="sub" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element ref="bold"/>
+								<xs:element ref="link_reference" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element ref="link_definition_short" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element ref="link_definition" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element ref="link_object_class" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element ref="link_object_document" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element ref="link_object_map" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element ref="link_object_url" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:choice>
+							<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="list">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="listitem" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="xs:string">
+												<xs:attribute name="XlinkId" type="xs:string" use="required"/>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="layout" type="xs:string" use="optional"/>
+							<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+			<xs:attribute name="layout" type="xs:string" use="optional"/>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_object_binary_image">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="object_binary"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="datatable">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="datarow" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="datacell" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:choice maxOccurs="unbounded">
+											<xs:element ref="paragraph"/>
+											<xs:element ref="header" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:element ref="link_object_binary_image"/>
+											<xs:element ref="list"/>
+										</xs:choice>
+									</xs:sequence>
+									<xs:attribute name="layout" type="xs:string" use="optional"/>
+									<xs:attribute name="colspan" type="xs:unsignedByte" use="optional"/>
+									<xs:attribute name="align" type="xs:string" use="optional"/>
+									<xs:attribute name="valign" type="xs:string" use="optional"/>
+									<xs:attribute name="width" type="xs:string" use="optional"/>
+									<xs:attribute name="height" type="xs:string" use="optional"/>
+									<xs:attribute name="nowrap" type="xs:boolean" use="optional"/>
+									<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="layout" type="xs:string" use="required"/>
+						<xs:attribute name="align" type="xs:string" use="required"/>
+						<xs:attribute name="valign" type="xs:string" use="required"/>
+						<xs:attribute name="width" type="xs:string" use="required"/>
+						<xs:attribute name="height" type="xs:string" use="required"/>
+						<xs:attribute name="nowrap" type="xs:boolean" use="required"/>
+						<xs:attribute name="XlinkId" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:attribute name="worksheetname" type="xs:string" use="optional"/>
+			<xs:attribute name="filename" type="xs:string" use="optional"/>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+			<xs:attribute name="width" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_object_wuc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="object_wuc" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="object_wuc_id" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="object_wuc_name" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_desc" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_location" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_preview_page" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_config_page" type="xs:string" use="optional"/>
+			<xs:attribute name="object_wuc_preview_width" type="xs:unsignedShort" use="optional"/>
+			<xs:attribute name="object_wuc_preview_height" type="xs:unsignedByte" use="optional"/>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link_content">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="content"/>
+			</xs:choice>
+			<xs:attribute name="XlinkId" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

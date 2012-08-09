@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="emptycell" type="region" uiname="rsi.edx.add">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.add" />
+	</edx:xhtml>
+</edx:template>

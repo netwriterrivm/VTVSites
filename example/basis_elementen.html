@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>HMTL basis elementen | Starters Kit</title>
+
+	<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />	
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />	
+	
+	<style type="text/css">
+		body { border: none; background: #fff; margin: 4em; }
+		hr { background: #ccc; padding: 0 0 1px 0; margin: 2em 0; }
+	</style>		
+</head>
+<body>
+
+	<h1>CSS Basis Elementen</h1>
+	<p>&hellip;</p>
+
+	<hr />
+
+	<h1 id="headings">Headings</h1>
+
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<h3>Heading 3</h3>
+	<h4>Heading 4</h4>
+	<h5>Heading 5</h5>
+	<h6>Heading 6</h6>
+
+	<p><small><a href="#wrapper">[top]</a></small></p>
+	<hr />
+
+
+	<h1 id="paragraph">Paragraph</h1>
+
+	<p><img style="float:right;" src="images/css_mastery.png" width="101" height="123" alt="CSS Mastery" /></p>
+	<p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+
+	<p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+	
+	<p>Lorem ipsum dolor sit amet, <strong>strong emphasis</strong> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>	
+
+	<p><small><a href="#wrapper">[top]</a></small></p>
+	<hr />
+
+	<h1 id="list_types">List Types</h1>
+
+	<h3>Definition List</h3>
+	<dl>
+		<dt>Definition List Title</dt>
+		<dd>This is a definition list division.</dd>
+	</dl>
+
+	<h3>Ordered List</h3>
+	<ol>
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+	</ol>
+
+	<h3>Unordered List</h3>
+	<ul>
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+	</ul>
+
+	<p><small><a href="#wrapper">[top]</a></small></p>
+	<hr />
+
+	<h1>Form, Fieldsets, Legends, and Form Elements</h1>
+
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
+	
+	<form method="post" action="#">
+			
+		<fieldset>
+			<legend>Legend 1</legend>			
+	
+			<ol>				
+				<li>
+					<label for="text_field">Text Field:</label>
+					<input type="text" id="text_field" />
+				</li>	
+				<li>
+					<label for="text_area">Text Area:</label>
+					<textarea id="text_area" cols="18" rows="6"></textarea>
+				</li>
+				<li>
+					<label>Select Element:</label>
+					<select name="select_element">
+						<optgroup label="Option Group 1">
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+						</optgroup>
+						<optgroup label="Option Group 2">
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+						</optgroup>
+					</select>
+				</li>				
+			</ol>
+			
+		</fieldset>
+		
+		<fieldset>
+			<legend>Legend 2</legend>
+			
+			<ol>					
+				<li>
+					<label>Radio Buttons:</label>
+					<ul>
+						<li><label><input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1</label></li>
+						<li><label><input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2</label></li>
+						<li><label><input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3</label></li>
+					</ul>
+				</li>
+				<li>
+					<label>Checkboxes:</label>
+					<ul>
+						<li><label><input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1</label></li>
+						<li><label><input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Radio 2</label></li>
+						<li><label><input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3</label></li>
+					</ul>
+				</li>
+				<li>
+					<label for="password">Password:</label>
+					<input type="password" class="password" id="password" name="password" />
+				</li>
+			</ol>
+
+		</fieldset>
+			
+		<fieldset>
+			<legend>Legend 3</legend>			
+
+			<ol>
+				<li>
+					<label for="file">File Input:</label>
+					<input type="file" class="file" id="file" name="file" />
+				</li>
+			</ol>
+			
+		</fieldset>
+		
+		<ul>
+			<li>
+				<input class="button" type="reset" value="Clear" />
+				<input class="button" type="submit" value="Submit" />
+			</li>
+		</ul>
+	
+	</form>
+
+	<p><small><a href="#wrapper">[top]</a></small></p>
+	<hr />
+
+	<h1 id="tables">Tables</h1>
+
+	<table cellspacing="0" cellpadding="0">
+		<tr>
+			<th>Table Header 1</th>
+			<th>Table Header 2</th>
+			<th>Table Header 3</th>
+		</tr>
+		<tr>
+			<td>Division 1</td>
+			<td>Division 2</td>
+			<td>Division 3</td>
+		</tr>
+		<tr class="even">
+			<td>Division 1</td><td>Division 2</td><td>Division 3</td>
+		</tr>
+		<tr>
+			<td>Division 1</td><td>Division 2</td><td>Division 3</td>
+		</tr>
+
+	</table>
+
+	<p><small><a href="#wrapper">[top]</a></small></p>
+	<hr />
+
+	<h1 id="misc">Misc Stuff - abbr, acronym, pre, code, sub, sup, etc.</h1>
+
+	<p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
+
+	<pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. <abbr title="Avenue">AVE</abbr></pre>
+
+	<blockquote>
+		<p>&ldquo;This stylesheet is going to help so freaking much.&rdquo; –Blockquote</p>
+	</blockquote>
+
+	<p><small><a href="#wrapper">[top]</a></small></p>
+	
+</body>
+</html>

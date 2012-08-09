@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- FRAME TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="frameline" type="region" uiname="rsi.edx.frame.line">
+	<edx:xhtml display="hidden"></edx:xhtml>
+	<edx:xhtml display="hidden_line">
+		<hr class="textLine"></hr>
+	</edx:xhtml>
+	<edx:xhtml display="visible_newline">
+		<hr class="textLine"></hr>
+	</edx:xhtml>
+	<edx:xhtml display="visible_newline_noline"></edx:xhtml>
+	<edx:xhtml display="visible_noline"></edx:xhtml>
+	<edx:xhtml display="visible">
+		<hr class="textLine"></hr>
+	</edx:xhtml>
+</edx:template>

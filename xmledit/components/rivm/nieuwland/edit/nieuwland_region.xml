@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="nieuwland" type="region"
+	uiname="rsi.aspx.objects.objectmap.maptype.nieuwland">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<div><h2>Nieuwland kaart/map:</h2>
+		<table>
+			<tr>
+				<td>Id:</td>
+				<td>
+					<input edxtemplate="widget:text" type="text" edxpath="@nieuwland_id" size="8" />
+				</td>
+			</tr>
+			<tr>
+				<td>Vormgeving:</td>
+				<td>
+					<select edxtemplate="widget:select" edxpath="@layout">
+						<option value="2">Blauwe voorbeeldlayout</option>
+						<option value="3">Zorgatlas</option>
+						<option value="446">Euphix layout 2</option>
+						<option value="588">Layout_HvB</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Breedte/Width:</td>
+				<td>
+					<input edxtemplate="widget:text" type="text" edxpath="@width" size="8" />
+				</td>
+			</tr>
+			<tr>
+				<td>Hoogte/Height:</td>
+				<td>
+					<input edxtemplate="widget:text" type="text" edxpath="@height" size="8" />
+				</td>
+			</tr>
+		</table></div>
+	</edx:xhtml>
+</edx:template>

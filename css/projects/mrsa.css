@@ -1,0 +1,70 @@
+﻿#zoeken
+{
+	display: none;
+}
+.loginset label
+{
+	width: 10em;
+	display: block;
+	float: left;
+}
+.loginset input
+{
+	display: block;
+	float: left;
+}
+.loginset .submit
+{
+	float: right;
+	margin-right: 1em;
+}
+#mrsa_list th
+{
+	white-space: normal;
+	text-align: left;
+}
+.mrsa_list_nl
+{
+	font-weight: bold;
+}
+#mrsa_list
+{
+	padding-right: 16px;
+}
+.content_supp_zorgatlas
+{
+	display: none;
+}
+.adduser
+{
+	width: 450px;
+	clear: both;
+}
+.adduser label
+{
+	width:15em;
+}
+.resultfilter
+{
+	width: 370px;
+	clear: both;
+}
+.resultfilter .submit, .adduser .submit
+{
+	float: left;
+}
+.resultfilter li,.adduser li
+{
+	list-style-type:none !important;
+}
+
+.resultlist img
+{
+	margin:0px !important;
+	vertical-align:text-bottom;
+	margin-left:2px !important;
+}
+.resultlist th
+{
+	text-align: left;
+}

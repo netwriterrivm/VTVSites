@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_object_binary_image_partner" type="container"
+	uiname="rsi.edx.logo">
+
+	<edx:match element="object_binary">
+		<span edxtemplate="object_binary_image_writer_partner" edxpath="."></span>
+	</edx:match>
+</edx:template>

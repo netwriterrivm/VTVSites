@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_object_binary_image" type="container"
+	uiname="rsi.menu.insert.image">
+	<edx:match element="link_object_class">
+		<span edxtemplate="region_link_object_class_image" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_document">
+		<span edxtemplate="region_link_object_document_image" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_map">
+		<span edxtemplate="region_link_object_map_image" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_url">
+		<span edxtemplate="region_link_object_url_image" edxpath="."></span>
+	</edx:match>
+			<edx:match element="link_code_file">
+		<span edxtemplate="region_link_code_file_image" edxpath="."></span>
+	</edx:match>
+	<edx:match element="object_binary">
+		<span edxtemplate="object_binary_image_writer" edxpath="."></span>
+	</edx:match>
+</edx:template>

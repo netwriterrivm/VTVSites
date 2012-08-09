@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<editviews xmlns:edx="msnbc-edx-edit-view" xmlns:xi="http://www.w3.org/2003/XInclude">
+	<edx:view uiname="Edit">
+		<!-- Dit template is afgeleid van het document template-->
+		<!-- Aangepaste templates -->
+		<!--	root -->
+		<!--	Frame (4 koloms, insert template, frame layout select verwijderd, attribuut toegevoegd) -->
+		<!-- body: auteurslijst weg-->
+						
+		<edx:template name="root" type="region" uiname="Kompas Document">
+			<edx:xhtml display="default">
+				 <div edxtemplate="kompasdocumentcontainer" edxpath="kompasdocument"></div>
+			</edx:xhtml>
+		</edx:template>
+		<edx:template name="kompasdocumentcontainer" type="container" uiname="rsi.edx.document.titel">
+			<edx:match element="documentheader">
+				<div class="textDocumentHeader" edxtemplate="documentheader" edxpath="."></div>
+			</edx:match>
+			<edx:match element="body">
+				<div class="textDocumentBody" edxtemplate="body" edxpath="."></div>
+			</edx:match>
+				<edx:match element="hiddenfields">
+				<div class="hiddenfields" edxtemplate="hiddenfields" edxpath="."></div>
+			</edx:match>
+			<edx:match element="footer">
+				<div class="textDocumentFooter" edxtemplate="footer" edxpath="." edxoptions="display-link:visibility"></div>
+			</edx:match>
+			<edx:match element="trefwoorden">			
+				<div  edxtemplate="trefwoorden" edxpath="."></div>
+			</edx:match>
+		</edx:template>
+		<!-- DOCUMENTTITLES CONTAINER -->
+		<edx:template name="documentheaderregion" type="region" uiname="footer">
+			<edx:xhtml display="default">
+				<div edxtemplate="documentheadercontainer" edxpath="." ></div>
+			</edx:xhtml></edx:template>
+		<edx:template name="documentheadercontainer" type="container" uiname="rsi.edx.document.titel">
+			<edx:match element="documenttitle">
+				<div edxtemplate="documenttitle" edxpath="." edxoptions="display-link:layout" ></div>
+			</edx:match>
+			<edx:match element="link_object_binary_image_partner">
+				<div style="CLEAR:left" edxtemplate="region_link_object_binary_image_partner" edxpath="."></div>
+			</edx:match>
+			<edx:match element="#empty">
+				<div edxtemplate="emptycell" edxpath="."></div>
+			</edx:match>
+		</edx:template>
+		
+		
+		<!-- DOCUMENTTITLE CONTAINER -->
+		<edx:template name="documenttitlecontainer" type="container" uiname="rsi.edx.document.titel">
+			<edx:match element="#text">
+				<span edxtemplate="field:flow" edxpath="."></span>
+			</edx:match>
+		</edx:template>
+
+			<edx:template name="hiddenfields" type="region" uiname="HiddenFields">
+					<edx:xhtml display="default">
+						<p>Hiddenfields (content not editable)</p>
+					</edx:xhtml>
+			</edx:template>
+				
+			<!-- BODY TEMPLATE -->
+		<edx:template name="body" type="region" uiname="Body">
+			<edx:xhtml display="Normaal">
+				<div class="textMenu" edxtemplate="linklist" edxpath="." ></div>
+				<div edxtemplate="bodycont" edxpath="."></div>
+			</edx:xhtml>
+		</edx:template>
+		<!-- LINKLIST CONTENT CONTAINER -->
+		<edx:template name="linklist" type="container" uiname="Body">
+			<edx:match element="frame">
+				<div edxtemplate="framemenu" edxpath="framemenu" edxoptions="display-link:layout" ></div>
+			</edx:match>
+		</edx:template>
+		<!-- BODY CONTENT CONTAINER -->
+		<edx:template name="bodycont" type="container" uiname="Body">
+			<edx:match element="frame">
+				<div edxtemplate="frame" edxpath="." edxoptions="display-link:layout" ></div>
+			</edx:match>
+			<edx:match element="#empty">
+				<div edxtemplate="emptycell" edxpath="."></div>
+			</edx:match>
+		</edx:template>
+		<!-- FOOTER REGION -->
+		<edx:template name="footer" type="region" uiname="rsi.edx.document.footer">
+			<edx:xhtml display="visible">
+				<span edxtemplate="footerlayoutsel" edxpath="." />
+				<span edxtemplate="widget:footer" edxpath="." />
+			</edx:xhtml>
+			<edx:xhtml display="hidden">
+				<span edxtemplate="footerlayoutsel" edxpath="." />
+				<span edxtemplate="widget:footer" edxpath="." />
+			</edx:xhtml>
+		</edx:template>
+		<!-- FOOTERLAYOUT REGION -->
+		<edx:template name="footerlayoutsel" type="region" uiname="rsi.edx.document.footer.properties">
+			<edx:xhtml display="rsi.edx.verbergen">
+				<img edxtemplate="widget:icon.properties" />
+			</edx:xhtml>
+			<edx:xhtml display="rsi.edx.aanpassen">
+				<img edxtemplate="widget:icon.details" />
+				<table class="edxPropertyFrame" border="0" cellpadding="5" cellspacing="0">
+					<tr>
+						<td>Voetregel:</td>
+						<td>
+							<select edxtemplate="widget:select" edxpath="@visibility" style="font-size:11px;font-family:arial">
+								<option value="visible">rsi.edx.attribute.footer.show</option>					
+								<option value="hidden">rsi.edx.attribute.footer.hide</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Personen: </td>
+						<td>
+							<select edxtemplate="widget:select" edxpath="@footerpersons" style="font-size:11px;font-family:arial">
+								<option value="visible">rsi.edx.attribute.footer.show.person</option>					
+								<option value="hidden">rsi.edx.attribute.footer.hide.person</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</edx:xhtml>
+		</edx:template>
+    <!-- Include voor groeperingen binnen een kolom -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\subgroup\edit\subgroup_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\subgroup\edit\subgroup_container.xml"/>
+				<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\documenttitle\edit\documenttitle_region.xml"/>
+		<!-- INCLUDE VOOR FRAME INDELING DOCUMENT -->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\frame\edit\kb_frame_region.xml" />
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\frame\edit\kb_frame_line_region.xml" />
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\frame\edit\frame_layoutsel_region.xml"/>
+		<!-- Include voor framelabel -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\frame\framelabel\edit\framelabel_region.xml"/>
+	<!-- Include voor framemenu -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\frame\framemenu\edit\framemenu_region.xml"/>	
+	<!-- Include voor kolommen definition list -->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\definitionlist\definition_list_item\edit\definition_list_item_region.xml"/>	
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\definitionlist\definitionlist_description\edit\definitionlist_description_region.xml"/>	
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\definitionlist\definitionlist_descriptioncollection\edit\definitionlist_descriptioncollection_container.xml"/>	
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\definitionlist\edit\definitionlist_region.xml"/>	
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\definitionlist\edit\definitionlist_container.xml"/>	
+			
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dotnetcontrol\edit\dotnetcontrol_attributes_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dotnetcontrol\edit\region_dotnetcontrol.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dotnetcontrol\edit\region_dotnetcontrol_attribute.xml"/>
+		<!-- Includes tbv taalwijzigingen-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\language\edit\language_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\language\edit\language_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\language\edit\language_container_links.xml"/>	
+	<!-- Include voor kolommen frame -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\frame\column\edit\column_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\frame\column\edit\kb_column_container.xml"/>	
+	<!-- Include voor empty elementen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\empty\edit\empty_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\empty\edit\empty_body_region.xml"/>		
+	<!-- Include voor paragraph elementen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\paragraph\edit\paragraph_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\paragraph\edit\paragraph_container.xml"/>	
+		<!-- Include voor media player-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\media_player\edit\media_player_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\media_player\edit\media_files_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\media_player\edit\media_file_region.xml"/>
+			<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\media_player\edit\transcription_container.xml"/>
+			<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\media_player\edit\transcription_item_region.xml"/>
+		
+	<!-- Include voor caption elementen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\caption\edit\caption_region.xml"/>	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\caption\edit\caption_container.xml"/>	
+	<!-- Include voor header tempates-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\header\edit\middenberm_header_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\header\edit\kb_header_container.xml"/>
+	<!-- Include voor topicallead tempates-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\topicallead\edit\topicallead_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\topicallead\edit\topicallead_container.xml"/>
+<!-- bold, italic, superscript en subscript -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\basic_formatting\edit\bold_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\basic_formatting\edit\italic_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\basic_formatting\edit\super_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\basic_formatting\edit\sub_container.xml"/>	
+	
+	<!-- includes tbv database linking -->
+	<!-- includes refence -->
+	<!-- REFERENCE -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_reference_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\reference_region.xml"/>
+	<!-- includes DEFINITION -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_definition_short_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\definition_short_region.xml"/>
+	<!-- includes DEFINITION -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_definition_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\definition_region.xml"/>
+	<!-- includes DEFINITION -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_class_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_class_region.xml"/>
+	<!-- includes link naar icoontje bij links -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_binary_icon_region.xml"/>
+		<!-- include voor link attributen -->
+		<xi:include href="C:\NetWriter\Rijksbreed\xmledit\components\netwriter.common\dblink\edit\link_attribute_region.xml"/>
+	<!-- includes object_document -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_document_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_document_region.xml"/>
+	<!-- includes object_map -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_map_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_map_region.xml"/>
+<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\release\link_object_map_swf_region.xml"/>
+		
+				<!-- includes code_file -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_code_file_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\code_file_region.xml"/>
+			<!-- includes object_url -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_url_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_url_region.xml"/>
+<!-- includes object_binary_icon partner logo-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_binary_image_partner_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_binary_image_partner_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_binary_image_partner_region.xml"/>
+	<!-- includes object_binary_image -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_binary_image_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\kb_link_object_binary_image_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_binary_image_region.xml"/>
+	
+		<!-- includen object_binary_images voor de rss feed-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\binary\edit\link_object_binary_image_region_large.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\binary\edit\link_object_binary_image_region_medium.xml"/>
+	
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_class_image_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_document_image_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_map_image_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_url_image_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_code_file_image_region.xml"/>
+<!-- includes link_content, om fragmenten te includen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_content_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_content_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\content_region.xml"/>
+		<!-- includes link_content, om wen user controls te includen -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_wuc_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_wuc_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_wuc_region.xml"/>
+			<!-- includes externe objecten -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_external_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_external_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_external_region.xml"/>
+
+		<!-- includes object_binary_pdf -->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\link_object_binary_pdf_container.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\dblink\edit\object_binary_pdf_region.xml"/>
+		
+	<!-- Include voor list tempates-->
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\list\edit\list_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\list\edit\list_container.xml"/>
+	
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\list\edit\listitem_region.xml"/>
+	<!-- Includes voor Tabellen -->		
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\edit\datatable_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\edit\datatable_layout_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\edit\datatable_body_region.xml"/>
+<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\edit\datatable_container.xml"/>
+<!-- Includes voor Tabel rijen -->		
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datarow\edit\datarow_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datarow\edit\datarow_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datarow\edit\datarow_container_th.xml"/>
+		<!--<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable/datarow\edit\datarow_container_throw.xml"/>-->
+	<!-- Includes voor Tabel cellen -->		
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datacell\edit\datacell_region.xml"/>
+	<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\netwriter.common\datatable\datacell\edit\datacell_container.xml"/>
+		<!-- includes voor banner/teasers-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\banner\edit\banner_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\banner\edit\banner_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\banner\edit\banner_image_container.xml"/>
+		<!-- Artikelcategorielijst-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\edit\articlecategorylist_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\edit\articlecategorylist_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\edit\articlecategory_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\edit\articlecategory_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\articlecategorylist\edit\articlecategory_image_container.xml"/>
+		<!-- Homepagelijst-->
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\edit\homepagelist_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\edit\homepagelist_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\edit\homepagelist_headerlinkcont_container.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\edit\homepagelist_item_region.xml"/>
+		<xi:include href="C:\NetWriter\KiesBeterNetWriter\xmledit\components\kiesbeter\homepagelist\edit\homepage_list_link_imagecont.xml"/>
+		
+	</edx:view>
+	<edx:navigationcollection>
+		<navigation name="rsi.menu.file" icon="" id="mnuFile" is_menu="1" is_toolbar="1" shortcut_ctrl="false" shortcut_alt="false" shortcut_keycode="" shortcut_key ="" show_title_toolbar="0" xml_tag="" enable_check="" item_type="menu">
+			<navigationitem enabled="false" toolbar_button_visible="1" name="rsi.menu.file.save" shortcut_ctrl="true" shortcut_alt="false" shortcut_key ="S" shortcut_keycode="83" icon="/NetWriterGui/content/xml/icons/file_save.gif" id="btnSave" onclick="if(typeof saveDocument == \'function\') {saveDocument();} else{setToolbarSettings();document.FrmSave.Content.value=edxid.getXmlNode().xml;document.FrmSave.ReturnUrl.value=\'\';document.FrmSave.submit();edxid.clearHistory();if (blnRefreshOpener==true){try {window.opener.location.reload(); window.focus();} catch (e) {}}}" xml_tag=""  enable_check="edxid.canUndo();"  aspx_propertypage=""  aspx_selectpage="" item_type="general"></navigationitem>
+			<navigationitem enabled="true"  toolbar_button_visible="1" name="rsi.menu.file.import"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" icon="/NetWriterGui/content/xml/icons/import.gif" id="btnImport" onclick="btnImport_onClick();" xml_tag=""  enable_check=""  aspx_propertypage=""  aspx_selectpage="" item_type=""></navigationitem>
+			<navigationitem enabled="true"  toolbar_button_visible="1" name="rsi.aspx.page.toolbar.redaction.preview"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  icon="/NetWriterGui/content/xml/icons/file_preview.gif" id="btnPreview4" onclick="btnPreview_onClick(4);" xml_tag=""  enable_check=""  aspx_propertypage=""  aspx_selectpage="" item_type=""></navigationitem>
+			<navigationitem enabled="true"  toolbar_button_visible="1" name="rsi.menu.file.preview.content"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  icon="/NetWriterGui/content/xml/icons/file_preview.gif" id="btnPreview5" onclick="btnPreview_onClick(5);" xml_tag=""  enable_check=""  aspx_propertypage=""  aspx_selectpage="" item_type=""></navigationitem>
+			<navigationitem enabled="true"  toolbar_button_visible="1" name="rsi.menu.file.xml" shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  icon="/NetWriterGui/content/xml/icons/preview.xml.gif" id="btnXmlViewer" onclick="btnXmlViewer_onClick();" xml_tag=""  enable_check=""  aspx_propertypage=""  aspx_selectpage="" item_type=""></navigationitem>
+		</navigation>
+		<navigation name="rsi.menu.edit" icon="" id="mnuEdit" is_menu="1" is_toolbar="1"  shortcut_ctrl="false" shortcut_key ="" shortcut_alt="false" shortcut_keycode="" show_title_toolbar="0" xml_tag=""  enable_check="" item_type="menu" >
+			<navigationitem enabled="false"  toolbar_button_visible="1" name="rsi.menu.edit.undo" shortcut_ctrl="true" shortcut_alt="false" shortcut_key ="Z" shortcut_keycode="90" icon="/NetWriterGui/content/xml/icons/edit_undo.gif" id="btnUndo" onclick="edxid.undo();" xml_tag=""  enable_check="edxid.canUndo();"  aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  toolbar_button_visible="1" name="rsi.menu.edit.redo"  shortcut_ctrl="true" shortcut_alt="false"  shortcut_key ="Y" shortcut_keycode="89" icon="/NetWriterGui/content/xml/icons/edit_redo.gif" id="btnRedo" onclick="edxid.redo();" xml_tag=""  enable_check="edxid.canRedo();"  aspx_propertypage=""  aspx_selectpage="" item_type="general"></navigationitem>
+				<navigationspacer/>
+			<navigationitem enabled="false"   toolbar_button_visible="1" name="rsi.menu.edit.cut"  shortcut_ctrl="true"  shortcut_key ="X" shortcut_alt="false" shortcut_keycode="88" icon="/NetWriterGui/content/xml/icons/edit_cut.gif" id="btnCut" onclick="btnCut_onClick();" xml_tag=""  enable_check=""  aspx_propertypage=""  aspx_selectpage="" item_type="general"></navigationitem>
+			<navigationitem enabled="false"  toolbar_button_visible="1" name="rsi.menu.edit.copy"  shortcut_ctrl="true"  shortcut_key ="C" shortcut_alt="false" shortcut_keycode="67" icon="/NetWriterGui/content/xml/icons/edit_copy.gif" id="btnCopy" onclick="btnCopy_onClick();" xml_tag=""  enable_check=""  aspx_propertypage=""  aspx_selectpage="" item_type="general"></navigationitem>
+			<navigationitem enabled="false"  toolbar_button_visible="1" name="rsi.menu.edit.paste"  shortcut_ctrl="true"  shortcut_key ="V" shortcut_alt="false" shortcut_keycode="86"  icon="/NetWriterGui/content/xml/icons/edit_paste.gif" id="btnPaste" onclick="btnPaste_onClick();" xml_tag=""  enable_check="" aspx_propertypage=""  aspx_selectpage="" item_type="general"></navigationitem>
+		</navigation>
+		<navigation name="rsi.menu.insert" icon="" id="mnuInsert"  is_menu="1" is_toolbar="1"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" show_title_toolbar="0"  xml_tag=""  enable_check="" item_type="insertmenu">
+			<navigationitem enabled="false"  toolbar_button_visible="1" name="rsi.menu.file.include"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" icon="/NetWriterGui/content/xml/icons/include2.gif" id="btnInclude" onclick="" xml_tag="link_content"  enable_check="guiOwnerCanApplyTag(\'link_content\');"  aspx_propertypage=""  aspx_selectpage="/VtvRedactieGui/Other/ObjectSelector2.aspx?WrapXmlTag=link_content&amp;PageMode=4&amp;ObjectTypeId=32&amp;SelectMode=true" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" name="rsi.menu.insert.documenttitle" icon="/NetWriterGui/content/xml/icons/insert_doumenttitle.gif" id="btnInsertDocumentTitle" onclick="" xml_tag="documenttitle"  enable_check="guiOwnerCanApplyTag(\'documenttitle\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" name="rsi.menu.insert.frame" icon="/NetWriterGui/content/xml/icons/insert_frame_below2.gif" id="btnInsertFrame" onclick="" xml_tag="frame"  enable_check="guiOwnerCanApplyTag(\'frame\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+			<navigationspacer/>
+				<navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.paragraph" icon="/NetWriterGui/content/xml/icons/paragraph_twee.gif" id="btnInsertParagraph" onclick="" xml_tag="paragraph"  enable_check="guiOwnerCanApplyTag(\'paragraph\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+				<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.caption" icon="/NetWriterGui/content/xml/icons/insert_caption.gif" id="btnInsertCaption" onclick="" xml_tag="caption"  enable_check="guiOwnerCanApplyTag(\'caption\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+				<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.header" icon="/NetWriterGui/content/xml/icons/paragraph.gif" id="btnInsertHeader" onclick="" xml_tag="header"  enable_check="guiOwnerCanApplyTag(\'header\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+				<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.topicallead" icon="/NetWriterGui/content/xml/icons/insert_topicallead.gif" id="btnInsertTopicalLead" onclick="" xml_tag="topicallead"  enable_check="guiOwnerCanApplyTag(\'topicallead\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+				<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.image" icon="/NetWriterGui/content/xml/icons/image.gif" id="btnInsertImage" onclick="" xml_tag="link_object_binary_image"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_image\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image&amp;PageMode=4&amp;SelectMode=true&amp;T1=rsi.aspx.other.objectselector.searchtree&amp;U1=/vtvRedactieGui/Other/ObjectSelector2.aspx&amp;P1=0&amp;TI1=0&amp;R1=0" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.image.large" icon="/NetWriterGui/images/icons/imagelarge.gif" id="btnInsertImageLarge" onclick="" xml_tag="link_object_binary_image_large"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_image_large\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image_large&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image_large&amp;PageMode=4&amp;SelectMode=true&amp;T1=rsi.aspx.other.objectselector.searchtree&amp;U1=/vtvRedactieGui/Other/ObjectSelector2.aspx&amp;P1=0&amp;TI1=0&amp;R1=0" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.image.medium" icon="/NetWriterGui/images/icons/imagemedium.gif" id="btnInsertImageMedium" onclick="" xml_tag="link_object_binary_image_medium"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_image_medium\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image_medium&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image_medium&amp;PageMode=4&amp;SelectMode=true&amp;T1=rsi.aspx.other.objectselector.searchtree&amp;U1=/vtvRedactieGui/Other/ObjectSelector2.aspx&amp;P1=0&amp;TI1=0&amp;R1=0" item_type="insert"></navigationitem>
+							<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.list" icon="/NetWriterGui/content/xml/icons/formatting_list_bullets.gif" id="btnInsertList" onclick="" xml_tag="list"  enable_check="guiOwnerCanApplyTag(\'list\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+			<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.banner" icon="/NetWriterGui/images/icons/insert_banner.gif" id="btnInsertBanner" onclick="" xml_tag="banner"  enable_check="guiOwnerCanApplyTag(\'banner\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+			<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.articlecategorylist" icon="/NetWriterGui/images/icons/insert_articlecategorylist.gif" id="btnInsertACLList" onclick="" xml_tag="articlecategorylist"  enable_check="guiOwnerCanApplyTag(\'articlecategorylist\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+			<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.homepagelist" icon="/NetWriterGui/images/icons/insert_homepagelist.gif" id="btnInsertHpList" onclick="" xml_tag="homepagelist"  enable_check="guiOwnerCanApplyTag(\'homepagelist\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+      	<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.tablecontainer" icon="/NetWriterGui/content/xml/icons/insert_subgroup.gif" id="btnSubGroup" onclick="" xml_tag="subgroup"  enable_check="guiOwnerCanApplyTag(\'subgroup\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationspacer/>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1" name="rsi.menu.insert.reference" icon="/NetWriterGui/content/xml/icons/reference_1.gif" id="btnInsertReference" onclick="" xml_tag="link_reference"  enable_check="guiOwnerCanApplyTag(\'link_reference\');" aspx_propertypage="/VtvRedactieGui/Objects/Reference.aspx?WrapXmlTag=link_reference&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapReference.aspx?WrapXmlTag=link_reference&amp;PageMode=4&amp;SelectMode=true" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1" name="rsi.menu.insert.definition.short" icon="/NetWriterGui/content/xml/icons/definition_short_1.gif" id="btnInsertDefinitionShort" onclick="" xml_tag="link_definition_short"  enable_check="guiOwnerCanApplyTag(\'link_definition_short\');" aspx_propertypage="/VtvRedactieGui/Objects/Definition.aspx?WrapXmlTag=link_definition_short&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapDefinition.aspx?WrapXmlTag=link_definition_short&amp;PageMode=4&amp;SelectMode=true" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1" name="rsi.menu.insert.definition" icon="/NetWriterGui/content/xml/icons/definition_1.gif" id="btnInsertDefinition" onclick="" xml_tag="link_definition"  enable_check="guiOwnerCanApplyTag(\'link_definition\');" aspx_propertypage="/VtvRedactieGui/Objects/Definition.aspx?WrapXmlTag=link_definition&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapDefinition.aspx?WrapXmlTag=link_definition&amp;PageMode=4&amp;SelectMode=true"  item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1"  name="rsi.menu.insert.class" icon="/NetWriterGui/content/xml/icons/insert_object_clas.gif" id="btnInsertObjectClass" onclick="" xml_tag="link_object_class"  enable_check="guiOwnerCanApplyTag(\'link_object_class\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectClass.aspx?WrapXmlTag=link_object_class&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Other/ObjectSelector2.aspx?WrapXmlTag=link_object_class&amp;PageMode=4&amp;ObjectTypeId=23&amp;SelectMode=true"  item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1" name="rsi.menu.insert.document" icon="/NetWriterGui/content/xml/icons/file_new.gif" id="btnInsertObjectDocument" onclick="" xml_tag="link_object_document"  enable_check="guiOwnerCanApplyTag(\'link_object_document\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectDocument.aspx?WrapXmlTag=link_object_document&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Other/ObjectSelector2.aspx?WrapXmlTag=link_object_document&amp;ObjectTypeId=2&amp;ObjectTypeId1=6&amp;PageMode=4&amp;SelectMode=true"  item_type="insert"></navigationitem>
+			<navigationitem enabled="false" shortcut_ctrl="false" shortcut_alt="false"   shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="1"  name="rsi.menu.insert.map" icon="/NetWriterGui/content/xml/icons/object_map_1.gif" id="btnInsertObjectMap" onclick="" xml_tag="link_object_map"  enable_check="guiOwnerCanApplyTag(\'link_object_map\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectMap.aspx?WrapXmlTag=link_object_map&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Other/ObjectSelector2.aspx?WrapXmlTag=link_object_map&amp;PageMode=4&amp;ObjectTypeId=5&amp;SelectMode=true" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.url" icon="/NetWriterGui/content/xml/icons/insert_hyperlink.gif" id="btnInsertObjectUrl" onclick="" xml_tag="link_object_url"  enable_check="guiOwnerCanApplyTag(\'link_object_url\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectUrl.aspx?WrapXmlTag=link_object_url&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapObjectUrl.aspx?WrapXmlTag=link_object_url&amp;PageMode=4&amp;SelectMode=true" item_type="insert"></navigationitem>
+			<navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.pdf" icon="/NetWriterGui/content/xml/icons/object_binary_pdf_1.gif" id="btnInsertPdf" onclick="" xml_tag="link_object_binary_pdf"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_pdf\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_pdf&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapObjectBinary.aspx?WrapXmlTag=link_object_binary_pdf&amp;PageMode=4&amp;SelectMode=true&amp;SearchMode=pdf"  item_type="insert"></navigationitem>
+						
+						<navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.code_file" icon="/NetWriterGui/content/xml/icons/object_wuc_1.gif" id="btnInsertCodeFile" onclick="" xml_tag="link_code_file"  enable_check="guiOwnerCanApplyTag(\'link_code_file\');" aspx_propertypage="/VtvRedactieGui/Management/CodeFile.aspx?WrapXmlTag=link_code_file&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Management/CodeFileList.aspx?WrapXmlTag=link_code_file&amp;PageMode=4&amp;SelectMode=true&amp;"  item_type="insert"></navigationitem>
+						<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.dotnetcontrol" icon="/NetWriterGui/content/xml/icons/insert_net.gif" id="dotnetcontrol" onclick="" xml_tag="dotnetcontrol"  enable_check="guiOwnerCanApplyTag(\'dotnetcontrol\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.media_player" icon="/NetWriterGui/images/icons/wmv-ikoon.gif" id="btnInsertMediaPlayer" onclick="" xml_tag="media_player"  enable_check="guiOwnerCanApplyTag(\'media_player\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+			<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.media_file" icon="/NetWriterGui/images/icons/wmv-ikoon.gif" id="btnInsertMediaFile" onclick="" xml_tag="media_file"  enable_check="guiOwnerCanApplyTag(\'media_file\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+			<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.transcription" icon="/NetWriterGui/images/icons/srt-ikoon.gif" id="btnInsertTranscription" onclick="" xml_tag="transcription_item"  enable_check="guiOwnerCanApplyTag(\'transcription_item\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+
+		</navigation>
+		<navigation name="rsi.menu.accessibility"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" icon="" id="mnuAcces"  is_menu="1" is_toolbar="1" show_title_toolbar="0" xml_tag=""  enable_check=""  item_type="insertmenu">
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.accessibility.language" icon="/NetWriterGui/images/icons/accessibility_language.gif" id="btnAccessibilityLanguage" onclick="" xml_tag="link_language"  enable_check="guiOwnerCanApplyTag(\'link_language\');" aspx_propertypage="/NetWriterGui/system/Language.aspx?WrapXmlTag=link_language&amp;PageMode=8"  aspx_selectpage="/NetWriterGui/system/LanguageList.aspx?WrapXmlTag=link_language&amp;PageMode=4&amp;SelectMode=true&amp;"  item_type="insert" preserve_inner_xml="true"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  toolbar_button_visible="0" name="rsi.menu.insert.definitionlist" icon="/NetWriterGui/images/icons/deflist.gif" id="btnInsertDefList" onclick="" xml_tag="definitionlist"  enable_check="guiOwnerCanApplyTag(\'definitionlist\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></navigationitem>
+		</navigation>
+		<navigation name="rsi.menu.formatting"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" icon="" id="mnuFormatting"  is_menu="1" is_toolbar="1" show_title_toolbar="0" xml_tag=""  enable_check=""  item_type="menu">
+			<navigationitem enabled="false"  shortcut_ctrl="true" shortcut_alt="false" shortcut_key ="B" shortcut_keycode="66" toolbar_button_visible="1" name="rsi.menu.formatting.bold" icon="/NetWriterGui/content/xml/icons/formatting_bold.gif" id="btnFormatBold" onclick="" xml_tag="bold"  enable_check="guiOwnerCanApplyTag(\'bold\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="true" shortcut_alt="false" shortcut_key ="I" shortcut_keycode="73" toolbar_button_visible="1" name="rsi.menu.formatting.italic" icon="/NetWriterGui/content/xml/icons/formatting_italic.gif" id="btnFormatItalic" onclick="" xml_tag="italic"  enable_check="guiOwnerCanApplyTag(\'italic\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.formatting.super" icon="/NetWriterGui/content/xml/icons/formatting_super.gif" id="btnFormatSuper" onclick="" xml_tag="super"  enable_check="edxid.canApplyTag(\'super\');" aspx_propertypage=""  aspx_selectpage=""  item_type="format"></navigationitem>
+			<navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.formatting.sub" icon="/NetWriterGui/content/xml/icons/formatting_sub.gif" id="btnFormatSub" onclick="" xml_tag="sub"  enable_check="edxid.canApplyTag(\'sub\');" aspx_propertypage=""  aspx_selectpage=""  item_type="format"></navigationitem>
+		
+		</navigation>
+		<navigation name="rsi.menu.table"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode=""  icon="" id="mnuTable"  is_menu="1" is_toolbar="1" show_title_toolbar="0" xml_tag=""  enable_check=""  item_type="insertmenu">
+			<navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table" icon="/NetWriterGui/content/xml/icons/insert_table.gif" id="btnInsertTable" onclick="" xml_tag="datatable"  enable_check="guiOwnerCanApplyTag(\'datatable\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table.insertrow" icon="/NetWriterGui/content/xml/icons/row_below.gif" id="btnInsertTableRow" onclick="widgetHandle.widgetPopupClick(\'datarowinser\');" xml_tag="datarow"  enable_check="guiOwnerCanApplyTag(\'datarow\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table.insertcell" icon="/NetWriterGui/content/xml/icons/cell.gif" id="btnInsertTableCell" onclick="" xml_tag="datacell"  enable_check="guiOwnerCanApplyTag(\'datacell\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table.insertcolumnleft" icon="/NetWriterGui/content/xml/icons/column_left.gif" id="btnInsertTableColumnLeft" onclick="widgetHandle.widgetPopupClick(\'tableinsertcolumnleft\',\'\');" xml_tag="datacell"  enable_check="guiOwnerCanApplyTag(\'datacell\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table.insertcolumnright" icon="/NetWriterGui/content/xml/icons/column_right.gif" id="btnInsertTableColumnRight" onclick="widgetHandle.widgetPopupClick(\'tableinsertcolumnright\',\'\');" xml_tag="datacell"  enable_check="guiOwnerCanApplyTag(\'datacell\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			
+			
+			
+		</navigation>
+		<navigation name="rsi.menu.help"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  icon="" id="mnuHelp"  is_menu="1" is_toolbar="1" show_title_toolbar="0" xml_tag="" enable_check=""  item_type="menu">
+		<navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.menu.bug.report" icon="/NetWriterGui/content/xml/icons/Bugs_1.gif" id="btnReportIssue" onclick="showASPX(\'/vtvRedactieGui/Management/Checklist.aspx?PageMode=5&amp;CodeFile=c:\\\\inetpub\\\\wwwroot\\\\vtvRedactieGui\\\\XMLEdit\\\\Content.Edit.aspx\');" xml_tag=""  enable_check="" aspx_propertypage=""  aspx_selectpage=""  item_type="system"></navigationitem>
+		<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.aspx.management.quality.tablabel" icon="/VtvRedactieGui/Objects/GetObjectBinary.aspx?ObjectBinaryHash=XnnQXgzHF1U51ucS4DWIpq1Wj1Yc7dqjcA/Vfm2uSjgLuFswEEelU/OXVgFWSHn2" id="btnQuality" onclick="openQuality();" xml_tag=""  enable_check="" aspx_propertypage=""  aspx_selectpage=""  item_type=""></navigationitem>
+		<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.menu.help" icon="/NetWriterGui/content/xml/icons/help_small_0.gif" id="btnHelp" onclick="showASPX(\'/vtvRedactieGuiPublic/help/index.htm\');" xml_tag=""  enable_check="" aspx_propertypage=""  aspx_selectpage=""  item_type=""></navigationitem>
+		</navigation>
+		<navigation name="rsi.menu.bug"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" icon="" id="TabOther"  is_menu="0" is_toolbar="0" show_title_toolbar="0" xml_tag=""  enable_check=""  item_type="insertmenu">
+		<navigationitem toolbar_button_visible="0" shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""   enabled="true" name="rsi.edx.icon" icon="" id="link_object_binary_icon" onclick="" xml_tag="link_object_binary_icon"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_icon\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_icon&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Structure/MapObjectBinary.aspx?SearchMode=icon&amp;WrapXmlTag=link_object_binary_icon&amp;PageMode=4&amp;SelectMode=true&amp;T1=rsi.aspx.other.objectselector.searchtree&amp;U1=/vtvRedactieGui/Other/ObjectSelector2.aspx&amp;P1=0&amp;TI1=0&amp;R1=0"  item_type="insert"></navigationitem>
+		<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.logo" icon="" id="btnlink_object_binary_image_partner" onclick="" xml_tag="link_object_binary_image_partner"  enable_check="guiOwnerCanApplyTag(\'link_object_binary_image_partner\');" aspx_propertypage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image_partner&amp;PageMode=8"  aspx_selectpage="/VtvRedactieGui/Objects/ObjectBinary.aspx?WrapXmlTag=link_object_binary_image_partner&amp;PageMode=4&amp;SelectMode=true&amp;T1=rsi.aspx.other.objectselector.searchtree&amp;U1=/vtvRedactieGui/Other/ObjectSelector2.aspx&amp;P1=0&amp;TI1=0&amp;R1=0"   item_type="insert"></navigationitem>
+		 <navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.menu.insert.listitem" icon="" id="listitem" onclick="" xml_tag="listitem"  enable_check="guiOwnerCanApplyTag(\'listitem\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+									<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.menu.insert.definitionlist.definitionlistitem" icon="" id="definition_list_item" onclick="" xml_tag="definition_list_item"  enable_check="guiOwnerCanApplyTag(\'definition_list_item\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.menu.insert.definitionlist.definitionlistitem" icon="" id="definition_list_description" onclick="" xml_tag="definition_list_description"  enable_check="guiOwnerCanApplyTag(\'definition_list_description\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+				<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.dotnetcontrol.attribute" icon="" id="dotnetcontrol_attribute" onclick="" xml_tag="dotnetcontrol_attribute"  enable_check="guiOwnerCanApplyTag(\'dotnetcontrol_attribute\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<edx:navigationitem toolbar_button_visible="0" enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" name="rsi.menu.insert.articlecategory" icon="/NetWriterGui/images/icons/insert_articlecategory.gif" id="btnInsertACL" onclick="" xml_tag="articlecategory"  enable_check="guiOwnerCanApplyTag(\'articlecategory\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+			<edx:navigationitem enabled="false"  shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="0" name="rsi.menu.insert.homepagelist.item" icon="/NetWriterGui/images/icons/insert_homepagelist.gif" id="btnInsertHpListItem" onclick="" xml_tag="homepagelist_item"  enable_check="guiOwnerCanApplyTag(\'homepagelist_item\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+			<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.keyword" icon="" id="trefwoord" onclick="" xml_tag="trefwoord"  enable_check="guiOwnerCanApplyTag(\'trefwoord\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.keywords" icon="" id="trefwoorden" onclick="" xml_tag="trefwoorden"  enable_check="guiOwnerCanApplyTag(\'trefwoorden\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+				<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.document.titel" icon="" id="documentheader" onclick="" xml_tag="documentheader"  enable_check="guiOwnerCanApplyTag(\'documentheader\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+				<navigationitem toolbar_button_visible="0"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode=""  enabled="true" name="rsi.edx.body" icon="" id="body" onclick="" xml_tag="body"  enable_check="guiOwnerCanApplyTag(\'body\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></navigationitem>
+			
+		
+		</navigation>
+	</edx:navigationcollection>
+	<edx:widget_xhtml>
+		<script src="/VtvRedactieGui/XmlEdit/templates/Document/Document.Widget.js"></script>
+	</edx:widget_xhtml>
+</editviews>

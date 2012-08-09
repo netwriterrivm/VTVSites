@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--COLUMNCONTAINER -->
+<edx:template  xmlns:edx="msnbc-edx-edit-view" name="columncont" type="container" uiname="rsi.edx.column">
+	<edx:match element="topicallead">
+		<span edxtemplate="topicallead" edxpath="."></span>
+	</edx:match>
+	<edx:match element="header" edxpath=".">
+		<span edxtemplate="header" edxpath="." edxoptions="display-link:level;enter-action:checkshift;allow-split:true"></span>
+	</edx:match>
+	<edx:match element="paragraph">
+		<span edxtemplate="paragraph" edxpath="." edxoptions="display-link:layout;enter-action:checkshift;allow-split:true"></span>
+	</edx:match>
+	<edx:match element="link_object_binary_image">
+		<span edxtemplate="region_link_object_binary_image" edxoptions="display-link:align" edxpath="."></span>
+	</edx:match>
+	<edx:match element="datatable">
+		<span edxtemplate="datatable" edxpath="."></span>
+	</edx:match>
+	<edx:match element="list">
+		<span edxtemplate="list" edxpath="." edxoptions="display-link:layout"></span>
+	</edx:match>
+	<edx:match element="definitionlist">
+		<span edxtemplate="definitionlist" edxpath="." edxoptions="display-link:layout"></span>
+	</edx:match>
+	<edx:match element="caption">
+		<span edxtemplate="caption" edxpath="." edxoptions="enter-action:checkshift;allow-split:true"></span>
+	</edx:match>
+	<edx:match element="link_object_map_swf">
+		<span edxtemplate="region_link_object_map_swf" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_content">
+		<span edxtemplate="region_link_content" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_wuc">
+		<span edxtemplate="region_link_object_wuc" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_external">
+		<span edxtemplate="region_link_object_external" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_search_result">
+		<span edxtemplate="region_link_search_result" edxpath="." edxoptions="display-link:mode"></span>
+	</edx:match>
+	<edx:match element="dotnetcontrol">
+		<span edxtemplate="dotnetcontrol" edxpath="."></span>
+	</edx:match>
+	<!-- EMPTY - note "magic" name for the situation when the container is empty -->
+	<edx:match element="#empty">
+		<div edxtemplate="emptycell" edxpath="."></div>
+	</edx:match>
+</edx:template>

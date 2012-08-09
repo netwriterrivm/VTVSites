@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="searchtask_writer" type="region"
+	uiname="rsi.menu.insert.cgl.link.search" allow_link_menu="true" >
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<div><strong>Id: </strong> <input edxtemplate="widget:text" disabled ="-1" edxpath="@searchtask_id"></input></div>
+		<div><strong>Titel: </strong> <input edxtemplate="widget:text" disabled ="-1"  edxpath="@searchtaskTitel"></input></div>
+		<div><strong>Naam: </strong> <input edxtemplate="widget:text" disabled ="-1" edxpath="@searchtaskNaam"></input></div>
+		<div><strong>Opmerkingen: </strong> <input edxtemplate="widget:text" disabled ="-1" edxpath="@searchtaskNotes"></input></div>
+	</edx:xhtml>
+</edx:template>

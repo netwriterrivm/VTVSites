@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARAGRAPH TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="transcription_item" type="region" uiname="rsi.menu.insert.transcription">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<p><b>Transcriptieregel</b></p>
+		<p><i>Handeling</i></p>
+		<p edxtemplate="field:flow" edxpath="transcription_scene"></p>
+		<p><i>Transcriptie</i></p>
+			<p edxtemplate="field:flow" edxpath="transcription_text"></p>
+	</edx:xhtml>
+	
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="true">
+		<transcription_item><transcription_scene>[Handeling]</transcription_scene>
+			<transcription_text>[Transcriptie]</transcription_text></transcription_item>
+	</edx:insert>
+	<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.transcription" icon="/NetWriterGui/images/icons/srt-ikoon.gif" id="btnInsertTranscription" onclick="" xml_tag="transcription_item"  enable_check="guiOwnerCanApplyTag(\'transcription_item\');" aspx_propertypage=""  aspx_selectpage="" item_type="insert"></edx:navigationitem>
+
+</edx:template>

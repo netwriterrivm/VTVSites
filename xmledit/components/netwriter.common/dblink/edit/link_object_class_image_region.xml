@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="region_link_object_class_image" type="region"
+	uiname="rsi.menu.insert.class">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert>
+		<link_object_class align="none">Nieuwe paragraaf</link_object_class>
+	</edx:insert>
+</edx:template>

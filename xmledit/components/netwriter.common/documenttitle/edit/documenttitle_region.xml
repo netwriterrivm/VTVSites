@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- DOCUMENTTITLES REGION -->
+		<edx:template  xmlns:edx="msnbc-edx-edit-view" name="documenttitle" type="region" uiname="rsi.edx.document.titel">
+			<edx:xhtml display="Titel onderwerp">
+				<img edxtemplate="widget:icon.default" />
+				<h2 class="textClass" edxtemplate="documenttitlecontainer" edxpath="."></h2>
+			</edx:xhtml>
+			<edx:xhtml display="Titel rubriek">
+				<img edxtemplate="widget:icon.default" />
+				<h2 class="textSection" edxtemplate="documenttitlecontainer" edxpath="."></h2>
+			</edx:xhtml>
+			<edx:xhtml display="Titel document">
+				<img edxtemplate="widget:icon.default" />
+				<h1 class="textTitle" edxtemplate="documenttitlecontainer" edxpath="."></h1>
+			</edx:xhtml>
+			<edx:insert allow_clipboard="true">
+				<documenttitle layout="Titel document" autodb="Nee">[Titel document]</documenttitle>
+			</edx:insert>
+			<edx:attributelist>
+				<attribute name="layout" uiname="rsi.edx.attribute.title.layout" applytocolumn="false" uiicon="">
+					<option value="Titel onderwerp">rsi.edx.attribute.object_class.title</option>
+					<option value="Titel rubriek">rsi.edx.attribute.subclass.title</option>
+					<option value="Titel document">rsi.edx.attribute.document.title</option>
+				</attribute>
+				<attribute name="autodb" uiname="rsi.edx.attribute.getfromdb" applytocolumn="false" uiicon="">
+					<option value="Ja">rsi.edx.attribute.yes</option>
+					<option value="Nee">rsi.edx.attribute.no</option>
+					<option value="NVT">rsi.edx.attribute.nvt</option>
+				</attribute>
+			</edx:attributelist>
+		</edx:template>

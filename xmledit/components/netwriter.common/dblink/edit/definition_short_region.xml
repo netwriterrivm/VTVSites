@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" allow_link_menu="true" copypasteparent="true" name="definition_short_writer"
+	type="region" uiname="rsi.menu.insert.definition.short">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<abbr  class="nw_editor_element_definition_short infolabel" onclick="widgetShowInfobox()"><span class="notion"><span edxtemplate="widget:attribute" edxpath="@definition_name"></span></span></abbr>
+    <span  class ="nw_editor_element_definition_short_infobox" style="display:none;"><span  class="nw_editor_element_definition_short_desc" edxtemplate="widget:attribute" edxpath="@definition_desc"></span></span>
+	</edx:xhtml>
+</edx:template>

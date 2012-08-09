@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_link_code_file" type="container" uiname="rsi.menu.insert.code_file">
+	<edx:match element="code_file">
+		<span edxtemplate="code_file_writer" edxpath="."></span>
+	</edx:match>
+	<edx:match element="link_object_binary_icon">
+		<span edxtemplate="region_link_object_binary_icon" edxpath="."></span>
+	</edx:match>
+</edx:template>

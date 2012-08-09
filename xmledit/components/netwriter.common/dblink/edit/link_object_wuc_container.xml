@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="para_object_wuc" type="container" uiname="rsi.menu.insert.wuc">
+	<edx:match element="object_wuc">
+		<span edxtemplate="object_wuc_writer" edxpath="."></span>
+	</edx:match>
+</edx:template>

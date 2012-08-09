@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="datatablelayoutselect" type="region" uiname="rsi.edx.table.properties">
+	<edx:xhtml display="rsi.edx.verbergen">
+		<img edxtemplate="widget:icon.properties" />
+	</edx:xhtml>
+	<edx:xhtml display="rsi.edx.aanpassen">
+    <img edxtemplate="widget:icon.details"   class="link_attribute_region_icon" />
+    <div class="link_attribute_region">
+        
+		
+		<table class="edxPropertyFrame" border="0" cellpadding="5" cellspacing="0">
+			<tr>
+				<td>Breedte tabel/Table width: </td>
+				<td>
+					<input edxtemplate="widget:text" type="text" edxpath="@width" size="35" style="font-size:12px;font-family:arial" />
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">NB:</td>
+				<td>Gewijzigde layout is pas zichtbaar als de tabel opnieuw geladen wordt. Bv. door in- en uitklappen van de tabel.</td>
+			</tr>
+			<tr>
+				<td valign="top">Beschrijving/Summary:</td>
+				<td><input edxtemplate="widget:text" type="text" edxpath="@summary" size="35" style="font-size:12px;font-family:arial" /></td>
+			</tr>
+		</table>
+    <div class="link_attribute_region_clear"></div></div>
+	</edx:xhtml>
+</edx:template>

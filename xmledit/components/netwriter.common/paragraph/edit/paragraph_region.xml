@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PARAGRAPH TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="paragraph" type="region" uiname="rsi.menu.insert.paragraph">
+	<edx:xhtml display="paragraph">
+		<img edxtemplate="widget:icon.default" />
+		<p edxtemplate="paracont" edxpath="."></p>
+	</edx:xhtml>
+	<edx:xhtml display="break_start">
+		<img edxtemplate="widget:icon.default" />
+		<p class="nw_break_start" edxtemplate="paracont" edxpath="."></p>
+	</edx:xhtml>
+	<edx:xhtml display="break_end">
+		<img edxtemplate="widget:icon.default" />
+		<p class="nw_break_end" edxtemplate="paracont" edxpath="."></p>
+	</edx:xhtml>
+	<edx:xhtml display="break_none">
+		<img edxtemplate="widget:icon.default" />
+		<p class="nw_inline" edxtemplate="paracont" edxpath="."></p>
+	</edx:xhtml>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert allow_clipboard="true" allow_node_name_change="true">
+		<paragraph align="" layout="paragraph">[Paragraaf]</paragraph>
+	</edx:insert>
+	<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false"  shortcut_key ="" shortcut_keycode="" 
+        toolbar_button_visible="1" name="rsi.menu.insert.paragraph" icon="/NetWriterGui/content/xml/icons/paragraph_twee.gif" 
+        id="btnInsertParagraph" onclick="" xml_tag="paragraph"  enable_check="guiOwnerCanApplyTag(\'paragraph\');" aspx_propertypage=""  
+        aspx_selectpage="" item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		<attribute name="layout" uiname="rsi.edx.attribute.paragraph.layout" applytocolumn="false"
+			uiicon="">
+			<option value="paragraph">rsi.edx.attribute.paragraph.default</option>
+			<option value="break_start">rsi.edx.attribute.paragraph.lf.start</option>
+			<option value="break_end">rsi.edx.attribute.paragraph.lf.end</option>
+			<option value="break_none">rsi.edx.attribute.paragraph.nobreak</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- DATAROW TEMPLATE-->
+<edx:template xmlns:edx="msnbc-edx-edit-view" edxnotifyparent="true" name="datarow" type="region"
+	uiname="rsi.menu.table.insertrow">
+	<edx:xhtml display="Normaal">
+		<tr class="edxDataTableRow">
+			<td>
+				<img edxtemplate="widget:icon.row" src="/NetWriterGui/content/xml/icons/row2.gif" />
+			</td>
+		</tr>
+		<tr class="textDataTableCell" border="0" cellpadding="0" cellspacing="0" width="100%"
+			edxtemplate="datarowcontainer" edxpath="."></tr>
+	</edx:xhtml>
+	<edx:xhtml display="Kop">
+		<tr class="edxDataTableRow">
+			<td> <!-- WV: colspan=veel om grijze rij over volle breedte te hebben -->
+				<!--<img src="/NetWriterGui/content/xml/icons/row.gif" alt="Eigenschappen tabelregel"></img>-->
+				<img edxtemplate="widget:icon.row" src="/NetWriterGui/content/xml/icons/row2.gif" />
+			</td>
+		</tr>
+		<tr class="textDataTableHead" border="0" cellpadding="0" cellspacing="0" edxtemplate="datarowcontainerth"
+			edxpath="." width="100%"></tr>
+	</edx:xhtml>
+	<edx:xhtml display="Tussenkop">
+		<tr class="edxDataTableRow">
+			<td>
+				<img edxtemplate="widget:icon.row" src="/NetWriterGui/content/xml/icons/row2.gif" />
+			</td>
+		</tr>
+		<tr class="textDataTableHead2Red" border="0" cellpadding="0" cellspacing="0" edxtemplate="datarowcontainer"
+			edxpath="." width="100%"></tr>
+	</edx:xhtml>
+	<edx:xhtml display="Slecht">
+		<tr class="edxDataTableRow">
+			<td>
+				<img edxtemplate="widget:icon.row" src="/NetWriterGui/content/xml/icons/row2.gif" />
+			</td>
+		</tr>
+		<tr class="textDataTableHeadSlecht" border="0" cellpadding="0" cellspacing="0" edxtemplate="datarowcontainer"
+			edxpath="." width="100%"></tr>
+	</edx:xhtml>
+	<edx:xhtml display="Gemiddeld">
+		<tr class="edxDataTableRow">
+			<td>
+				<img edxtemplate="widget:icon.row" src="/NetWriterGui/content/xml/icons/row2.gif" />
+			</td>
+		</tr>
+		<tr class="textDataTableHeadGemiddeld" border="0" cellpadding="0" cellspacing="0" edxtemplate="datarowcontainer"
+			edxpath="." width="100%"></tr>
+	</edx:xhtml>
+	<edx:xhtml display="Goed">
+		<tr class="edxDataTableRow">
+			<td>
+				<img edxtemplate="widget:icon.row" src="/NetWriterGui/content/xml/icons/row2.gif" />
+			</td>
+		</tr>
+		<tr class="textDataTableHeadGoed" border="0" cellpadding="0" cellspacing="0" edxtemplate="datarowcontainer"
+			edxpath="." width="100%"></tr>
+	</edx:xhtml>
+	<edx:navigationitem toolbar_button_visible="1"  shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" enabled="false" name="rsi.menu.table.insertrow" icon="/NetWriterGui/content/xml/icons/row_below.gif" id="btnInsertTableRow" onclick="widgetHandle.widgetPopupClick(\'datarowinser\');" xml_tag="datarow"  enable_check="guiOwnerCanApplyTag(\'datarow\');" aspx_propertypage=""  aspx_selectpage=""  item_type="insert"></edx:navigationitem>
+	<edx:insert allow_clipboard="true" clipboard_insert_commands="rowabove:rsi.edx.insert.clipboard.row.above|rowbelow:rsi.edx.insert.clipboard.row.below">
+		<datarow layout="Normaal" align="left" valign="top" width="" height="" nowrap="false">
+			<datacell layout="" colspan="1" align="" valign="" width="" height="" nowrap="false">
+				<paragraph align="" layout="paragraph">[Paragraaf]</paragraph>
+			</datacell>
+			<datacell layout="" colspan="1" align="" valign="" width="" height="" nowrap="false">
+				<paragraph align="" layout="paragraph">[Paragraaf]</paragraph>
+			</datacell>
+		</datarow>
+	</edx:insert>
+	<edx:attributelist>
+		<attribute name="layout" uiname="rsi.edx.attribute.table.row.layout" applytocolumn="false"
+			uiicon="">
+			<option value="Normaal">rsi.edx.attribute.table.row.normal</option>
+			<option value="Kop">rsi.edx.attribute.table.row.header</option>
+			<option value="Tussenkop">rsi.edx.attribute.table.row.subheader</option>
+			<option value="Slecht">rsi.edx.attribute.table.row.poor</option>
+			<option value="Gemiddeld">rsi.edx.attribute.table.row.average</option>
+			<option value="Goed">rsi.edx.attribute.table.row.good</option>
+		</attribute>
+		<attribute name="valign" uiname="rsi.edx.attribute.table.valign" applytocolumn="false" uiicon="">
+			<option value="top">rsi.edx.attribute.table.valign.top</option>
+			<option value="middle">rsi.edx.attribute.table.valign.middle</option>
+			<option value="center">rsi.edx.attribute.table.valign.centre</option>
+			<option value="bottom">rsi.edx.attribute.table.valign.bottom</option>
+			<option value="baseline">rsi.edx.attribute.table.valign.baseline</option>
+		</attribute>
+		<attribute name="align" uiname="rsi.edx.attribute.table.align" applytocolumn="false" uiicon="">
+			<option value="left">rsi.edx.attribute.table.align.left</option>
+			<option value="center">rsi.edx.attribute.table.align.center</option>
+			<option value="right">rsi.edx.attribute.table.align.right</option>
+		</attribute>
+	</edx:attributelist>
+</edx:template>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- OBJECT BINARY IMAGE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="region_link_search_result" type="region"
+	uiname="rsi.menu.insert.cgl.link.search">
+	<edx:xhtml display="default">
+		<img edxtemplate="widget:icon.default" />
+		<strong>Link naar Zoekresultaten</strong>
+		<div class="textImageFrame" edxtemplate="para_link_search_result" edxpath="."></div>
+	</edx:xhtml>
+		<edx:xhtml display="link_search_page">
+		<img edxtemplate="widget:icon.default" />
+		<strong>Link naar Zoekresultaten, weergave als link</strong>
+		<div class="textImageFrame" edxtemplate="para_link_search_result" edxpath="."></div>
+	</edx:xhtml>
+		<edx:xhtml display="list_search_results">
+		<img edxtemplate="widget:icon.default" />
+		<strong>Link naar Zoekresultaten, weergave als lijst</strong>
+		<div class="textImageFrame" edxtemplate="para_link_search_result" edxpath="."></div>
+	</edx:xhtml>
+	<edx:navigationitem enabled="false"   shortcut_ctrl="false" shortcut_alt="false" shortcut_key ="" shortcut_keycode="" toolbar_button_visible="1" name="rsi.menu.insert.cgl.link.search" icon="/NetWriterGui/content/xml/icons/search_link.gif" id="btnInsertSearchLink" onclick="" xml_tag="link_search_result"  enable_check="guiOwnerCanApplyTag(\'link_search_result\');" aspx_propertypage="/Search/Redacteuren/SearchContainerEditorEdit.aspx?WrapXmlTag=link_search_result&amp;PageMode=8"  aspx_selectpage="/Search/Redacteuren/SearchContainerEditorList.aspx?WrapXmlTag=link_search_result&amp;PageMode=4&amp;SelectMode=true"  item_type="insert"></edx:navigationitem>
+	<edx:attributelist>
+		   <attribute name="mode" uiname="rsi.menu.insert.cgl.link.search.mode" applytocolumn="false" uiicon="">
+			<option value="link_search_page">rsi.menu.insert.cgl.link.search.mode.link</option>
+			<option value="list_search_results">rsi.menu.insert.cgl.link.search.mode.list</option>
+		   </attribute>
+	</edx:attributelist>
+	<!-- INSERTION TEMPLATE -->
+	<edx:insert>
+		<link_search_result mode="link_search_page"></link_search_result>
+	</edx:insert>
+</edx:template>

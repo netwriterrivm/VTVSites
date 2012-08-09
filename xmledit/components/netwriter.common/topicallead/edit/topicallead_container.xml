@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- TOPICAL LEAD CONTAINER TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="topicalleadcont" type="container" uiname="rsi.menu.insert.topicallead">
+	<edx:match element="#text">
+		<span edxtemplate="field:flow" edxpath="." ></span>
+	</edx:match>
+	<edx:match element="link_language">
+		<span class="nw_editor_language_change"  edxtemplate="languagecont"  edxpath="."></span>
+	</edx:match>
+	<edx:match element="bold">
+		<strong class="textEmphasis" edxtemplate="parabold" edxpath="."></strong >
+	</edx:match>
+	<edx:match element="italic">
+      <em edxtemplate="paraitalic" edxpath="."></em>
+    </edx:match>
+	<edx:match element="super">
+		<span edxtemplate="parasuper" edxpath="."></span>
+	</edx:match>
+	<edx:match element="sub">
+		<span edxtemplate="parasub" edxpath="."></span>
+	</edx:match>
+</edx:template>

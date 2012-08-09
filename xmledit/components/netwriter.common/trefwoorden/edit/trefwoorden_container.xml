@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- HEADER CONTAINER TEMPLATE -->
+<edx:template xmlns:edx="msnbc-edx-edit-view" name="trefwoordencont" type="container" uiname="rsi.edx.keywords">
+	<edx:match element="trefwoord">
+		   
+		<li edxtemplate="trefwoord" edxpath="."  edxoptions="enter-action:checkshift;allow-split:true"></li>
+	</edx:match>
+	<edx:match element="#empty">
+		<li edxtemplate="emptycell" edxpath="."></li>
+	</edx:match>
+</edx:template>
